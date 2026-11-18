@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.hl {
+  
+  width: 100%; 
+  max-width: 100%; 
+  height: 2px;
+  margin-bottom: 2px;
+  z-index: -1;
+}
+</style>
+<link rel="icon" href="asset/img/favicon.ico" type="image/x-icon">
+</head>
+
+<script>
+function init() {
+    var ipAddress = window.location.host;
+    console.log(ipAddress);
+	document.getElementById("Main_video").src = "http://" + ipAddress + ":8080";
+    setInterval(function (oldip) {
+        var newIpAddress = window.location.host;
+        if (newIpAddress !== oldip) {
+            ipAddress = newIpAddress;
+        }
+
+        document.getElementById("Main_video").src = "http://" + ipAddress + ":8080";
+        console.log("http://" + ipAddress + ":8080");
+    }, 30000, ipAddress);
+	
+	const img = document.getElementById("Main_video");
+
+	img.addEventListener("click", function () {
+    if (this.requestFullscreen) {
+      this.requestFullscreen();
+    } else if (this.webkitRequestFullscreen) { // Safari
+      this.webkitRequestFullscreen();
+    } else if (this.msRequestFullscreen) { // IE11
+      this.msRequestFullscreen();
+    }
+  });
+}
+
+function SelectedCamera(camera){
+	
+	switch (camera) {
+	  case "A":
+		document.getElementById("cams").value = camera
+		break;
+	  case "B":
+		document.getElementById("cams").value = camera
+		break;
+	  case "C":
+		document.getElementById("cams").value = camera
+		break;
+	  case "D":
+		document.getElementById("cams").value = camera
+		break;
+	  default:
+		console.log("Unknown cams");
+	}
+}
+
+function GetCamerea(){
+	 fetch('/cgi-bin/GetCamera.cgi')
+        .then(response => response.text())
+        .then(data => {
+            console.log("Response:", data);
+            //alert(data); // show CGI output -->
+			let obj = {};
+			data.split("&").forEach(p => {
+			  let [key, value] = p.split("=");
+			  obj[key] = value;
+			});
+			SelectedCamera(obj['Camera'])
+        })
+        .catch(err => console.error(err));
+}
+
+function cameraOnChange(val) {
+	 fetch('/cgi-bin/SetCamera.cgi?Camera='+val)
+        .then(response => response.text())
+        .then(data => {
+            console.log("Response:", data);
+            //alert(data); // show CGI output -->
+			init()
+        })
+        .catch(err => console.error(err));
+	
+}
+
+function openImagePopup() {
+	// Image URL — can be your /tmp image via HTTP server
+	let imgUrl = "/tmp/screenshot.jpg";
+
+	// Open a small popup window
+	let popup = window.open("", "ImagePopup", "width=800,height=600");
+
+	// Write image into popup
+	popup.document.write(`
+		<html>
+		<head><title>Image Screenshot</title></head>
+		<body style="margin:0; padding:0; text-align:center; background-color:black;">
+			<div>
+				<img src="/cgi-bin/GetScreenshot.cgi" style="max-width:100%; height:auto;">
+			</div>
+			<br>
+			<div>
+				<div>
+					<a href="/cgi-bin/GetScreenshot.cgi" download="screenshot.jpg" style="background:#4CAF50; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; font-size:16px;">
+								Save Image
+					</a>
+				</div>
+				<br>
+				<br>
+				<div>
+					<a href="javascript:void(0)"
+					   style="background:#AD1822; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; font-size:16px;"
+					   onclick="window.close()">
+						Close
+					</a>
+				</div>
+			</div>
+		</body>
+		</html>
+	`);
+}
+	document.addEventListener("DOMContentLoaded", init);
+	document.addEventListener("DOMContentLoaded", GetCamerea);
+</script>
+<body>
+
+
+<div style="position: relative; width: 200px; height: 200px; margin: 40px auto;">
+	<div style="margin:5px;">
+	<div class="hl" style="background-color: blue;"></div>
+	<div class="hl" style="background-color: green;"></div>
+	<div class="hl" style="background-color: yellow;"></div>
+	<div class="hl" style="background-color: red ;"></div>
+	<div style="z-index: 3;margin:5px;">
+	 <img src="asset/img/Chicony.png" alt="Center Image"
+       style="position: absolute;  top: 4%; left: 50%; transform: translate(-50%, -50%); max-width: 50px; max-height: 50px;background-color: white">
+	</div>
+	</div>
+	<div>
+		<p style="text-align: center;color:rgb(0,0,128);">群光電子</p>
+	</div>
+	<div style="height:50%;background-image: url('asset/img/galaxy.jpg');text-align: center;">
+		<!-- <img id="Main_video" style="height:80%;width:51%;margin:5px;" src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=33680&t=0.8947716357160378" alt="MJPEG Stream"> -->
+		<img id="Main_video" style="height:80%;width:51%;margin:5px;" src="" alt="MJPEG Stream">
+	</div>
+	<!-- <div> -->
+	<!-- <p style="text-align: center;font-size: 15px;">江XX</p> -->
+	<!-- <p style="text-align: center;font-size:15px;">Jeff Chiang</p> -->
+	<!-- <p style="text-align: center;font-size: 15px;">VIP開發處</p> -->
+		
+	<!-- </div> -->
+	<div>
+		<div style="text-align: center;font-size: 15px; margin-bottom: 5px" >
+			<label for="cam">Camera</label>
+
+			<select name="cams" id="cams" onchange="cameraOnChange(this.value)">
+			  <option value="A">A</option>
+			  <option value="B">B</option>
+			  <option value="C">C</option>
+			  <option value="D">D</option>
+			</select>
+		</div>
+		<div style="text-align: center;font-size: 15px;  margin-bottom: 5px" >
+			<button onclick="openImagePopup()">Capture</button>
+		</div>
+		<p style="text-align: center;font-size:15px;">Jeff Chiang</p>
+		<p style="text-align: center;font-size: 15px;">VIP開發處</p>
+	</div>
+</div>
+
+
+</body>
+</html>

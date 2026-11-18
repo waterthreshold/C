@@ -1,0 +1,15 @@
+[Unit]
+Description=Broadcast Reminder
+Wants=network.target
+After=network.target
+BindsTo=sys-subsystem-net-devices-eth0.device
+After=sys-subsystem-net-devices-eth0.device
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/receiver &
+TimeoutSec=0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

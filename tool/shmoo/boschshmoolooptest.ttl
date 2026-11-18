@@ -1,0 +1,73 @@
+;; for cec shmoo loop test 
+inputbox 'do loop times' 'title' '100'
+str2int do_count inputstr
+
+
+DO_REBOOT=1
+gettime timestr "%Y%m%d-%H%M%S"
+if DO_REBOOT <> 1 then
+	sprintf2 filename "shmoo_smttest-nonreboot-%d-looptime-%s.txt" do_count timestr
+else
+	sprintf2 filename "shmoo_smttest-reboot-%d-looptime-%s.txt" do_count timestr
+endif 
+
+
+fileopen fh filename  1
+i=1
+
+until i > do_count
+	sendln '/usr/local/bin/cec_smt_pcba_verify.sh 1 4 6'
+	call wait_for_response
+	result1=retresult
+	sendln '/usr/local/bin/cec_smt_pcba_verify.sh 2 4 6'
+	call wait_for_response
+	result2=retresult
+	sendln '/usr/local/bin/cec_smt_pcba_verify.sh 3 4 25'
+	call wait_for_response
+	result3=retresult
+	sendln '/usr/local/bin/cec_smt_pcba_verify.sh 4 4 25'
+	call wait_for_response
+	result4=retresult
+	sprintf2 per_result '%d,%d,%d,%d' result1 result2 result3 result4
+	filewriteln fh per_result
+	i=i+1
+	if DO_REBOOT = 1 call reboot_label
+enduntil
+fileclose fh
+exit 
+
+:wait_for_response
+	timeout=60
+	waitregex 'PCBA:PASSEND' 'PCBA:FAILEND'
+	if result = 0 then
+		retresult=-1
+	elseif result = 1 then
+		retresult = 1 
+	elseif result = 2 then
+		retresult =0
+	else
+		retresult= -2 
+		;expected never see thsi result 
+	endif
+	timeout=3
+	sendkcode  28 3
+	waitregex '^# $'
+
+return 
+
+:reboot_label
+	timeout=20
+	loginname='root'
+	sendln 'reboot'
+	pause 1 
+	
+	wait  ' login:'
+	if result = 0 then
+		messagebox 'No " Broadband Router" found ' 'Error'
+		exit
+	endif
+	
+	sendln loginname
+	waitregex '^# $'
+	return
+	

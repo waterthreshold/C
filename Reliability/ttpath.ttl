@@ -1,0 +1,9 @@
+; getdir dir
+getttdir  dir
+messagebox dir 'Info'
+var2clipb dir
+filedelete 'ttpath.txt'
+fileopen fh 'ttpath.txt' 0
+filewrite fh dir
+fileclose fh
+closett

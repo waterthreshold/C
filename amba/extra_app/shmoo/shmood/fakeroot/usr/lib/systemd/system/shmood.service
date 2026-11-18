@@ -1,0 +1,12 @@
+[Unit]
+Description=For shmoo initialization
+After=cec_init.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/start_shmood.sh
+KillMode=process
+Environment="PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/local/bin"
+
+[Install]
+WantedBy=multi-user.target

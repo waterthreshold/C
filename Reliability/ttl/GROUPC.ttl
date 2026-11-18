@@ -1,0 +1,109 @@
+; strlen param2
+; if result <= 0 then
+inputbox 'Please Input DUT ip address' 'DUT IP' '192.168.100.20'
+ip=inputstr
+call verification_ip 
+; else
+; ip=param2
+; endif 
+; call verification_ip 
+; if myresult = 1 then 
+	; sprintf2 tmpinfo_msg '%s invalid' param2
+	; messagebox tmpinfo_msg 'Error'
+	; exit
+; endif
+testlink
+if result <> 0  disconnect 0
+
+; restoresetup 'GC_setting.INI'
+sprintf2 cmd '%s /ssh /2 /auth=password /user=root /passwd=' ip
+connect cmd
+
+getdate basedirname '%Y%m%d_C'
+getenv 'userprofile' path
+makepath full_path path 'Desktop'
+makepath rootdirname full_path basedirname
+foldercreate rootdirname
+; changedir rootdirname
+gettitle titletext
+sprintf2 mytitle '%s,C,Cyclic reboot' titletext
+settitle mytitle
+; timeout=timeout_time
+makepath logpath rootdirname 'C.log'
+; makepath inipath rootdirname 'GC_setting.INI'
+filedelete logpath
+
+logopen logpath 0 0 0 1
+
+getdir MACRO_DIR
+; callmenu 55210
+
+makepath SRC_PATH MACRO_DIR 'cec_sd_detect.sh'
+estimated_reboot_time=6
+logopen logpath 0 0 0 1
+; filedelete 'GROUPC_test_result.txt'
+; fileopen fh 'GROUPC_test_result.txt' 1	
+sprintf2 connect_cmd '%s /ssh /2 /auth=password /user=root /passwd=' ip
+max_cyclic_time=100
+idx=0
+while max_cyclic_time > idx
+connect connect_cmd
+
+if result = 1  continue
+waitregex '^# $'
+if idx = 0 then 
+	scpsend  SRC_PATH '/usr/local/bin'
+	pause 1
+	sendln 'chmod +x /usr/local/bin/cec_sd_detect.sh'
+	waitregex '^# $'
+endif
+sprintf2 line2 'Cyclic %d: ' idx
+dispstr line2
+; mpause 500
+; setsync 1 
+sendln 'cec_sd_detect.sh'
+; waitln 'cec_sd_detect.sh' 
+; recvln
+; sprintf2 line '%d: %s' idx inputstr
+; setsync 0
+; filewriteln fh line
+waitregex '^# $'
+; dispstr line
+sendln 'reboot'
+idx = idx + 1
+waitregex '^# $'
+; tmp_timeout=timeout
+pause estimated_reboot_time
+endwhile
+; fileclose fh
+logclose
+; scprecv 
+; sendln 'cec_sd_loop_test.sh restart' 
+dispstr 'Group C test done'
+closett
+exit
+; waitregex '^# $'
+; if result = 0 call L_INTERRUPT
+; logclose
+:verification_ip
+myresult=0
+strsplit ip '.' 4
+for i 1 4
+sprintf2 tmp_cmnd 'str2int target_ip groupmatchstr%d' i i
+execcmnd  tmp_cmnd
+if result = 0 then 
+	sprintf2 tmp_error_msg 'IP format error %s' param1 
+	; messagebox  tmp_error_msg 'Error'
+	; goto main
+	myresult = 1
+	break
+elseif result = 1 then 
+	if target_ip > 255  || target_ip < 0 then 
+		sprintf2 tmp_error_msg 'IP range error %s %d out of range' param1  target_ip
+		; messagebox  tmp_error_msg 'Error'
+		myresult = 1
+		break
+	endif	
+endif
+next 
+return

@@ -1,0 +1,25 @@
+#DEPS(amba.mk) cecscript(jobserver): 
+
+PACKAGE_NAME = cecscript
+SRC_DIR = "fakeroot/usr/local/bin"
+OUT_DIR = $(OUT_PATH)/usr/local/bin
+INSTALL_TODIR_bin =  $(BIN_TARGETS) /usr/local/bin
+include $(ENV_MAKE_DIR)/inc.env.mk
+
+.PHONY: all clean install
+
+
+all:
+	@for i in "$SRC_DIR"/*; do
+        if [ ! -x "$i" ]; then
+            chmod +x "$i"
+        fi
+        cp -f "$i" "$OUT_DIR/"
+	@echo "Build $(PACKAGE_NAME) Done."
+
+include $(ENV_MAKE_DIR)/inc.ins.mk
+
+clean:
+	@echo "Clean $(PACKAGE_NAME) Done."
+
+install: install_todir_bin

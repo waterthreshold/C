@@ -1,0 +1,1 @@
+wkhtmltopdf.exe --enable-local-file-access  --page-size A4  --margin-left 0  --margin-right 0 cover .\cover_out.html toc  .\report_out.html report.pdf

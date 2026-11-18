@@ -1,0 +1,20 @@
+#!/bin/sh
+source /www/cgi-bin/global.sh
+DEFAULTFILE="/etc/default.conf"
+if [ -e "${DEFAULTFILE}" ]; then 
+while IFS= read -r line; 
+do
+	key=$(echo $line | cut -d= -f 1)
+	val=$(echo $line | cut -d= -f 2)
+	redis_set_wrap "$key" "$val" > /dev/null
+	if [ $? -ne 0 ]; then
+		echo "${key} = ${val} failed"
+		exit 1
+	fi
+done < ${DEFAULTFILE}
+fi
+val=$(( NETWORK_FLAG | SYSTEM_FLAG | SHOMOO_FLAG))
+# echo $val
+echo $val > /etc/writeEnv
+echo "Load default successfully!!"
+

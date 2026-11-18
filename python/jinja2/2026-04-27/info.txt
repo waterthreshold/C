@@ -1,0 +1,5 @@
+name=Larnaca2
+odm=Bosch
+version=larnaca2_main_a90a95dfd_smt_20260420.1458
+Soc=CV5
+SDK=Ambarella SDK 1.6

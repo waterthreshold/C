@@ -1,0 +1,3 @@
+# This project uses Python standard libraries only (tkinter, socket, struct, base64, re).
+# Optional: Include PyInstaller if you are compiling the app into an executable (.exe).
+pyinstaller==6.16.0

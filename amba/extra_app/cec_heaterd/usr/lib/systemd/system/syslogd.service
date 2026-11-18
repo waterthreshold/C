@@ -1,0 +1,9 @@
+[Unit]
+Description=BusyBox Syslog Daemon
+
+[Service]
+ExecStart=/sbin/syslogd -n -O /var/log/messages
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

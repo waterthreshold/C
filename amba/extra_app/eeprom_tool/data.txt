@@ -1,0 +1,26 @@
+//variablename, index, json output,type
+TagVersion, 1, 1,num
+ProductId, 2,1,num
+VarintId, 3 ,1,num
+EthernetMacAddress, 4 ,1,hex
+Signature, 5,hex
+SerialNumber, 6,1,string
+MaterialDescription,7,1,string
+Ctn,8,1,string
+SapCode,9,1,string
+Rev,10,0,string
+TypeCode,11,0,num
+MinfFwVersion,15,0,hex
+Platform,16,0,string
+PriductFamilyName,17,1,string
+Project,18,0,string
+MinumumFirmwarevVersion,19,1,hex
+ManufacturingDate,20,1,hex
+NumberOfmacs,21,0,num
+LabelMac,31,0,string
+UnkonownCode1, 32,0,hex
+EepromWriteProtectGpio,24,num
+OriginalVarintId,53,num
+ReleaseStatus,54,0,string
+UnkonownCode,55,0,hex
+ManufacturingSignDate,56,0,hex

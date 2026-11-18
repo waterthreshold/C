@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Device Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: #0077cc;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #0077cc;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.2rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    button {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    button.primary {
+      background: #0077cc;
+      color: #fff;
+    }
+
+    button.primary:hover {
+      background: #005fa3;
+    }
+
+    button.secondary {
+      background: #e0e0e0;
+      color: #333;
+    }
+
+    button.secondary:hover {
+      background: #cfcfcf;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>Device Management</header>
+  <main>
+    <!-- Backup & Restore -->
+	
+		<div class="card">
+		  <h2>Backup & Restore</h2>
+		  <p>Save your current configuration or restore from a previous backup.</p>
+		  <div class="actions">
+			<button class="primary" onclick="BackupConfig();" >Backup Now</button>
+			<form action="/cgi-bin/RestoreCFG.cgi" method="post" enctype="multipart/form-data">
+				<button class="secondary" type="submit">Restore</button>
+				<input type="file" name="uploadcfg">
+			</form>
+		  </div>
+		</div>
+	
+	
+    <!-- Upgrade -->
+	<form action="/cgi-bin/UploadFW.cgi" method="post" enctype="multipart/form-data">
+		<div class="card">
+		  <h2>Upgrade</h2>
+		  <p>Upload and install the latest firmware to keep your device secure and updated.</p>
+		  <div class="actions">
+			<button class="primary" type="submit" onclick="uploadfw()" value="Upload"  >Upload Firmware</button>
+			<input type="file" name="uploadfile">
+		  </div>
+		</div>
+	</form>
+    <!-- Reboot -->
+    <div class="card">
+      <h2>Reboot</h2>
+      <p>Restart the device to apply changes or recover from issues.</p>
+      <div class="actions">
+        <button class="primary" onclick="reboot();">Reboot Now</button>
+      </div>
+    </div>
+	
+	<!-- Loaddefault -->
+    <div class="card">
+      <h2>Load default</h2>
+      <p>Load default system settings</p>
+      <div class="actions">
+        <button class="primary" onclick="loaddefault();">Load default</button>
+      </div>
+    </div>
+  </main>
+  <footer>© 2025 Device Management UI</footer>
+</body>
+<script>
+
+async function uploadfw() {
+    const file = document.getElementById("uploadfile").files[0];
+    const formData = new FormData();
+    formData.append("uploadfile", file);
+
+    const res = await fetch("/cgi-bin/UploadFW.cgi", {
+        method: "POST",
+        body: formData
+    });
+
+    console.log(await res.text());
+}
+function BackupConfig(){
+	if (confirm("Do you want to backup internal setting?")){
+		fetch('/cgi-bin/GetConfig.cgi', { method: 'POST' })
+		.then(response => response.blob())
+		.then(blob => {
+		  const url = window.URL.createObjectURL(blob);
+		  const a = document.createElement('a');
+		  a.href = url;
+		  a.download = "db.bin";  // suggested filename
+		  document.body.appendChild(a);
+		  a.click();
+		  a.remove();
+		  window.URL.revokeObjectURL(url);
+		})
+		.catch(err => alert("Error: " + err));
+	}
+}
+
+function reboot(){
+	if (confirm("Are you sure to reboot the system?")){
+		 fetch('/cgi-bin/SetAction.cgi?method=Reboot')
+		  .then(response => {
+			if (!response.ok) {
+			  throw new Error("Network response was not ok: " + response.status);
+			}
+			return response.text();
+		  })
+		  .then(data => {
+			console.log("Response:", data);
+			alert("System is rebooting!!");
+		  })
+		  .catch(err => console.error("Fetch error:", err));
+	}
+}
+
+function loaddefault(){
+	if (confirm("Are you sure to load  default the system?")){
+		fetch('/cgi-bin/SetAction.cgi?method=Loaddefault')
+		  .then(response => {
+			if (!response.ok) {
+			  throw new Error("Network response was not ok: " + response.status);
+			}
+			return response.text();
+		  })
+		  .then(data => {
+			console.log("Response:", data);
+			alert("System is load default!!");
+		  })
+		  .catch(err => console.error("Fetch error:", err));
+	}
+}
+</script>
+</html>

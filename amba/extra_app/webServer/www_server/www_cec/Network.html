@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network Settings</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f9;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 500px;
+        background: white;
+        margin: 40px auto;
+        padding: 25px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+    }
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #444;
+    }
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+    input:focus, select:focus {
+        border-color: #2c97de;
+        outline: none;
+        box-shadow: 0 0 5px rgba(44, 151, 222, 0.5);
+    }
+    .button-group {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .button-apply {
+        flex: 1;
+        padding: 12px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
+        color: white;
+        transition: background 0.3s ease;
+    }
+    .save-btn {
+        background-color: #28a745;
+    }
+    .save-btn:hover {
+        background-color: #218838;
+    }
+    .reset-btn {
+        background-color: #dc3545;
+    }
+    .reset-btn:hover {
+        background-color: #c82333;
+    }
+	.grayout {
+		opacity: 0.5;           /* Make it look faded */
+		pointer-events: none;    /* Disable clicks/interactions */
+	}
+	
+	#ntpFields {
+	  background: #f9fbff;             /* light background */
+	  border: 1px solid #cce0ff;       /* subtle blue border */
+	  border-radius: 10px;             /* rounded corners */
+	  padding: 20px;
+	  margin-top: 20px;
+	  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* soft shadow */
+	}
+
+	#ntpFields h3 {
+	  margin-top: 0;
+	  margin-bottom: 15px;
+	  font-size: 18px;
+	  color: #0056b3;                  /* darker blue title */
+	  border-bottom: 2px solid #007bff;
+	  padding-bottom: 5px;
+	}
+
+	#ntpFields label {
+	  display: block;
+	  margin-top: 12px;
+	  font-size: 14px;
+	  color: #444;
+	}
+
+	#ntpFields input,
+	#ntpFields select {
+	  width: 100%;
+	  padding: 10px;
+	  margin-top: 5px;
+	  border: 1px solid #ccc;
+	  border-radius: 6px;
+	  font-size: 14px;
+	  box-sizing: border-box;
+	}
+
+	#ntpFields input:focus,
+	#ntpFields select:focus {
+	  border-color: #007bff;
+	  outline: none;
+	  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+	}
+	
+	
+	  .btn-group {
+      display: inline-flex;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      padding: 0.8rem 1.2rem;
+      border: none;
+      background: #e0e0e0;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      font-size: 1rem;
+    }
+
+    .btn:not(:last-child) {
+      border-right: 1px solid #ccc;
+    }
+
+    .btn:hover {
+      background: #d0d0d0;
+    }
+
+    .btn.active {
+      background: #0077cc;
+      color: #fff;
+      font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Network Settings</h2>
+    <form id="networkForm">
+        <label for="dhcp">DHCP</label>
+        <select id="dhcp" name="dhcp" onchange="toggleStaticFields(this.value)">
+            <option value="on">Enabled</option>
+            <option value="off">Disabled</option>
+        </select>
+
+        <div id="staticFields">
+            <label for="ip">IP Address</label>
+            <input type="text" id="ip" name="ip" placeholder="192.168.1.100">
+
+            <label for="subnet">Subnet Mask</label>
+            <input type="text" id="subnet" name="subnet" placeholder="255.255.255.0">
+
+            <label for="gateway">Gateway</label>
+            <input type="text" id="gateway" name="gateway" placeholder="192.168.1.1">
+
+            <label for="dns">DNS Server</label>
+            <input type="text" id="dns" name="dns" placeholder="8.8.8.8">
+			
+        </div>
+
+		<div id="ntpFields">
+		  <h3>NTP Settings</h3>
+			<div style="display: flex; gap: 10px; margin-bottom: 10px;">
+				<label for="time_now">System Time:</label>
+				<span  id="time_now"></span>
+			</div>
+			  <div>
+			   <label for="timezone">Timezone</label>
+			  <select id="timezone" name="timezone">
+				<option value="auto">Auto</option>
+				<option value="-12">(GMT-12:00) Baker Island</option>
+				<option value="-11">(GMT-11:00) Niuē</option>
+				<option value="-10">(GMT-10:00) Kenya/Hawaii</option>
+				<option value="-9">(GMT-09:00) U.A.E/Dubai</option>
+				<option value="-8">(GMT-08:00) America/Washiton</option>
+				<option value="-7">(GMT-07:00) America/Idaho</option>
+				<option value="-6">(GMT-06:00) America/Texas</option>
+				<option value="-5">(GMT-05:00) America/New_York</option>
+				<option value="-4">(GMT-04:00) Guyana/Georgetown</option>
+				<option value="-3">(GMT-03:00) Argentina/Buenos Aires</option>
+				<option value="-2">(GMT-02:00) Solomon</option>
+				<option value="-1">(GMT-01:00) Portuguese/Azores</option>
+				<option value="0">(GMT) U.K/London</option>
+				<option value="1">(GMT+01:00) Italy/Roma</option>
+				<option value="2">(GMT+02:00) Egypt/Cairo</option>
+				<option value="3">(GMT+03:00) Kenya/Nairobi</option>
+				<option value="4">(GMT+04:00) U.A.E/Dubai</option>
+				<option value="5">(GMT+05:00) Pakistan/Karachi</option>
+				<option value="6">(GMT+06:00) Myanmar/Yangon</option>
+				<option value="7">(GMT+07:00) Vietnam/Hanoi</option>
+				<option value="8">(GMT+08:00) Taiwan/Taipei</option>
+				<option value="9">(GMT+09:00) Japan/Tokyo</option>
+				<option value="10">(GMT+10:00) Australia/Sydney</option>
+				<option value="11">(GMT+11:00) Solomon</option>
+				<option value="12">(GMT+12:00) New Zealand/Auckland</option>
+				
+				<!-- add more as needed -->
+			  </select>
+		 </div>
+		 
+		
+		 
+			  <div class="btn-group" id="modeGroup">
+				<button class="btn active" value="ntp" id="ntp_mode">NTP</button>
+				<button class="btn" value="manual" id="manual_mode">Manual</button>
+				
+			  </div>
+		<div id="ntp_section">	  
+		  <label for="ntpServer">NTP Server</label>
+		  <input type="text" id="ntp_server" name="ntpServer" placeholder="pool.ntp.org">
+		</div>
+		<div id="manual_section" style="display: flex; gap: 10px; margin-bottom: 10px;display:none">
+			<div style="display: flex; gap: 10px; margin-bottom: 10px;">
+				 <div>
+					<label for="year">Year:</label>
+					<input type="text" id="year" name="year" style="width:80px;" placeholder="2000">
+
+				</div>
+				<div>
+					<label for="month">Month:</label>
+					<input type="text" id="month" name="month" style="width:60px;" placeholder="01">
+				</div>
+				<div>
+					<label for="day">Day:</label>
+					<input type="text" id="day" name="day" style="width:60px;" placeholder="01">
+				</div>
+			</div>
+			<div style="display: flex; gap: 10px;">
+				<div>
+					<label for="hour">Hour:</label>
+					<input type="text" id="hour" name="hour" style="width:60px;" placeholder="00">
+				</div>
+				<div>
+					 <label for="minute">Minute:</label>
+					<input type="text" id="minute" name="minute" style="width:60px;" placeholder="00">
+				</div>
+			</div>
+		
+		</div>
+        <div class="button-group">
+            <button type="submit" class="button-apply save-btn">Save</button>
+            <button type="reset" class="button-apply reset-btn">Reset</button>
+        </div>
+    	</form>
+</div>
+
+<script>
+var dhcp=''
+var ip=''
+var subnet=''
+var gateway=''
+var dns=''
+var time_now=0;
+function toggle_ntp(mode){
+	if ( mode == "manual"){
+		document.getElementById('ntp_section').style.display='none'
+		document.getElementById('manual_section').style.display='block'
+	} else if(mode == "ntp")
+	{
+		document.getElementById('ntp_section').style.display='block'
+		document.getElementById('manual_section').style.display='none'
+	}
+	
+}
+
+function toggleStaticFields(value) {
+    const fields = document.getElementById("staticFields");
+    //fields.style.display = (value === "on") ? "none" : "block";
+	(value === "on") ? fields.classList.add('grayout') : fields.classList.remove('grayout');
+}
+
+function init_ntp (mode){
+	const group = document.getElementById("modeGroup");
+	const buttons = group.querySelectorAll(".btn");
+
+    buttons.forEach(btn => {
+		btn.classList.remove("active")
+		if (mode == btn.value){
+			btn.classList.add.add("active");
+		}
+	});
+    
+}
+
+function convertTimestamp()
+{
+	// Create a new JavaScript Date object based on the timestamp
+	// multiplied by 1000 so that the argument is in milliseconds, not seconds
+	let date = new Date(time_now * 1000);
+
+	let formattedUTC = date.getUTCFullYear() + "-" +
+                  String(date.getUTCMonth() + 1).padStart(2, '0') + "-" +
+                  String(date.getUTCDate()).padStart(2, '0') + " " +
+                  String(date.getUTCHours()).padStart(2, '0') + ":" +
+                  String(date.getUTCMinutes()).padStart(2, '0') + ":" +
+                  String(date.getUTCSeconds()).padStart(2, '0');
+
+	console.log(formattedUTC);  // 2023-09-01 00:00:00
+	  
+	  document.getElementById('time_now').textContent = formattedUTC;
+	time_now+=1;
+}
+document.getElementById("networkForm").addEventListener("submit", function(e) {
+    e.preventDefault();	
+	var getstr = "dhcp=" + document.getElementById('dhcp').value + "&" + "ip=" + document.getElementById('ip').value  + "&" + "subnet=" + document.getElementById('subnet').value + "&" + "gateway=" + document.getElementById('gateway').value + "&" + "dns=" + document.getElementById('dns').value 
+
+	fetch('/cgi-bin/SetNetwork.cgi?' + getstr)
+        .then(response => response.text())
+        .then(data => {
+            console.log("Response:", data);
+			alert("Settings saved!"); 
+        })
+        .catch(err => {console.error(err)
+			 alert("Settings Failure!"); 
+		});
+   
+});
+
+window.onload = () => {
+	
+    fetch('/cgi-bin/GetNetwork.cgi')
+        .then(response => response.text())
+        .then(data => {
+            console.log("Response:", data);
+            let params = new URLSearchParams(data);
+			document.getElementById('dhcp').value   = params.get('dhcp')   || '';
+			dhcp = params.get('dhcp')
+            document.getElementById('ip').value      = params.get('ip')      || '';
+            document.getElementById('subnet').value  = params.get('subnet')  || '';
+            document.getElementById('gateway').value = params.get('gateway') || '';
+            document.getElementById('dns').value     = params.get('dns')     || '';
+			if (document.getElementById('dhcp').value === "on"){
+				toggleStaticFields(document.getElementById('dhcp').value)
+			}
+			else if (document.getElementById('dhcp').value === "off")
+			{
+				toggleStaticFields(document.getElementById('dhcp').value)
+			}
+            //alert("Network settings loaded!");
+        })
+        .catch(err => console.error('Failed to load network settings:', err));
+	
+	 fetch('/cgi-bin/GetTime.cgi')
+        .then(response => response.text())
+        .then(data => {
+            console.log("Response:", data);
+            let params = new URLSearchParams(data);
+			console.log(typeof(params.get('timezone'))+params.get('timezone') )
+			document.getElementById('timezone').value   = params.get('timezone')   ;
+            document.getElementById('ntp_server').value      = params.get('ntp_server')      || '';
+			console.log(params.get('time_now'))
+			time_now = parseInt(params.get('time_now')) || '';
+			 
+			
+           // init_ntp(params.get('ntp_enable');
+		})		
+        .catch(err => console.error('Failed to load time settings:', err));
+		setInterval(convertTimestamp, 1000)
+	const group = document.getElementById("modeGroup");
+	const buttons = group.querySelectorAll(".btn");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+		toggle_ntp(btn.value)
+      });
+    });
+	
+};
+//document.addEventListener("DOMContentLoaded", toggleStaticFields(dhcp));
+</script>
+
+</body>
+</html>

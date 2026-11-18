@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Progress Bar Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f8f9fa;
+    }
+    .progress-container {
+      width: 100%;
+      max-width: 500px;
+      background: #e9ecef;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 25px;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #4cafef, #007bff);
+      text-align: center;
+      line-height: 25px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      transition: width 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <h2>Setting Progress</h2>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar">0%</div>
+  </div>
+
+  <br>
+  <!-- <button onclick="increaseProgress()">Increase</button> -->
+  <!-- <button onclick="resetProgress()">Reset</button> -->
+
+  <script>
+    let progress = 0;
+	function getProgress() {
+    fetch('/cgi-bin/GetProgress.cgi')
+        .then(res => res.text())
+        .then(data => {
+			//console.log()
+			if (data > 0 && progress < data) {
+				
+				const bar = document.getElementById("progress-bar");
+				progress +=1
+				bar.style.width = progress + "%";
+				bar.textContent = progress + "%";
+			} else if ( data == 100 ){
+				
+			}
+        })
+        .catch(err => console.error(err));
+	}
+
+/*
+    function updateProgress() {
+      const bar = document.getElementById("progress-bar");
+      bar.style.width = progress + "%";
+      bar.textContent = progress + "%";
+    }
+
+    function increaseProgress() {
+      if (progress < 100) {
+        progress += 10;
+        updateProgress();
+      }
+    }
+
+    function resetProgress() {
+      progress = 0;
+      updateProgress();
+    }
+*/
+	//send_upgrade();
+	function start_upload(){
+		  fetch('/cgi-bin/upgradeCecFW', { method: 'GET' });
+	}
+	start_upload();
+    setInterval(getProgress, 1000);
+	getProgress();
+  </script>
+</body>
+</html>

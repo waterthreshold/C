@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Device Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: #0077cc;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      <!-- justify-content: space-between; -->
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #0077cc;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.2rem;
+    }
+
+    .sensor-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .sensor-item {
+      background: #f1f5f9;
+      padding: 0.6rem 0.8rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sensor-label {
+      font-weight: bold;
+      color: #444;
+    }
+
+    .sensor-value {
+      color: #0077cc;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    button {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    button.primary {
+      background: #0077cc;
+      color: #fff;
+    }
+
+    button.primary:hover {
+      background: #005fa3;
+    }
+
+    button.secondary {
+      background: #e0e0e0;
+      color: #333;
+    }
+
+    button.secondary:hover {
+      background: #cfcfcf;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>Sensor</header>
+  <main>
+    <!-- Backup & Restore -->
+   
+
+    <!-- Temperature -->
+    <div class="card">
+      <h2>Temperature</h2>
+      <div class="sensor-list">
+        <div class="sensor-item">
+          <span class="sensor-label">Board Temp</span>
+          <span class="sensor-value" id="boardTemp"></span>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- ALS (Ambient Light Sensor) -->
+    <div class="card">
+      <h2>Ambient Light (ALS)</h2>
+      <div class="sensor-list" id="alsList">
+        <!-- Items will be injected dynamically -->
+      </div>
+     
+    </div>
+
+    <!-- Gyroscope -->
+    <div class="card">
+      <h2>Gyroscope</h2>
+      <div class="sensor-list" id="gyroList">
+        <!-- Items will be injected dynamically -->
+      </div>
+      
+    </div>
+	
+	<div class="card">
+      <h2>MCU</h2>
+		  <div class="sensor-list" id="mcuList">
+			<!-- Items will be injected dynamically -->
+		  </div>
+      
+    </div>
+  </main>
+  <footer>© 2025 Sensor UI</footer>
+
+  <script>
+    // Fake refresh temp
+    function refreshTemp() {
+		fetch('/cgi-bin/GetTemprature.cgi')
+			.then(response => response.text())
+			.then(data => {
+				console.log("Response:", data);
+				let params = new URLSearchParams(data);				  
+				document.getElementById('boardTemp').textContent = params.get('temp0')+ '°C ('+ params.get('temp1') + ')'
+		})
+		.catch(err => {
+		console.error(err);
+		
+		});
+		
+    }
+
+    // ALS dynamic add
+    let camCount = 0;
+    function addALS() {
+      
+      const  list = document.getElementById("alsList");
+      for (i=0;i<camCount;i++){ 
+		  div = document.createElement("div");
+		  div.className = "sensor-item";
+		  div.innerHTML = `<span class="sensor-label">ALS ${i}</span>
+						   <span class="sensor-value" id ="als_${i}">test ${i}</span>`;
+		  list.appendChild(div);
+	   }
+    }
+
+    
+    function addGyro() {
+     
+      const list = document.getElementById("gyroList");
+	  for (i=0;i<camCount; i++){ 
+		  div = document.createElement("div");
+		  div.className = "sensor-item";
+		  div.innerHTML = `<span class="sensor-label">Gyro ${i}</span>
+						   <span class="sensor-value" id ="gyro_${i}">test 1</span>`;
+		  list.appendChild(div);
+		}
+    }
+	
+	function refreshGyro (){
+		fetch('/cgi-bin/GetGyro.cgi')
+			.then(response => response.text())
+			.then(data => {
+				console.log("Response:", data);
+				let params = new URLSearchParams(data);
+				for (i=0;i<camCount;i++){
+					xyz=params.get('cam'+i+'_pos').split(",")
+					document.getElementById('gyro_'+i).textContent = 'X:' + xyz[0] + ' Y:' + xyz[1] + ' Z:' +xyz[2] 
+					
+				}
+				
+		})
+		.catch(err => {
+		console.error(err);
+		
+		});
+	}
+	function GetCam_num (){
+		fetch('/cgi-bin/GetGyro.cgi')
+			.then(response => response.text())
+			.then(data => {
+				console.log("Response:", data);
+				let params = new URLSearchParams(data);	
+					
+				 return params.get('cam'+i+'_pos')	
+				 
+					
+				
+		})
+		.catch(err => {
+			console.error(err);
+		
+		});
+	}
+	function loadMCU_info(){
+		const list = document.getElementById("mcuList");
+		fetch('/cgi-bin/GetMCU.cgi')
+			.then(response => response.text())
+			.then(data => {
+				console.log("Response:", data);
+				let params = new URLSearchParams(data);	
+				const mcuCount = parseInt(params.get("mcu_num"))
+				for (i=0;i < mcuCount;i++){	
+					div = document.createElement("div");
+				    div.className = "sensor-item";
+				    div.innerHTML = `<span class="sensor-label">MCU ${i+1}</span>
+								   <span class="sensor-value" id ="mcu_${i}">None</span>`;
+				    list.appendChild(div);
+					document.getElementById('mcu_'+i).textContent = params.get('mcu'+i+'_ver')
+				}								
+		})
+		.catch(err => {
+			console.error(err);
+		
+		});	
+	}
+    
+	function refreshAls (){
+		fetch('/cgi-bin/GetAlsLux.cgi')
+			.then(response => response.text())
+			.then(data => {
+				console.log("Response:", data);
+				let params = new URLSearchParams(data);
+				for (i=0;i<camCount;i++){
+				   const lux_raw=params.get('cam'+i+'_lux')
+					document.getElementById('als_'+i).textContent = lux_raw
+					
+				}
+				
+		})
+		.catch(err => {
+		console.error(err);
+		
+		});
+	}
+	window.onload = () => {
+		setInterval(refreshTemp, 1000)
+		setInterval(refreshGyro, 1000)
+		setInterval(refreshAls, 1000)
+		camCount  = 4
+		addALS()
+		addGyro()
+		loadMCU_info()
+	}
+  </script>
+</body>
+</html>
+	

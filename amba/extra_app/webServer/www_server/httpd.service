@@ -1,0 +1,13 @@
+[Unit]
+Description=Custom Apache HTTP Server
+ConditionFileIsExecutable=/bin/busybox
+After=network.target  NetworkManager.service
+
+[Service]
+ExecStart=/usr/sbin/httpd 
+Restart=always
+User=root
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target=multi-user.target

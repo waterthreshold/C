@@ -1,0 +1,1028 @@
+[2025-09-09 11:04:52.302] # cec_bosch_reliability_function.sh BitstreamDiff
+[2025-09-09 11:04:52.436] /usr/local/bin/cec_init.sh: line 142: VO: not found
+[2025-09-09 11:04:52.443] /bin:/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/bin/X11:/usr/local/bin:/usr/local/sbin
+[2025-09-09 11:04:52.463] Init without VIN drivers...
+[2025-09-09 11:04:52.463] Default init without lens driver
+[2025-09-09 11:04:52.569] Use default settings
+[2025-09-09 11:04:52.574] map_size = 0xb00000, nr_item = 9
+[2025-09-09 11:04:52.574] addr_offset = 0x00000000, filename = orccode.bin
+[2025-09-09 11:04:52.574] addr_offset = 0x00200000, filename = orcvin.bin
+[2025-09-09 11:04:52.575] addr_offset = 0x00300000, filename = orcidsp0.bin
+[2025-09-09 11:04:52.575] addr_offset = 0x00500000, filename = orcidsp1.bin
+[2025-09-09 11:04:52.575] addr_offset = 0x00700000, filename = orcme0.bin
+[2025-09-09 11:04:52.575] addr_offset = 0x00740000, filename = orcme1.bin
+[2025-09-09 11:04:52.575] addr_offset = 0x00780000, filename = orcmdxf0.bin
+[2025-09-09 11:04:52.576] addr_offset = 0x007c0000, filename = orcmdxf1.bin
+[2025-09-09 11:04:52.576] addr_offset = 0x00800000, filename = default_binary.bin
+[2025-09-09 11:04:52.576] mmap returns 0x7f8b5e0000
+[2025-09-09 11:04:52.576] loading /lib/firmware/orccode.bin...addr = 0x7f8b5e0000, size = 0x1158fc
+[2025-09-09 11:04:52.579] loading /lib/firmware/orcvin.bin...addr = 0x7f8b7e0000, size = 0x7adda
+[2025-09-09 11:04:52.579] loading /lib/firmware/orcidsp0.bin...addr = 0x7f8b8e0000, size = 0x157a40
+[2025-09-09 11:04:52.580] loading /lib/firmware/orcidsp1.bin...addr = 0x7f8bae0000, size = 0x157a40
+[2025-09-09 11:04:52.582] loading /lib/firmware/orcme0.bin...addr = 0x7f8bce0000, size = 0xa2a8
+[2025-09-09 11:04:52.582] loading /lib/firmware/orcme1.bin...addr = 0x7f8bd20000, size = 0xa2a8
+[2025-09-09 11:04:52.583] loading /lib/firmware/orcmdxf0.bin...addr = 0x7f8bd60000, size = 0x1b4c4
+[2025-09-09 11:04:52.585] loading /lib/firmware/orcmdxf1.bin...addr = 0x7f8bda0000, size = 0x1b428
+[2025-09-09 11:04:52.585] loading /lib/firmware/default_binary.bin...addr = 0x7f8bde0000, size = 0x7b380
+[2025-09-09 11:04:52.585] ===============================================
+[2025-09-09 11:04:52.585] ucode (CV5) version = 2024/08/15 02:19:33 (hash : 0x18743a66)
+[2025-09-09 11:04:52.590]     Ucode generation : Third (New)
+[2025-09-09 11:04:52.590] ===============================================
+[2025-09-09 11:04:57.027] >>> Connection established with kernel.
+[2025-09-09 11:04:59.029] enter IDLE done
+[2025-09-09 11:04:59.036] 
+[2025-09-09 11:04:59.036] Find Vin Source imx838 it supports:
+[2025-09-09 11:04:59.036] Default mode:
+[2025-09-09 11:04:59.036] 	3840x2160P(Linear)            	60.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:04:59.036] ------------:
+[2025-09-09 11:04:59.388] 	3840x2160P(Linear)            	60.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:04:59.388] 	3840x2160P(HDR 2x)(L+S)       	30.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:04:59.388] 	3840x2160P(HDR 2x)(HCG+LCG)   	30.000	RGB	10bits	16:9	AUTO	rev[0]
+[2025-09-09 11:04:59.821] 
+[2025-09-09 11:04:59.821] Find Vin Source imx838 it supports:
+[2025-09-09 11:04:59.821] Default mode:
+[2025-09-09 11:04:59.821] 	3840x2160P(Linear)            	60.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:04:59.821] ------------:
+[2025-09-09 11:05:00.190] 	3840x2160P(Linear)            	60.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:00.191] 	3840x2160P(HDR 2x)(L+S)       	30.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:00.191] 	3840x2160P(HDR 2x)(HCG+LCG)   	30.000	RGB	10bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:00.645] 
+[2025-09-09 11:05:00.645] Find Vin Source imx838 it supports:
+[2025-09-09 11:05:00.645] Default mode:
+[2025-09-09 11:05:00.645] 	3840x2160P(Linear)            	60.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:00.645] ------------:
+[2025-09-09 11:05:00.955] 	3840x2160P(Linear)            	60.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:00.955] 	3840x2160P(HDR 2x)(L+S)       	30.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:00.957] 	3840x2160P(HDR 2x)(HCG+LCG)   	30.000	RGB	10bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:01.338] 
+[2025-09-09 11:05:01.338] Find Vin Source imx838 it supports:
+[2025-09-09 11:05:01.338] Default mode:
+[2025-09-09 11:05:01.338] 	3840x2160P(Linear)            	60.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:01.338] ------------:
+[2025-09-09 11:05:01.671] 	3840x2160P(Linear)            	60.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:01.676] 	3840x2160P(HDR 2x)(L+S)       	30.000	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:01.676] 	3840x2160P(HDR 2x)(HCG+LCG)   	30.000	RGB	10bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:02.309] Target vsrc map [0xf], active vsrc map [0x0]Active src 0's mode is:
+[2025-09-09 11:05:02.309] 	3840x2160P(Linear)            	30.000(max:60.000)	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:02.309] Active src 1's mode is:
+[2025-09-09 11:05:02.309] 	3840x2160P(Linear)            	30.000(max:60.000)	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:02.309] Active src 2's mode is:
+[2025-09-09 11:05:02.309] 	3840x2160P(Linear)            	30.000(max:60.000)	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:02.309] Active src 3's mode is:
+[2025-09-09 11:05:02.309] 	3840x2160P(Linear)            	30.000(max:60.000)	RGB	12bits	16:9	AUTO	rev[0]
+[2025-09-09 11:05:02.311] init_vin done
+[2025-09-09 11:05:02.319] >>> AAA prepare start.
+[2025-09-09 11:05:02.336] system_info->boot_mode=0
+[2025-09-09 11:05:02.336] system mode: 0, dsp mode 0
+[2025-09-09 11:05:02.338] ik_init_mode=0
+[2025-09-09 11:05:02.340] [IK_version] V554107160.52 C554107160.75
+[2025-09-09 11:05:02.348] Img NNCtrl Version:[1.1.1], mod time: 0x20230908
+[2025-09-09 11:05:02.356] img_lib init done(0x16d6c00,0x0,0x0,0x0)
+[2025-09-09 11:05:02.398] >>> img algo lib version : 66048 
+[2025-09-09 11:05:02.398] 	Last updated time: 20240122
+[2025-09-09 11:05:02.404] >>> [chan-0]ADJ parameter version : 3 
+[2025-09-09 11:05:02.404] 	Last updated date: 20250303
+[2025-09-09 11:05:02.404] 	Last updated time: 0
+[2025-09-09 11:05:02.404] >>> [chan-0]AEB parameter version : 1 
+[2025-09-09 11:05:02.404] 	Last updated date: 134febf
+[2025-09-09 11:05:02.404] 	Last updated time: 0
+[2025-09-09 11:05:02.404] >>> [chan-1]ADJ parameter version : 3 
+[2025-09-09 11:05:02.404] 	Last updated date: 20250303
+[2025-09-09 11:05:02.404] 	Last updated time: 0
+[2025-09-09 11:05:02.404] >>> [chan-1]AEB parameter version : 1 
+[2025-09-09 11:05:02.404] 	Last updated date: 134febf
+[2025-09-09 11:05:02.404] 	Last updated time: 0
+[2025-09-09 11:05:02.405] >>> [chan-2]ADJ parameter version : 3 
+[2025-09-09 11:05:02.405] 	Last updated date: 20250303
+[2025-09-09 11:05:02.405] 	Last updated time: 0
+[2025-09-09 11:05:02.405] >>> [chan-2]AEB parameter version : 1 
+[2025-09-09 11:05:02.405] 	Last updated date: 134febf
+[2025-09-09 11:05:02.423] 	Last updated time: 0
+[2025-09-09 11:05:02.423] >>> [chan-3]ADJ parameter version : 3 
+[2025-09-09 11:05:02.423] 	Last updated date: 20250303
+[2025-09-09 11:05:02.423] 	Last updated time: 0
+[2025-09-09 11:05:02.423] >>> [chan-3]AEB parameter version : 1 
+[2025-09-09 11:05:02.423] 	Last updated date: 134febf
+[2025-09-09 11:05:02.423] 	Last updated time: 0
+[2025-09-09 11:05:02.447] >>> AAA prepare done.
+[2025-09-09 11:05:02.726] init 3A done
+[2025-09-09 11:05:02.726] loop start now
+[2025-09-09 11:05:02.729] [Amage] launch_amage_server!!!
+[2025-09-09 11:05:02.764] >>> Amage server start done.
+[2025-09-09 11:05:02.764] >>> AAA start done.
+[2025-09-09 11:05:02.772] enable preview done
+[2025-09-09 11:05:03.772] resolution 3840x2160
+[2025-09-09 11:05:03.861] Start encoding for stream 0x1 successfully
+[2025-09-09 11:05:03.865] resolution 3840x2160
+[2025-09-09 11:05:03.964] Start encoding for stream 0x2 successfully
+[2025-09-09 11:05:03.971] resolution 3840x2160
+[2025-09-09 11:05:04.068] Start encoding for stream 0x4 successfully
+[2025-09-09 11:05:04.073] resolution 3840x2160
+[2025-09-09 11:05:04.168] Start encoding for stream 0x8 successfully
+[2025-09-09 11:05:09.185] Stream A NONE: 
+[2025-09-09 11:05:09.185] Stream B NONE: 
+[2025-09-09 11:05:09.185] Stream C NONE: 
+[2025-09-09 11:05:09.185] Stream D NONE: 
+[2025-09-09 11:05:09.185] Stream E NONE: 
+[2025-09-09 11:05:09.185] Stream F NONE: 
+[2025-09-09 11:05:09.185] Stream G NONE: 
+[2025-09-09 11:05:09.185] Stream H NONE: 
+[2025-09-09 11:05:09.185] Stream I NONE: 
+[2025-09-09 11:05:09.185] Stream J NONE: 
+[2025-09-09 11:05:09.186] Stream K NONE: 
+[2025-09-09 11:05:09.186] Stream L NONE: 
+[2025-09-09 11:05:09.192] Stream M NONE: 
+[2025-09-09 11:05:09.193] Stream N NONE: 
+[2025-09-09 11:05:09.193] Stream O NONE: 
+[2025-09-09 11:05:09.193] Stream P NONE: 
+[2025-09-09 11:05:09.193] Stream Q NONE: 
+[2025-09-09 11:05:09.193] Stream R NONE: 
+[2025-09-09 11:05:09.193] Stream S NONE: 
+[2025-09-09 11:05:09.193] Stream T NONE: 
+[2025-09-09 11:05:09.193] Do DRAM test for all active streams, when no stream map is specified.
+[2025-09-09 11:05:09.215] bsb_mem = 0x7faf820000, size = 0x2000000
+[2025-09-09 11:05:09.216] mask is 0xf
+[2025-09-09 11:05:09.216] stream A, state: 1
+[2025-09-09 11:05:09.216] stream B, state: 2
+[2025-09-09 11:05:09.216] stream C, state: 4
+[2025-09-09 11:05:09.216] stream D, state: 8
+[2025-09-09 11:05:09.216] stream E, state: 0
+[2025-09-09 11:05:09.216] stream F, state: 0
+[2025-09-09 11:05:09.216] stream G, state: 0
+[2025-09-09 11:05:09.216] stream H, state: 0
+[2025-09-09 11:05:09.216] stream I, state: 0
+[2025-09-09 11:05:09.216] stream J, state: 0
+[2025-09-09 11:05:09.218] stream K, state: 0
+[2025-09-09 11:05:09.219] stream L, state: 0
+[2025-09-09 11:05:09.219] stream M, state: 0
+[2025-09-09 11:05:09.219] stream N, state: 0
+[2025-09-09 11:05:09.219] stream O, state: 0
+[2025-09-09 11:05:09.219] stream P, state: 0
+[2025-09-09 11:05:09.219] stream Q, state: 0
+[2025-09-09 11:05:09.219] stream R, state: 0
+[2025-09-09 11:05:09.219] stream S, state: 0
+[2025-09-09 11:05:09.244] stream T, state: 0
+[2025-09-09 11:05:09.244] DRAM test pre check, OK...
+[2025-09-09 11:05:09.244] 
+[2025-09-09 11:05:09.244] new session file name [_A_0102054512_d1410be7.h265], fd [99] 
+[2025-09-09 11:05:09.244] 
+[2025-09-09 11:05:09.244] new session file name [_C_0102054512_43f121c1.h265], fd [99] 
+[2025-09-09 11:05:09.244] 
+[2025-09-09 11:05:09.244] new session file name [_B_0102054512_3aa0fc9a.h265], fd [99] 
+[2025-09-09 11:05:09.244] 
+[2025-09-09 11:05:09.244] new session file name [_D_0102054512_39dea1cf.h265], fd [99] 
+[2025-09-09 11:05:09.253] lwmedia: version 1.4.5, date 2024-1-11
+[2025-09-09 11:05:09.268] stream C:	30 frames, 375.17 fps,             512367	bytes, 48160 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:09.287] [Notice]	[CLWMDEngine,0]	use default streaming server (RTSP) port 554
+[2025-09-09 11:05:09.288] [Config]	[CLWMDEngine,0]	streaming server port 554, video enable 1, audio enable 0
+[2025-09-09 11:05:09.296] stream B:	30 frames, 282.00 fps,             509285	bytes, 35721 kbps, enc_pipe_time [ 2839: 5893]
+[2025-09-09 11:05:09.305] [Warn  ]	[CVideoEncoder,0]	video encoder before GetModuleConfig(index = 0x03800000)
+[2025-09-09 11:05:09.305] 					[trace] file: filters/video_encoder.cpp.
+[2025-09-09 11:05:09.305] 					function: CVideoEncoderV2, line 110
+[2025-09-09 11:05:09.305] stream D:	30 frames, 270.17 fps,             505123	bytes, 33890 kbps, enc_pipe_time [ 3404: 6451]
+[2025-09-09 11:05:09.305] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.305] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.305] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.306] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.306] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.306] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.336] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.336] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.336] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.337] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.337] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.337] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.338] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.338] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.364] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.364] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.364] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.364] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.364] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.366] [Notice]	component(08800000) exist in multi pipelines, default first pipeline(72800000).
+[2025-09-09 11:05:09.367] [Config]	[CLWMDEngine,0]	setupPipelines: pb pipelines 0, rec pipelines 0, streaming pipelines 20
+[2025-09-09 11:05:09.367] [Notice]	[CLWMDEngine,0]	doRunProcessing(), start
+[2025-09-09 11:05:09.367] [Config]	[CAmbaVideoEncoder,0]	mStreamID ffffffff, skipSEI 1
+[2025-09-09 11:05:09.380] 		[mmap]: bsb_mem = 0x7f84000000, size = 0x2000000
+[2025-09-09 11:05:09.380] [Config]	[CAmbaVideoEncoder,0]	vin framerate: 30.000000, 90000/3000
+[2025-09-09 11:05:09.380] [Notice]	[CLWMDEngine,0]	doRunProcessing(), done
+[2025-09-09 11:05:09.380] [Notice]	[CLWMDEngine,0]	doStart(), start
+[2025-09-09 11:05:09.380] [Notice]	[CLWMDEngine,0]	doStart(): done
+[2025-09-09 11:05:09.380] [Config]	[CAmbaVideoEncoder,0]	stream [0], get framerate num 90000, den 3000, fps 30.000000
+[2025-09-09 11:05:09.380] [Config]	[CAmbaVideoEncoder,0]	stream[0] start, video format 20
+[2025-09-09 11:05:09.380] [Config]	[CAmbaVideoEncoder,0]	stream [2], get framerate num 90000, den 3000, fps 30.000000
+[2025-09-09 11:05:09.380] [Config]	[CAmbaVideoEncoder,0]	stream[2] start, video format 20
+[2025-09-09 11:05:09.381] [Config]	[CAmbaVideoEncoder,0]	stream [1], get framerate num 90000, den 3000, fps 30.000000
+[2025-09-09 11:05:09.392] [Config]	[CAmbaVideoEncoder,0]	stream[1] start, video format 20
+[2025-09-09 11:05:09.392] [Config]	[CAmbaVideoEncoder,0]	stream [3], get framerate num 90000, den 3000, fps 30.000000
+[2025-09-09 11:05:09.392] [Config]	[CAmbaVideoEncoder,0]	stream[3] start, video format 20
+[2025-09-09 11:05:10.267] Stream A and stream C's tile 0 size[344, 299] is different, statistic count: 1
+[2025-09-09 11:05:10.635] Stream A and stream C's tile 0 size[4686, 5460] is different, statistic count: 2
+[2025-09-09 11:05:12.028] stream B:	90 frames, 25.01 fps,            1203866	bytes,  2631 kbps, enc_pipe_time [ 2839: 5893]
+[2025-09-09 11:05:12.100] Stream A and stream C's type [3, 1] is different, statistic count: 3
+[2025-09-09 11:05:12.167] Stream A and stream C's tile 0 size[4684, 4648] is different, statistic count: 4
+[2025-09-09 11:05:12.400] Stream A and stream C's tile 0 size[388, 371] is different, statistic count: 5
+[2025-09-09 11:05:13.658] stream A:	120 frames, 18.76 fps,            1531282	bytes,  1556 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:17.432] stream D:	150 frames, 9.38 fps,            1950135	bytes,  1166 kbps, enc_pipe_time [ 2872: 6451]
+[2025-09-09 11:05:18.323] stream A:	150 frames, 6.43 fps,            2044036	bytes,   859 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:18.330] stream C:	150 frames, 6.17 fps,            1902165	bytes,   887 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:18.625] stream B:	150 frames, 5.77 fps,            2134290	bytes,   956 kbps, enc_pipe_time [ 2839: 6382]
+[2025-09-09 11:05:21.123] stream A:	180 frames, 10.72 fps,            2555462	bytes,  1383 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:21.688] stream B:	180 frames, 9.79 fps,            2683832	bytes,  1441 kbps, enc_pipe_time [ 2839: 6386]
+[2025-09-09 11:05:24.360] Stream A and stream C's tile 0 size[4635, 4620] is different, statistic count: 6
+[2025-09-09 11:05:24.926] Stream A and stream C's tile 0 size[386, 299] is different, statistic count: 7
+[2025-09-09 11:05:25.787] stream A:	240 frames, 18.01 fps,            3250492	bytes,   981 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:26.026] Stream A and stream C's tile 0 size[6115, 4450] is different, statistic count: 8
+[2025-09-09 11:05:26.259] Stream A and stream C's tile 0 size[280, 378] is different, statistic count: 9
+[2025-09-09 11:05:26.359] stream D:	270 frames, 21.44 fps,            3586868	bytes,  2755 kbps, enc_pipe_time [ 2870: 6451]
+[2025-09-09 11:05:26.759] Stream A and stream C's tile 0 size[4890, 3730] is different, statistic count: 10
+[2025-09-09 11:05:27.053] stream A:	270 frames, 23.69 fps,            3654475	bytes,  2484 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:27.191] Stream A and stream C's tile 0 size[1525, 1724] is different, statistic count: 11
+[2025-09-09 11:05:27.393] stream C:	270 frames, 16.66 fps,            3509356	bytes,  2054 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:27.458] stream C:	270 frames, 16.66 fps,            3511530	bytes,  2054 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:27.959] AVG FPS = 15.98 fps
+[2025-09-09 11:05:27.959] stream D:	300 frames, 18.75 fps,            3959031	bytes,  1744 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:05:28.184] AVG FPS = 0.00 fps
+[2025-09-09 11:05:28.185] stream A:	300 frames, 26.50 fps,            3930220	bytes,  1902 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:28.792] AVG FPS = 15.30 fps
+[2025-09-09 11:05:28.887] AVG FPS = 15.23 fps
+[2025-09-09 11:05:28.887] stream B:	300 frames, 18.75 fps,            4240751	bytes,  1365 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:29.158] Stream A and stream C's tile 0 size[5200, 5133] is different, statistic count: 12
+[2025-09-09 11:05:29.258] Stream A and stream C's tile 0 size[457, 328] is different, statistic count: 13
+[2025-09-09 11:05:29.558] Stream A and stream C's tile 0 size[5126, 5114] is different, statistic count: 14
+[2025-09-09 11:05:29.924] Stream A and stream C's tile 0 size[289, 322] is different, statistic count: 15
+[2025-09-09 11:05:30.191] Stream A and stream C's tile 0 size[354, 429] is different, statistic count: 16
+[2025-09-09 11:05:30.285] stream B:	330 frames, 21.46 fps,            4669288	bytes,  2472 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:30.852] stream A:	360 frames, 22.52 fps,            4593085	bytes,  1777 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:32.724] Stream A and stream C's tile 0 size[372, 305] is different, statistic count: 17
+[2025-09-09 11:05:32.725] Stream A and stream C's tile 0 size[372, 305] is different, statistic count: 18
+[2025-09-09 11:05:34.356] Stream A and stream C's tile 0 size[4649, 4732] is different, statistic count: 19
+[2025-09-09 11:05:35.152] stream B:	420 frames, 20.44 fps,            5563771	bytes,  1493 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:36.415] stream B:	450 frames, 23.72 fps,            5810353	bytes,  1617 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:36.754] Stream A and stream C's tile 0 size[4500, 4753] is different, statistic count: 20
+[2025-09-09 11:05:37.387] Stream A and stream C's tile 0 size[302, 299] is different, statistic count: 21
+[2025-09-09 11:05:37.488] stream D:	480 frames, 21.43 fps,            6100932	bytes,  3064 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:05:37.755] Stream A and stream C's tile 0 size[4522, 3485] is different, statistic count: 22
+[2025-09-09 11:05:37.814] stream B:	480 frames, 21.44 fps,            6268357	bytes,  2557 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:38.621] Stream A and stream C's tile 0 size[4558, 4640] is different, statistic count: 23
+[2025-09-09 11:05:38.788] stream C:	480 frames, 19.57 fps,            5610923	bytes,  1677 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:39.653] Stream A and stream C's tile 0 size[283, 425] is different, statistic count: 24
+[2025-09-09 11:05:40.320] stream C:	510 frames, 19.58 fps,            5940253	bytes,  1750 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:41.419] Stream A and stream C's tile 0 size[3520, 4908] is different, statistic count: 25
+[2025-09-09 11:05:42.652] Stream A and stream C's tile 0 size[288, 275] is different, statistic count: 26
+[2025-09-09 11:05:42.657] Stream A and stream C's tile 0 size[288, 275] is different, statistic count: 27
+[2025-09-09 11:05:42.713] AVG FPS = 20.65 fps
+[2025-09-09 11:05:42.785] Stream A and stream C's tile 2 size[250, 240] is different, statistic count: 28
+[2025-09-09 11:05:42.919] stream C:	570 frames, 23.70 fps,            6512171	bytes,  2103 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:43.052] Stream A and stream C's tile 0 size[242, 291] is different, statistic count: 29
+[2025-09-09 11:05:43.280] AVG FPS = 20.84 fps
+[2025-09-09 11:05:43.280] stream B:	600 frames, 22.49 fps,            7671380	bytes,  1988 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:43.352] AVG FPS = 19.49 fps
+[2025-09-09 11:05:43.352] stream D:	600 frames, 21.44 fps,            7446986	bytes,  2181 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:05:43.784] Stream A and stream C's tile 0 size[297, 282] is different, statistic count: 30
+[2025-09-09 11:05:44.385] AVG FPS = 19.24 fps
+[2025-09-09 11:05:44.386] stream C:	600 frames, 20.45 fps,            6759416	bytes,  1287 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:44.451] Stream A and stream C's tile 0 size[286, 273] is different, statistic count: 31
+[2025-09-09 11:05:44.519] Stream A and stream C's tile 0 size[393, 289] is different, statistic count: 32
+[2025-09-09 11:05:44.685] stream D:	630 frames, 22.52 fps,            7859006	bytes,  2537 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:05:45.185] Stream A and stream C's tile 0 size[290, 346] is different, statistic count: 33
+[2025-09-09 11:05:45.445] stream A:	660 frames, 22.49 fps,            8251681	bytes,  2637 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:45.517] Stream A and stream C's tile 0 size[322, 269] is different, statistic count: 34
+[2025-09-09 11:05:45.546] stream B:	660 frames, 28.13 fps,            8493514	bytes,  2768 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:45.817] Stream A and stream C's tile 0 size[3464, 3518] is different, statistic count: 35
+[2025-09-09 11:05:46.117] Stream A and stream C's tile 0 size[397, 286] is different, statistic count: 36
+[2025-09-09 11:05:46.185] Stream A and stream C's tile 0 size[319, 350] is different, statistic count: 37
+[2025-09-09 11:05:46.778] stream A:	690 frames, 22.51 fps,            8625482	bytes,  2262 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:46.813] stream B:	690 frames, 23.71 fps,            8896883	bytes,  2509 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:46.984] Stream A and stream C's tile 0 size[358, 284] is different, statistic count: 38
+[2025-09-09 11:05:47.050] Stream A and stream C's tile 0 size[409, 302] is different, statistic count: 39
+[2025-09-09 11:05:47.052] stream C:	660 frames, 21.45 fps,            7593136	bytes,  1984 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:47.316] Stream A and stream C's tile 0 size[300, 275] is different, statistic count: 40
+[2025-09-09 11:05:47.483] stream D:	690 frames, 21.45 fps,            8615506	bytes,  2004 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:05:47.493] stream D:	690 frames, 21.45 fps,            8626454	bytes,  2004 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:05:47.616] Stream A and stream C's tile 0 size[4775, 4879] is different, statistic count: 41
+[2025-09-09 11:05:47.878] stream B:	720 frames, 28.16 fps,            9231828	bytes,  2573 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:48.111] stream A:	720 frames, 22.50 fps,            9140608	bytes,  2908 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:48.217] Stream A and stream C's tile 0 size[3580, 4999] is different, statistic count: 42
+[2025-09-09 11:05:48.449] stream C:	690 frames, 21.45 fps,            7986829	bytes,  2200 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:48.583] Stream A and stream C's tile 0 size[288, 306] is different, statistic count: 43
+[2025-09-09 11:05:48.684] stream D:	720 frames, 24.99 fps,            8934351	bytes,  2070 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:05:48.917] Stream A and stream C's tile 0 size[308, 376] is different, statistic count: 44
+[2025-09-09 11:05:49.315] Stream A and stream C's tile 0 size[291, 332] is different, statistic count: 45
+[2025-09-09 11:05:51.249] stream C:	750 frames, 22.50 fps,            8634628	bytes,  1686 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:51.514] Stream A and stream C's tile 0 size[428, 265] is different, statistic count: 46
+[2025-09-09 11:05:51.648] Stream A and stream C's tile 0 size[301, 331] is different, statistic count: 47
+[2025-09-09 11:05:52.049] Stream A and stream C's tile 0 size[296, 261] is different, statistic count: 48
+[2025-09-09 11:05:52.115] Stream A and stream C's tile 0 size[301, 292] is different, statistic count: 49
+[2025-09-09 11:05:52.143] stream B:	810 frames, 19.56 fps,           10531694	bytes,  2726 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:52.440] stream A:	810 frames, 22.51 fps,           10338577	bytes,  2824 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:52.481] Stream A and stream C's tile 0 size[4339, 3430] is different, statistic count: 50
+[2025-09-09 11:05:52.681] Stream A and stream C's tile 0 size[4600, 3539] is different, statistic count: 51
+[2025-09-09 11:05:53.150] stream D:	810 frames, 20.44 fps,           10033164	bytes,  2541 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:05:53.340] stream B:	840 frames, 25.03 fps,           10906362	bytes,  2501 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:53.647] Stream A and stream C's tile 0 size[445, 302] is different, statistic count: 52
+[2025-09-09 11:05:54.480] Stream A and stream C's tile 0 size[4730, 3509] is different, statistic count: 53
+[2025-09-09 11:05:54.873] stream B:	870 frames, 19.58 fps,           11144800	bytes,  1247 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:55.241] stream A:	870 frames, 20.46 fps,           11010791	bytes,  1608 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:05:55.513] stream C:	840 frames, 20.46 fps,            9597940	bytes,  1215 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:57.340] AVG FPS = 21.34 fps
+[2025-09-09 11:05:57.340] stream B:	900 frames, 12.17 fps,           11543184	bytes,  1261 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:05:57.641] AVG FPS = 20.10 fps
+[2025-09-09 11:05:58.046] Stream A and stream C's tile 0 size[292, 403] is different, statistic count: 54
+[2025-09-09 11:05:58.679] AVG FPS = 19.57 fps
+[2025-09-09 11:05:58.680] stream D:	900 frames, 14.07 fps,           11004619	bytes,   935 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:05:58.878] Stream A and stream C's type [1, 3] is different, statistic count: 55
+[2025-09-09 11:05:59.245] AVG FPS = 20.19 fps
+[2025-09-09 11:05:59.251] stream C:	900 frames, 21.43 fps,           10295687	bytes,  2080 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:05:59.311] Stream A and stream C's tile 0 size[311, 477] is different, statistic count: 56
+[2025-09-09 11:05:59.743] Stream A and stream C's tile 0 size[4458, 3560] is different, statistic count: 57
+[2025-09-09 11:06:00.044] Stream A and stream C's tile 0 size[284, 401] is different, statistic count: 58
+[2025-09-09 11:06:00.111] Stream A and stream C's tile 0 size[292, 312] is different, statistic count: 59
+[2025-09-09 11:06:00.139] stream B:	960 frames, 20.45 fps,           12230966	bytes,  1896 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:06:01.177] Stream A and stream C's tile 0 size[277, 307] is different, statistic count: 60
+[2025-09-09 11:06:01.544] Stream A and stream C's tile 0 size[4666, 3617] is different, statistic count: 61
+[2025-09-09 11:06:01.910] Stream A and stream C's tile 0 size[303, 278] is different, statistic count: 62
+[2025-09-09 11:06:02.277] Stream A and stream C's tile 0 size[4646, 5823] is different, statistic count: 63
+[2025-09-09 11:06:02.870] stream B:	1020 frames, 22.51 fps,           12916356	bytes,  2187 kbps, enc_pipe_time [ 2839: 6391]
+[2025-09-09 11:06:02.944] stream D:	990 frames, 23.69 fps,           11713487	bytes,  1329 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:03.903] stream A:	1020 frames, 15.52 fps,           12699475	bytes,  1367 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:04.042] stream C:	990 frames, 14.53 fps,           11464956	bytes,  2268 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:04.676] stream D:	1020 frames, 17.32 fps,           12249760	bytes,  2337 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:04.976] Stream A and stream C's tile 0 size[324, 280] is different, statistic count: 64
+[2025-09-09 11:06:05.170] stream A:	1050 frames, 23.69 fps,           13036034	bytes,  2075 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:05.443] stream C:	1020 frames, 21.43 fps,           12037420	bytes,  3130 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:05.776] Stream A and stream C's tile 0 size[296, 342] is different, statistic count: 65
+[2025-09-09 11:06:06.776] stream C:	1050 frames, 22.50 fps,           12401280	bytes,  2115 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:07.874] Stream A and stream C's type [1, 3] is different, statistic count: 66
+[2025-09-09 11:06:08.707] Stream A and stream C's tile 0 size[388, 321] is different, statistic count: 67
+[2025-09-09 11:06:08.807] Stream A and stream C's tile 0 size[4546, 4518] is different, statistic count: 68
+[2025-09-09 11:06:09.006] Stream A and stream C's tile 0 size[4919, 4533] is different, statistic count: 69
+[2025-09-09 11:06:09.174] Stream A and stream C's tile 0 size[311, 275] is different, statistic count: 70
+[2025-09-09 11:06:10.506] Stream A and stream C's tile 0 size[313, 303] is different, statistic count: 71
+[2025-09-09 11:06:11.133] AVG FPS = 21.75 fps
+[2025-09-09 11:06:11.134] stream B:	1200 frames, 20.45 fps,           15532338	bytes,  2271 kbps, enc_pipe_time [ 2839: 6392]
+[2025-09-09 11:06:11.539] Stream A and stream C's tile 0 size[4841, 4849] is different, statistic count: 72
+[2025-09-09 11:06:12.899] AVG FPS = 19.66 fps
+[2025-09-09 11:06:12.966] stream A:	1200 frames, 15.01 fps,           14922248	bytes,  1426 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:13.166] stream A:	1200 frames, 15.01 fps,           14934816	bytes,  1426 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:14.271] Stream A and stream C's tile 0 size[3551, 5807] is different, statistic count: 73
+[2025-09-09 11:06:15.137] AVG FPS = 18.23 fps
+[2025-09-09 11:06:15.137] stream D:	1200 frames, 11.26 fps,           14013260	bytes,  1173 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:15.137] Stream A and stream C's tile 0 size[5039, 5633] is different, statistic count: 74
+[2025-09-09 11:06:15.165] stream A:	1230 frames, 13.24 fps,           15373450	bytes,  1567 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:15.597] stream B:	1260 frames, 18.76 fps,           16021460	bytes,  1307 kbps, enc_pipe_time [ 2839: 6392]
+[2025-09-09 11:06:15.904] AVG FPS = 18.01 fps
+[2025-09-09 11:06:15.904] stream C:	1200 frames, 18.76 fps,           13754983	bytes,  1377 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:16.297] stream A:	1260 frames, 26.52 fps,           15738416	bytes,  2625 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:16.931] stream B:	1290 frames, 22.51 fps,           16447223	bytes,  2496 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:17.003] Stream A and stream C's tile 0 size[4964, 4657] is different, statistic count: 75
+[2025-09-09 11:06:17.336] Stream A and stream C's tile 0 size[3672, 5135] is different, statistic count: 76
+[2025-09-09 11:06:17.437] stream C:	1230 frames, 19.57 fps,           14273742	bytes,  2656 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:17.497] stream A:	1290 frames, 25.00 fps,           16108626	bytes,  2313 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:17.564] stream A:	1290 frames, 25.00 fps,           16109546	bytes,  2313 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:17.836] Stream A and stream C's tile 0 size[299, 263] is different, statistic count: 77
+[2025-09-09 11:06:18.538] stream D:	1260 frames, 16.07 fps,           15206723	bytes,  2851 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:19.903] stream C:	1260 frames, 12.17 fps,           14594763	bytes,  1067 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:20.064] stream B:	1350 frames, 15.52 fps,           17296276	bytes,   836 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:23.567] stream C:	1290 frames, 8.50 fps,           14877766	bytes,   625 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:24.268] stream D:	1320 frames, 13.24 fps,           15784208	bytes,  1026 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:25.662] stream B:	1410 frames, 18.75 fps,           18081610	bytes,  1716 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:26.232] Stream A and stream C's tile 0 size[284, 277] is different, statistic count: 78
+[2025-09-09 11:06:26.266] stream D:	1350 frames, 15.01 fps,           16125575	bytes,  1429 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:28.366] stream C:	1350 frames, 10.47 fps,           15572212	bytes,  1019 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:29.526] stream B:	1440 frames, 7.50 fps,           18556681	bytes,   960 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:29.593] stream B:	1440 frames, 7.50 fps,           18564025	bytes,   960 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:29.659] stream B:	1440 frames, 7.50 fps,           18584121	bytes,   960 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:30.397] Stream A and stream C's tile 0 size[3606, 3825] is different, statistic count: 79
+[2025-09-09 11:06:30.493] stream A:	1440 frames, 14.07 fps,           17898029	bytes,  1741 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:30.565] stream C:	1380 frames, 13.64 fps,           15862287	bytes,  1029 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:31.030] Stream A and stream C's tile 0 size[349, 283] is different, statistic count: 80
+[2025-09-09 11:06:31.458] stream B:	1470 frames, 15.52 fps,           18919291	bytes,  1386 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:31.497] Stream A and stream C's tile 0 size[305, 294] is different, statistic count: 81
+[2025-09-09 11:06:32.090] stream A:	1470 frames, 18.76 fps,           18165899	bytes,  1272 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:32.363] Stream A and stream C's tile 0 size[308, 277] is different, statistic count: 82
+[2025-09-09 11:06:34.856] AVG FPS = 12.65 fps
+[2025-09-09 11:06:36.090] AVG FPS = 12.94 fps
+[2025-09-09 11:06:36.195] stream D:	1470 frames, 10.23 fps,           17379828	bytes,  1075 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:36.295] stream C:	1440 frames, 7.50 fps,           16923085	bytes,  1350 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:36.594] Stream A and stream C's tile 0 size[4747, 4673] is different, statistic count: 83
+[2025-09-09 11:06:36.729] Stream A and stream C's tile 0 size[3616, 3550] is different, statistic count: 84
+[2025-09-09 11:06:37.221] stream A:	1530 frames, 26.49 fps,           19017173	bytes,  3078 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:38.062] AVG FPS = 13.09 fps
+[2025-09-09 11:06:38.062] stream D:	1500 frames, 16.07 fps,           17699519	bytes,  1337 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:38.589] stream B:	1560 frames, 16.07 fps,           19843657	bytes,  1398 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:39.353] stream A:	1560 frames, 14.52 fps,           19382301	bytes,  1377 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:40.693] AVG FPS = 12.10 fps
+[2025-09-09 11:06:41.259] stream D:	1530 frames, 9.38 fps,           17979476	bytes,   684 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:42.487] stream A:	1590 frames, 9.38 fps,           19884260	bytes,  1178 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:43.892] stream C:	1530 frames, 9.38 fps,           18033895	bytes,   970 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:44.091] Stream A and stream C's tile 0 size[244, 271] is different, statistic count: 85
+[2025-09-09 11:06:44.127] stream D:	1560 frames, 10.46 fps,           18470916	bytes,  1035 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:44.591] Stream A and stream C's tile 0 size[4818, 3605] is different, statistic count: 86
+[2025-09-09 11:06:45.559] stream C:	1560 frames, 18.01 fps,           18249473	bytes,  1012 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:49.190] stream D:	1620 frames, 9.19 fps,           19328569	bytes,  1800 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:49.192] stream D:	1620 frames, 9.19 fps,           19352681	bytes,  1800 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:49.517] stream B:	1680 frames, 9.01 fps,           21463109	bytes,  1553 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:50.123] Stream A and stream C's tile 0 size[4783, 4716] is different, statistic count: 87
+[2025-09-09 11:06:52.354] Stream A and stream C's tile 0 size[277, 282] is different, statistic count: 88
+[2025-09-09 11:06:52.849] stream B:	1740 frames, 19.58 fps,           21923799	bytes,   802 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:54.488] Stream A and stream C's tile 0 size[329, 214] is different, statistic count: 89
+[2025-09-09 11:06:54.522] stream D:	1710 frames, 19.55 fps,           20026445	bytes,  1459 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:54.747] stream A:	1770 frames, 20.46 fps,           21458387	bytes,  1171 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:06:54.853] Stream A and stream C's type [1, 3] is different, statistic count: 90
+[2025-09-09 11:06:55.446] AVG FPS = 14.57 fps
+[2025-09-09 11:06:55.446] stream B:	1800 frames, 23.71 fps,           22454214	bytes,  1753 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:55.879] AVG FPS = 15.16 fps
+[2025-09-09 11:06:56.353] stream C:	1740 frames, 20.46 fps,           20170251	bytes,  1050 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:06:57.086] Stream A and stream C's tile 0 size[352, 162] is different, statistic count: 91
+[2025-09-09 11:06:58.185] Stream A and stream C's tile 0 size[4483, 4429] is different, statistic count: 92
+[2025-09-09 11:06:58.313] stream B:	1860 frames, 18.01 fps,           22942244	bytes,  1382 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:06:58.485] Stream A and stream C's tile 0 size[363, 462] is different, statistic count: 93
+[2025-09-09 11:06:59.120] AVG FPS = 14.25 fps
+[2025-09-09 11:06:59.151] AVG FPS = 16.25 fps
+[2025-09-09 11:06:59.187] stream D:	1800 frames, 18.74 fps,           20849365	bytes,  1262 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:59.188] stream D:	1800 frames, 18.74 fps,           20867946	bytes,  1262 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:06:59.252] stream D:	1800 frames, 18.74 fps,           20868862	bytes,  1262 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:00.411] stream A:	1890 frames, 17.32 fps,           22405351	bytes,  1393 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:00.419] Stream A and stream C's tile 0 size[337, 327] is different, statistic count: 94
+[2025-09-09 11:07:00.484] Stream A and stream C's tile 0 size[307, 518] is different, statistic count: 95
+[2025-09-09 11:07:00.621] stream C:	1830 frames, 20.47 fps,           20758827	bytes,   831 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:00.779] stream D:	1830 frames, 18.10 fps,           21096216	bytes,  1321 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:00.912] stream B:	1920 frames, 23.70 fps,           23502303	bytes,  1737 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:01.017] Stream A and stream C's tile 0 size[427, 380] is different, statistic count: 96
+[2025-09-09 11:07:01.811] stream A:	1920 frames, 21.44 fps,           22640837	bytes,  1316 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:02.450] stream D:	1860 frames, 17.93 fps,           21444392	bytes,  1584 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:03.077] stream A:	1950 frames, 23.67 fps,           23129232	bytes,  2943 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:03.443] stream B:	1980 frames, 23.70 fps,           24097270	bytes,  2371 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:03.454] Stream A and stream C's tile 0 size[4083, 4041] is different, statistic count: 97
+[2025-09-09 11:07:04.409] stream A:	1980 frames, 22.52 fps,           23479720	bytes,  2114 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:04.417] Stream A and stream C's tile 0 size[292, 325] is different, statistic count: 98
+[2025-09-09 11:07:04.482] Stream A and stream C's tile 0 size[289, 303] is different, statistic count: 99
+[2025-09-09 11:07:04.482] Stream A and stream C's tile 0 size[289, 303] is different, statistic count: 100
+[2025-09-09 11:07:04.981] stream D:	1920 frames, 25.01 fps,           22136086	bytes,  2552 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:05.115] Stream A and stream C's tile 0 size[3992, 5030] is different, statistic count: 101
+[2025-09-09 11:07:05.449] Stream A and stream C's tile 0 size[3719, 3129] is different, statistic count: 102
+[2025-09-09 11:07:05.776] stream B:	2040 frames, 26.48 fps,           24957187	bytes,  3240 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:05.809] stream A:	2010 frames, 21.44 fps,           23934304	bytes,  2537 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:05.819] Stream A and stream C's tile 0 size[295, 284] is different, statistic count: 103
+[2025-09-09 11:07:06.281] Stream A and stream C's tile 0 size[277, 401] is different, statistic count: 104
+[2025-09-09 11:07:06.282] stream C:	1950 frames, 22.51 fps,           22426221	bytes,  3452 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:06.315] stream D:	1950 frames, 22.50 fps,           22792697	bytes,  3749 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:06.348] stream C:	1950 frames, 22.51 fps,           22427216	bytes,  3452 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:06.916] Stream A and stream C's tile 0 size[5626, 4761] is different, statistic count: 105
+[2025-09-09 11:07:07.043] stream B:	2070 frames, 23.68 fps,           25571396	bytes,  3712 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:07.381] Stream A and stream C's tile 0 size[3594, 5074] is different, statistic count: 106
+[2025-09-09 11:07:07.449] Stream A and stream C's tile 0 size[4734, 3631] is different, statistic count: 107
+[2025-09-09 11:07:07.717] Stream A and stream C's tile 0 size[4553, 3418] is different, statistic count: 108
+[2025-09-09 11:07:07.718] stream D:	1980 frames, 21.45 fps,           23101329	bytes,  1814 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:08.442] AVG FPS = 23.09 fps
+[2025-09-09 11:07:08.475] stream A:	2070 frames, 21.44 fps,           24745278	bytes,  1731 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:09.181] Stream A and stream C's tile 0 size[3623, 4979] is different, statistic count: 109
+[2025-09-09 11:07:09.414] Stream A and stream C's tile 0 size[267, 314] is different, statistic count: 110
+[2025-09-09 11:07:09.428] Stream A and stream C's tile 0 size[267, 314] is different, statistic count: 111
+[2025-09-09 11:07:09.547] Stream A and stream C's tile 0 size[330, 302] is different, statistic count: 112
+[2025-09-09 11:07:09.640] stream B:	2130 frames, 25.02 fps,           26169632	bytes,  1988 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:09.747] Stream A and stream C's tile 0 size[294, 293] is different, statistic count: 113
+[2025-09-09 11:07:09.941] AVG FPS = 21.34 fps
+[2025-09-09 11:07:10.814] stream C:	2040 frames, 23.69 fps,           23463332	bytes,  1983 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:10.979] Stream A and stream C's tile 0 size[5251, 4743] is different, statistic count: 114
+[2025-09-09 11:07:11.040] stream B:	2160 frames, 21.43 fps,           26760588	bytes,  3298 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:11.074] stream A:	2130 frames, 26.47 fps,           25498182	bytes,  2323 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:11.179] Stream A and stream C's tile 0 size[3811, 5273] is different, statistic count: 115
+[2025-09-09 11:07:12.846] stream D:	2070 frames, 12.51 fps,           24030958	bytes,   932 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:14.011] stream C:	2070 frames, 9.38 fps,           23831137	bytes,   899 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:14.773] stream B:	2190 frames, 8.04 fps,           27021538	bytes,   524 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:14.839] stream B:	2190 frames, 8.04 fps,           27034680	bytes,   524 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:14.873] stream A:	2160 frames, 7.90 fps,           25751948	bytes,   554 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:15.772] AVG FPS = 18.02 fps
+[2025-09-09 11:07:16.077] AVG FPS = 17.72 fps
+[2025-09-09 11:07:16.077] stream C:	2100 frames, 14.52 fps,           24256478	bytes,  1580 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:16.405] stream A:	2190 frames, 19.57 fps,           26037782	bytes,  1457 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:16.505] stream B:	2220 frames, 17.32 fps,           27356048	bytes,  1538 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:20.976] Stream A and stream C's tile 0 size[4215, 3329] is different, statistic count: 116
+[2025-09-09 11:07:22.502] stream B:	2340 frames, 21.42 fps,           28153362	bytes,   743 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:22.542] Stream A and stream C's tile 0 size[315, 285] is different, statistic count: 117
+[2025-09-09 11:07:23.741] Stream A and stream C's tile 0 size[489, 628] is different, statistic count: 118
+[2025-09-09 11:07:24.074] stream C:	2250 frames, 15.01 fps,           25363788	bytes,  1080 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:24.102] stream B:	2370 frames, 18.76 fps,           28400915	bytes,  1208 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:26.802] stream A:	2370 frames, 10.00 fps,           27660581	bytes,  1172 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:26.932] stream A:	2370 frames, 10.00 fps,           27662435	bytes,  1172 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:26.940] stream A:	2370 frames, 10.00 fps,           27668094	bytes,  1172 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:27.299] AVG FPS = 15.91 fps
+[2025-09-09 11:07:27.300] stream B:	2400 frames, 9.38 fps,           28893377	bytes,  1229 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:27.300] stream B:	2400 frames, 9.38 fps,           28902611	bytes,  1229 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:27.339] stream C:	2280 frames, 9.19 fps,           25857190	bytes,  1179 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:27.405] stream C:	2280 frames, 9.19 fps,           25858579	bytes,  1179 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:28.906] stream D:	2310 frames, 11.85 fps,           26610724	bytes,  2370 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:28.971] stream D:	2310 frames, 11.85 fps,           26611847	bytes,  2370 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:28.972] stream D:	2310 frames, 11.85 fps,           26619111	bytes,  2370 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:29.040] stream D:	2310 frames, 11.85 fps,           26637049	bytes,  2370 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:29.671] stream C:	2310 frames, 12.86 fps,           26540396	bytes,  2259 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:29.933] AVG FPS = 15.01 fps
+[2025-09-09 11:07:29.934] stream A:	2400 frames, 9.58 fps,           28297718	bytes,  1786 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:30.303] Stream A and stream C's tile 0 size[3471, 4969] is different, statistic count: 119
+[2025-09-09 11:07:30.432] stream B:	2430 frames, 9.58 fps,           29599308	bytes,  1733 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:30.571] stream D:	2340 frames, 18.02 fps,           27181472	bytes,  2734 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:30.671] Stream A and stream C's tile 0 size[288, 312] is different, statistic count: 120
+[2025-09-09 11:07:30.739] Stream A and stream C's tile 0 size[288, 406] is different, statistic count: 121
+[2025-09-09 11:07:30.837] Stream A and stream C's type [1, 3] is different, statistic count: 122
+[2025-09-09 11:07:31.138] stream C:	2340 frames, 20.47 fps,           26987299	bytes,  2433 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:31.204] Stream A and stream C's tile 0 size[403, 233] is different, statistic count: 123
+[2025-09-09 11:07:31.663] stream A:	2430 frames, 17.33 fps,           28514984	bytes,  1025 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:31.830] stream B:	2460 frames, 21.44 fps,           29943271	bytes,  1979 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:31.870] Stream A and stream C's tile 0 size[262, 303] is different, statistic count: 124
+[2025-09-09 11:07:31.904] stream D:	2370 frames, 22.51 fps,           27469018	bytes,  1685 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:33.270] stream C:	2370 frames, 14.07 fps,           27250606	bytes,  1004 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:34.528] stream A:	2460 frames, 10.47 fps,           28833688	bytes,   869 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:35.370] AVG FPS = 15.31 fps
+[2025-09-09 11:07:35.435] stream D:	2400 frames, 8.65 fps,           28204513	bytes,  1640 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:36.136] AVG FPS = 14.96 fps
+[2025-09-09 11:07:36.661] stream A:	2490 frames, 14.52 fps,           29065998	bytes,   855 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:37.368] stream D:	2430 frames, 15.01 fps,           28529531	bytes,  1299 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:37.368] stream D:	2430 frames, 15.01 fps,           28546363	bytes,  1299 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:41.792] stream A:	2550 frames, 7.90 fps,           29712762	bytes,   889 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:41.998] Stream A and stream C's tile 0 size[361, 280] is different, statistic count: 125
+[2025-09-09 11:07:42.033] stream D:	2490 frames, 13.24 fps,           28999020	bytes,  1002 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:43.433] stream D:	2520 frames, 21.45 fps,           29322245	bytes,  1851 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:43.565] Stream A and stream C's tile 0 size[4842, 3764] is different, statistic count: 126
+[2025-09-09 11:07:44.265] stream C:	2520 frames, 19.58 fps,           28887453	bytes,  1962 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:45.192] stream A:	2610 frames, 15.00 fps,           30587159	bytes,  1286 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:46.631] stream D:	2550 frames, 9.38 fps,           29685902	bytes,   886 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:46.829] Stream A and stream C's type [1, 3] is different, statistic count: 127
+[2025-09-09 11:07:48.130] Stream A and stream C's tile 0 size[425, 375] is different, statistic count: 128
+[2025-09-09 11:07:48.559] AVG FPS = 14.11 fps
+[2025-09-09 11:07:48.923] stream A:	2670 frames, 19.58 fps,           31496397	bytes,  2390 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:49.562] Stream A and stream C's tile 0 size[3591, 4887] is different, statistic count: 129
+[2025-09-09 11:07:49.762] stream D:	2610 frames, 20.48 fps,           30510340	bytes,  2104 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:49.773] stream D:	2610 frames, 20.48 fps,           30520283	bytes,  2104 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:49.897] Stream A and stream C's tile 0 size[5492, 3396] is different, statistic count: 130
+[2025-09-09 11:07:49.955] stream B:	2730 frames, 21.45 fps,           33268137	bytes,  2570 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:50.128] Stream A and stream C's tile 0 size[270, 323] is different, statistic count: 131
+[2025-09-09 11:07:50.322] AVG FPS = 14.71 fps
+[2025-09-09 11:07:50.322] stream A:	2700 frames, 21.44 fps,           31957777	bytes,  2577 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:50.396] stream C:	2610 frames, 19.57 fps,           30276143	bytes,  2691 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:51.588] stream A:	2730 frames, 23.69 fps,           32241510	bytes,  1749 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:51.795] stream C:	2640 frames, 21.45 fps,           30467174	bytes,  1139 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:51.795] stream C:	2640 frames, 21.45 fps,           30483764	bytes,  1139 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:52.295] Stream A and stream C's tile 0 size[4698, 4991] is different, statistic count: 132
+[2025-09-09 11:07:54.159] AVG FPS = 15.97 fps
+[2025-09-09 11:07:54.160] stream D:	2700 frames, 18.02 fps,           31526253	bytes,  1281 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:54.326] Stream A and stream C's tile 0 size[339, 302] is different, statistic count: 133
+[2025-09-09 11:07:54.393] Stream A and stream C's tile 0 size[285, 278] is different, statistic count: 134
+[2025-09-09 11:07:54.594] AVG FPS = 16.25 fps
+[2025-09-09 11:07:54.595] stream C:	2700 frames, 21.45 fps,           31127393	bytes,  1733 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:54.827] Stream A and stream C's type [1, 3] is different, statistic count: 135
+[2025-09-09 11:07:55.353] stream B:	2850 frames, 25.02 fps,           34649961	bytes,  2525 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:55.693] Stream A and stream C's tile 0 size[3504, 3544] is different, statistic count: 136
+[2025-09-09 11:07:56.754] stream B:	2880 frames, 21.42 fps,           34988734	bytes,  1774 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:56.786] stream A:	2850 frames, 21.45 fps,           33589180	bytes,  2070 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:57.059] Stream A and stream C's tile 0 size[370, 198] is different, statistic count: 137
+[2025-09-09 11:07:57.126] Stream A and stream C's tile 0 size[342, 274] is different, statistic count: 138
+[2025-09-09 11:07:57.392] Stream A and stream C's tile 0 size[367, 285] is different, statistic count: 139
+[2025-09-09 11:07:57.396] stream C:	2760 frames, 25.00 fps,           31717954	bytes,  1971 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:07:57.759] Stream A and stream C's tile 0 size[3575, 4554] is different, statistic count: 140
+[2025-09-09 11:07:57.958] Stream A and stream C's tile 0 size[5065, 3362] is different, statistic count: 141
+[2025-09-09 11:07:58.054] stream A:	2880 frames, 23.67 fps,           34144266	bytes,  3345 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:07:58.324] Stream A and stream C's tile 0 size[318, 352] is different, statistic count: 142
+[2025-09-09 11:07:58.419] stream B:	2910 frames, 18.01 fps,           35517405	bytes,  2485 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:07:58.559] stream D:	2790 frames, 19.57 fps,           32732494	bytes,  2696 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:07:59.324] Stream A and stream C's tile 0 size[325, 289] is different, statistic count: 143
+[2025-09-09 11:07:59.625] Stream A and stream C's tile 0 size[3529, 3715] is different, statistic count: 144
+[2025-09-09 11:07:59.627] Stream A and stream C's tile 0 size[3529, 3715] is different, statistic count: 145
+[2025-09-09 11:07:59.687] stream B:	2940 frames, 23.71 fps,           35849071	bytes,  2116 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:00.458] stream C:	2820 frames, 19.57 fps,           32398086	bytes,  1806 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:00.786] stream A:	2940 frames, 24.96 fps,           34825019	bytes,  1837 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:00.857] Stream A and stream C's tile 0 size[262, 404] is different, statistic count: 146
+[2025-09-09 11:08:00.892] stream B:	2970 frames, 24.85 fps,           36387807	bytes,  2961 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:00.957] Stream A and stream C's tile 0 size[4313, 4055] is different, statistic count: 147
+[2025-09-09 11:08:01.357] Stream A and stream C's tile 0 size[4890, 3717] is different, statistic count: 148
+[2025-09-09 11:08:01.791] stream C:	2850 frames, 22.53 fps,           32673119	bytes,  1714 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:01.793] stream C:	2850 frames, 22.53 fps,           32689703	bytes,  1714 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:01.923] Stream A and stream C's tile 0 size[391, 291] is different, statistic count: 149
+[2025-09-09 11:08:02.053] stream A:	2970 frames, 23.71 fps,           35262212	bytes,  3113 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:02.218] AVG FPS = 21.96 fps
+[2025-09-09 11:08:02.218] stream B:	3000 frames, 22.64 fps,           36815158	bytes,  2957 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:02.490] Stream A and stream C's tile 0 size[4676, 3624] is different, statistic count: 150
+[2025-09-09 11:08:02.557] Stream A and stream C's tile 0 size[4633, 4876] is different, statistic count: 151
+[2025-09-09 11:08:02.889] stream D:	2880 frames, 23.70 fps,           33652858	bytes,  1834 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:03.451] AVG FPS = 22.85 fps
+[2025-09-09 11:08:03.684] stream B:	3030 frames, 20.47 fps,           37078544	bytes,  1484 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:03.692] Stream A and stream C's tile 0 size[4714, 3484] is different, statistic count: 152
+[2025-09-09 11:08:04.022] Stream A and stream C's type [3, 1] is different, statistic count: 153
+[2025-09-09 11:08:04.849] stream A:	3030 frames, 21.45 fps,           35801460	bytes,  1665 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:05.015] stream B:	3060 frames, 23.69 fps,           37486758	bytes,  2456 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:06.155] Stream A and stream C's tile 0 size[4529, 4828] is different, statistic count: 154
+[2025-09-09 11:08:07.221] Stream A and stream C's tile 0 size[3595, 5738] is different, statistic count: 155
+[2025-09-09 11:08:07.222] stream D:	2970 frames, 21.44 fps,           34540923	bytes,  1634 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:07.288] Stream A and stream C's tile 0 size[4885, 3723] is different, statistic count: 156
+[2025-09-09 11:08:07.313] Stream A and stream C's tile 0 size[4885, 3723] is different, statistic count: 157
+[2025-09-09 11:08:07.790] stream C:	2970 frames, 18.75 fps,           33899732	bytes,  1088 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:08.314] stream A:	3090 frames, 15.01 fps,           36491283	bytes,  1381 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:10.221] AVG FPS = 18.68 fps
+[2025-09-09 11:08:10.653] AVG FPS = 18.68 fps
+[2025-09-09 11:08:12.345] stream B:	3150 frames, 8.83 fps,           38624169	bytes,   836 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:12.413] stream B:	3150 frames, 8.83 fps,           38628087	bytes,   836 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:13.945] stream D:	3030 frames, 8.06 fps,           35563796	bytes,   932 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:16.551] stream D:	3060 frames, 11.51 fps,           35849400	bytes,   799 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:17.184] stream C:	3060 frames, 10.23 fps,           35249274	bytes,  1080 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:17.710] stream A:	3180 frames, 13.64 fps,           37592462	bytes,   749 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:17.749] Stream A and stream C's tile 0 size[4619, 4360] is different, statistic count: 158
+[2025-09-09 11:08:18.783] stream C:	3090 frames, 18.77 fps,           35384406	bytes,   734 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:19.515] Stream A and stream C's tile 0 size[354, 249] is different, statistic count: 159
+[2025-09-09 11:08:19.582] Stream A and stream C's tile 0 size[308, 314] is different, statistic count: 160
+[2025-09-09 11:08:19.815] Stream A and stream C's type [1, 3] is different, statistic count: 161
+[2025-09-09 11:08:20.282] Stream A and stream C's tile 0 size[3438, 4783] is different, statistic count: 162
+[2025-09-09 11:08:20.476] stream B:	3270 frames, 25.01 fps,           39957890	bytes,  2445 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:20.575] stream A:	3240 frames, 22.54 fps,           38224823	bytes,  2428 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:20.815] stream D:	3150 frames, 23.70 fps,           36892013	bytes,  1818 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:20.881] Stream A and stream C's tile 0 size[4415, 4518] is different, statistic count: 163
+[2025-09-09 11:08:21.083] Stream A and stream C's tile 0 size[4844, 4542] is different, statistic count: 164
+[2025-09-09 11:08:21.095] Stream A and stream C's tile 0 size[4844, 4542] is different, statistic count: 165
+[2025-09-09 11:08:21.582] stream C:	3150 frames, 20.46 fps,           36142876	bytes,  2595 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:21.615] Stream A and stream C's tile 0 size[4410, 3451] is different, statistic count: 166
+[2025-09-09 11:08:21.616] Stream A and stream C's tile 0 size[4410, 3451] is different, statistic count: 167
+[2025-09-09 11:08:21.709] stream A:	3270 frames, 26.47 fps,           38680753	bytes,  3143 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:21.810] AVG FPS = 15.31 fps
+[2025-09-09 11:08:21.810] stream B:	3300 frames, 22.51 fps,           40417855	bytes,  2802 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:21.847] Stream A and stream C's tile 0 size[297, 307] is different, statistic count: 168
+[2025-09-09 11:08:22.215] Stream A and stream C's tile 0 size[4815, 4869] is different, statistic count: 169
+[2025-09-09 11:08:22.281] stream D:	3180 frames, 20.45 fps,           37535779	bytes,  3427 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:22.514] Stream A and stream C's tile 0 size[387, 273] is different, statistic count: 170
+[2025-09-09 11:08:23.041] AVG FPS = 15.31 fps
+[2025-09-09 11:08:23.548] stream D:	3210 frames, 23.70 fps,           37963758	bytes,  2517 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:24.813] Stream A and stream C's type [1, 3] is different, statistic count: 171
+[2025-09-09 11:08:25.113] Stream A and stream C's tile 0 size[321, 404] is different, statistic count: 172
+[2025-09-09 11:08:25.780] stream C:	3240 frames, 20.47 fps,           37177755	bytes,  1410 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:25.876] stream B:	3390 frames, 21.40 fps,           41575899	bytes,  1585 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:26.041] stream A:	3360 frames, 18.75 fps,           40023539	bytes,  2022 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:26.447] Stream A and stream C's tile 0 size[313, 420] is different, statistic count: 173
+[2025-09-09 11:08:27.073] stream B:	3420 frames, 25.04 fps,           41823802	bytes,  2188 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:27.074] stream B:	3420 frames, 25.04 fps,           41845407	bytes,  2188 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:27.179] stream C:	3270 frames, 21.43 fps,           37565116	bytes,  2046 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:27.307] stream A:	3390 frames, 23.70 fps,           40427264	bytes,  2521 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:27.845] Stream A and stream C's tile 0 size[225, 332] is different, statistic count: 174
+[2025-09-09 11:08:28.145] AVG FPS = 16.74 fps
+[2025-09-09 11:08:28.212] Stream A and stream C's tile 0 size[4620, 3617] is different, statistic count: 175
+[2025-09-09 11:08:28.218] Stream A and stream C's tile 0 size[4620, 3617] is different, statistic count: 176
+[2025-09-09 11:08:28.279] Stream A and stream C's tile 0 size[3398, 4935] is different, statistic count: 177
+[2025-09-09 11:08:28.714] AVG FPS = 16.61 fps
+[2025-09-09 11:08:28.714] stream C:	3300 frames, 19.57 fps,           37796528	bytes,  1281 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:28.875] stream B:	3450 frames, 16.65 fps,           42247111	bytes,  1353 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:28.913] Stream A and stream C's tile 0 size[355, 328] is different, statistic count: 178
+[2025-09-09 11:08:29.344] Stream A and stream C's tile 0 size[4636, 4677] is different, statistic count: 179
+[2025-09-09 11:08:30.945] stream D:	3360 frames, 21.45 fps,           39355273	bytes,  1346 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:32.770] stream A:	3480 frames, 12.86 fps,           41507533	bytes,  1634 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:32.776] stream A:	3480 frames, 12.86 fps,           41564792	bytes,  1634 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:32.836] stream A:	3480 frames, 12.86 fps,           41566211	bytes,  1634 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:34.842] stream C:	3390 frames, 10.72 fps,           38804972	bytes,  1153 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:36.408] stream D:	3420 frames, 11.84 fps,           40469026	bytes,  2164 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:36.502] stream A:	3510 frames, 7.90 fps,           42469326	bytes,  1980 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:37.668] stream B:	3540 frames, 8.83 fps,           44103922	bytes,  1901 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:37.669] stream B:	3540 frames, 8.83 fps,           44111436	bytes,  1901 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:39.540] stream D:	3450 frames, 9.58 fps,           40918497	bytes,  1122 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:39.773] Stream A and stream C's tile 0 size[240, 272] is different, statistic count: 180
+[2025-09-09 11:08:39.773] stream C:	3450 frames, 9.58 fps,           40110899	bytes,  1414 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:40.001] stream B:	3570 frames, 12.86 fps,           44820413	bytes,  2354 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:40.673] stream D:	3480 frames, 26.47 fps,           41328949	bytes,  2755 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:40.772] Stream A and stream C's tile 0 size[291, 303] is different, statistic count: 181
+[2025-09-09 11:08:40.872] Stream A and stream C's tile 0 size[4612, 5116] is different, statistic count: 182
+[2025-09-09 11:08:40.939] Stream A and stream C's tile 0 size[3943, 3168] is different, statistic count: 183
+[2025-09-09 11:08:41.233] stream A:	3570 frames, 22.51 fps,           43313224	bytes,  2559 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:41.306] stream C:	3480 frames, 19.57 fps,           40491515	bytes,  1938 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:41.400] AVG FPS = 15.31 fps
+[2025-09-09 11:08:41.400] stream B:	3600 frames, 21.45 fps,           45188051	bytes,  2124 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:41.572] Stream A and stream C's tile 0 size[379, 284] is different, statistic count: 184
+[2025-09-09 11:08:41.771] Stream A and stream C's tile 0 size[356, 367] is different, statistic count: 185
+[2025-09-09 11:08:41.799] Stream A and stream C's tile 0 size[356, 367] is different, statistic count: 186
+[2025-09-09 11:08:41.938] Stream A and stream C's tile 0 size[4148, 4134] is different, statistic count: 187
+[2025-09-09 11:08:41.939] stream D:	3510 frames, 23.71 fps,           41770943	bytes,  2790 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:08:42.271] Stream A and stream C's tile 0 size[3736, 3930] is different, statistic count: 188
+[2025-09-09 11:08:42.365] AVG FPS = 15.52 fps
+[2025-09-09 11:08:42.772] stream C:	3510 frames, 20.46 fps,           40876832	bytes,  2054 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:44.001] stream B:	3660 frames, 22.49 fps,           45823521	bytes,  2068 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:08:44.405] Stream A and stream C's tile 0 size[285, 437] is different, statistic count: 189
+[2025-09-09 11:08:45.097] stream A:	3660 frames, 19.57 fps,           44294148	bytes,  1844 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:48.069] AVG FPS = 15.06 fps
+[2025-09-09 11:08:49.569] AVG FPS = 14.38 fps
+[2025-09-09 11:08:49.570] stream C:	3600 frames, 10.23 fps,           42134355	bytes,  1760 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:49.570] stream C:	3600 frames, 10.23 fps,           42150785	bytes,  1760 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:56.900] stream C:	3660 frames, 8.82 fps,           43069786	bytes,   768 kbps, enc_pipe_time [ 3404: 6454]
+[2025-09-09 11:08:57.099] Stream A and stream C's tile 0 size[282, 293] is different, statistic count: 190
+[2025-09-09 11:08:57.465] Stream A and stream C's tile 0 size[4463, 4789] is different, statistic count: 191
+[2025-09-09 11:08:58.425] stream A:	3780 frames, 22.51 fps,           45763137	bytes,   941 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:08:58.932] stream D:	3720 frames, 19.56 fps,           44232844	bytes,  1068 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:09:00.196] Stream A and stream C's tile 0 size[4721, 3764] is different, statistic count: 192
+[2025-09-09 11:09:00.464] stream D:	3750 frames, 19.59 fps,           44485559	bytes,  1386 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:09:00.963] Stream A and stream C's tile 0 size[347, 309] is different, statistic count: 193
+[2025-09-09 11:09:01.163] stream C:	3750 frames, 22.52 fps,           43772748	bytes,  1391 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:01.797] Stream A and stream C's type [1, 3] is different, statistic count: 194
+[2025-09-09 11:09:02.491] stream A:	3870 frames, 26.45 fps,           46570244	bytes,  2604 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:09:02.656] AVG FPS = 14.11 fps
+[2025-09-09 11:09:02.656] stream B:	3900 frames, 23.69 fps,           48788734	bytes,  2494 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:02.896] stream C:	3780 frames, 17.31 fps,           44222270	bytes,  1988 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:03.396] Stream A and stream C's tile 0 size[4947, 3788] is different, statistic count: 195
+[2025-09-09 11:09:03.824] AVG FPS = 13.98 fps
+[2025-09-09 11:09:04.828] stream C:	3810 frames, 15.53 fps,           44546260	bytes,  1342 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:04.895] Stream A and stream C's tile 0 size[281, 386] is different, statistic count: 196
+[2025-09-09 11:09:04.995] Stream A and stream C's type [3, 1] is different, statistic count: 197
+[2025-09-09 11:09:05.194] stream D:	3840 frames, 20.47 fps,           45767051	bytes,  2179 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:09:05.200] stream D:	3840 frames, 20.47 fps,           45788433	bytes,  2179 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:09:05.262] Stream A and stream C's tile 0 size[3746, 3581] is different, statistic count: 198
+[2025-09-09 11:09:05.388] stream B:	3960 frames, 22.52 fps,           49433192	bytes,  2167 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:06.590] stream B:	3990 frames, 25.00 fps,           49759820	bytes,  2089 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:06.961] Stream A and stream C's tile 0 size[303, 260] is different, statistic count: 199
+[2025-09-09 11:09:07.328] Stream A and stream C's tile 0 size[4654, 4545] is different, statistic count: 200
+[2025-09-09 11:09:07.955] stream A:	3990 frames, 21.43 fps,           47795007	bytes,  1591 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:09:07.959] Stream A and stream C's tile 0 size[279, 395] is different, statistic count: 201
+[2025-09-09 11:09:08.127] AVG FPS = 14.96 fps
+[2025-09-09 11:09:09.095] AVG FPS = 15.36 fps
+[2025-09-09 11:09:10.088] stream A:	4020 frames, 14.06 fps,           48108193	bytes,  1094 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:09:12.725] stream D:	3960 frames, 14.52 fps,           47153984	bytes,  2673 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:09:13.818] stream A:	4050 frames, 8.50 fps,           49029490	bytes,  1895 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:09:14.052] stream B:	4080 frames, 7.15 fps,           51294492	bytes,  1945 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:14.291] stream C:	3960 frames, 11.26 fps,           46415819	bytes,  1932 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:14.291] stream C:	3960 frames, 11.26 fps,           46427336	bytes,  1932 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:14.358] stream C:	3960 frames, 11.26 fps,           46427758	bytes,  1932 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:14.358] stream C:	3960 frames, 11.26 fps,           46442237	bytes,  1932 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:14.992] stream D:	3990 frames, 13.24 fps,           47661632	bytes,  1726 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:09:15.058] stream D:	3990 frames, 13.24 fps,           47662836	bytes,  1726 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:09:15.065] stream D:	3990 frames, 13.24 fps,           47776594	bytes,  1726 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:09:15.684] stream A:	4080 frames, 14.52 fps,           49495507	bytes,  1986 kbps, enc_pipe_time [ 2844: 5885]
+[2025-09-09 11:09:16.051] stream B:	4110 frames, 15.53 fps,           51901433	bytes,  2450 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:16.051] stream B:	4110 frames, 15.53 fps,           51906887	bytes,  2450 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:16.118] stream B:	4110 frames, 15.53 fps,           51912783	bytes,  2450 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:16.185] stream B:	4110 frames, 15.53 fps,           51914239	bytes,  2450 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:16.223] stream C:	3990 frames, 15.01 fps,           46938517	bytes,  2048 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:16.250] stream B:	4110 frames, 15.53 fps,           51916744	bytes,  2450 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:16.291] stream C:	3990 frames, 15.01 fps,           46941341	bytes,  2048 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:16.317] stream B:	4110 frames, 15.53 fps,           51918098	bytes,  2450 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:16.319] stream B:	4110 frames, 15.53 fps,           51923388	bytes,  2450 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:16.385] stream B:	4110 frames, 15.53 fps,           51933501	bytes,  2450 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:16.451] stream B:	4110 frames, 15.53 fps,           51934942	bytes,  2450 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:18.751] stream A:	4110 frames, 9.79 fps,           49993344	bytes,  1317 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:18.816] stream A:	4110 frames, 9.79 fps,           49993805	bytes,  1317 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:19.222] Stream A and stream C's tile 0 size[290, 422] is different, statistic count: 202
+[2025-09-09 11:09:19.356] stream C:	4020 frames, 9.58 fps,           47369496	bytes,  1085 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:19.489] Stream A and stream C's tile 0 size[330, 370] is different, statistic count: 203
+[2025-09-09 11:09:19.688] Stream A and stream C's tile 0 size[314, 299] is different, statistic count: 204
+[2025-09-09 11:09:20.121] Stream A and stream C's tile 0 size[4681, 4893] is different, statistic count: 205
+[2025-09-09 11:09:21.422] Stream A and stream C's tile 0 size[303, 290] is different, statistic count: 206
+[2025-09-09 11:09:21.849] AVG FPS = 15.63 fps
+[2025-09-09 11:09:22.588] Stream A and stream C's tile 0 size[3635, 3515] is different, statistic count: 207
+[2025-09-09 11:09:22.954] Stream A and stream C's tile 0 size[278, 302] is different, statistic count: 208
+[2025-09-09 11:09:23.148] AVG FPS = 15.52 fps
+[2025-09-09 11:09:23.353] Stream A and stream C's tile 0 size[429, 340] is different, statistic count: 209
+[2025-09-09 11:09:23.854] Stream A and stream C's tile 0 size[4482, 4715] is different, statistic count: 210
+[2025-09-09 11:09:23.988] stream D:	4140 frames, 23.57 fps,           49579317	bytes,  2132 kbps, enc_pipe_time [ 2865: 6451]
+[2025-09-09 11:09:24.680] stream A:	4230 frames, 19.58 fps,           51193159	bytes,  1516 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:24.820] Stream A and stream C's tile 0 size[286, 310] is different, statistic count: 211
+[2025-09-09 11:09:25.086] Stream A and stream C's tile 0 size[304, 319] is different, statistic count: 212
+[2025-09-09 11:09:27.219] Stream A and stream C's tile 0 size[287, 329] is different, statistic count: 213
+[2025-09-09 11:09:27.319] AVG FPS = 15.63 fps
+[2025-09-09 11:09:28.685] AVG FPS = 15.31 fps
+[2025-09-09 11:09:28.685] stream C:	4200 frames, 14.53 fps,           48682259	bytes,   463 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:30.917] Stream A and stream C's tile 0 size[5123, 4555] is different, statistic count: 214
+[2025-09-09 11:09:31.018] Stream A and stream C's tile 0 size[418, 234] is different, statistic count: 215
+[2025-09-09 11:09:32.084] stream C:	4260 frames, 16.07 fps,           49157129	bytes,  1060 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:32.144] stream A:	4380 frames, 25.00 fps,           52381625	bytes,  1547 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:33.116] Stream A and stream C's tile 0 size[4724, 4997] is different, statistic count: 216
+[2025-09-09 11:09:33.277] stream A:	4410 frames, 25.01 fps,           52559589	bytes,  1169 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:34.610] stream A:	4440 frames, 22.50 fps,           52848540	bytes,  1635 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:35.083] Stream A and stream C's tile 0 size[271, 256] is different, statistic count: 217
+[2025-09-09 11:09:36.375] AVG FPS = 20.65 fps
+[2025-09-09 11:09:37.742] AVG FPS = 20.56 fps
+[2025-09-09 11:09:37.775] stream B:	4530 frames, 21.43 fps,           55881477	bytes,  1254 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:37.776] stream B:	4530 frames, 21.43 fps,           55885337	bytes,  1254 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:38.114] stream D:	4410 frames, 18.75 fps,           51743628	bytes,  1285 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:09:39.108] stream B:	4560 frames, 22.50 fps,           56163405	bytes,  1518 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:39.448] stream D:	4440 frames, 22.49 fps,           51964702	bytes,  1240 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:09:40.880] Stream A and stream C's tile 0 size[290, 410] is different, statistic count: 218
+[2025-09-09 11:09:42.178] Stream A and stream C's tile 0 size[5025, 5159] is different, statistic count: 219
+[2025-09-09 11:09:43.046] Stream A and stream C's tile 0 size[3945, 4919] is different, statistic count: 220
+[2025-09-09 11:09:43.711] AVG FPS = 18.30 fps
+[2025-09-09 11:09:44.211] Stream A and stream C's tile 0 size[283, 305] is different, statistic count: 221
+[2025-09-09 11:09:44.345] stream C:	4470 frames, 14.52 fps,           50982787	bytes,  1122 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:44.578] Stream A and stream C's tile 0 size[3649, 3627] is different, statistic count: 222
+[2025-09-09 11:09:45.171] stream B:	4680 frames, 23.71 fps,           57320052	bytes,  2754 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:45.174] stream B:	4680 frames, 23.71 fps,           57343358	bytes,  2754 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:45.179] stream D:	4530 frames, 20.46 fps,           53001023	bytes,  2975 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:09:45.271] stream A:	4650 frames, 23.70 fps,           54950739	bytes,  2702 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:45.611] Stream A and stream C's tile 0 size[296, 309] is different, statistic count: 223
+[2025-09-09 11:09:46.010] AVG FPS = 17.32 fps
+[2025-09-09 11:09:46.010] stream C:	4500 frames, 18.02 fps,           51643161	bytes,  3178 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:46.243] Stream A and stream C's tile 0 size[5006, 3949] is different, statistic count: 224
+[2025-09-09 11:09:46.410] Stream A and stream C's tile 0 size[299, 295] is different, statistic count: 225
+[2025-09-09 11:09:46.436] stream B:	4710 frames, 23.69 fps,           57826156	bytes,  3123 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:46.439] stream B:	4710 frames, 23.69 fps,           57838678	bytes,  3123 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:46.537] stream A:	4680 frames, 23.70 fps,           55439368	bytes,  3126 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:46.777] Stream A and stream C's type [1, 3] is different, statistic count: 226
+[2025-09-09 11:09:46.877] Stream A and stream C's tile 0 size[256, 261] is different, statistic count: 227
+[2025-09-09 11:09:47.142] stream C:	4530 frames, 26.48 fps,           52003517	bytes,  2485 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:47.244] Stream A and stream C's tile 0 size[3819, 5120] is different, statistic count: 228
+[2025-09-09 11:09:47.970] stream B:	4740 frames, 19.56 fps,           58228119	bytes,  1958 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:48.142] Stream A and stream C's tile 0 size[316, 422] is different, statistic count: 229
+[2025-09-09 11:09:48.477] stream C:	4560 frames, 23.69 fps,           52300362	bytes,  1732 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:49.242] Stream A and stream C's tile 0 size[3634, 3858] is different, statistic count: 230
+[2025-09-09 11:09:49.270] stream A:	4740 frames, 23.68 fps,           56119555	bytes,  1978 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:49.502] stream B:	4770 frames, 19.58 fps,           58594106	bytes,  1851 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:50.308] Stream A and stream C's tile 0 size[4870, 5252] is different, statistic count: 231
+[2025-09-09 11:09:50.315] Stream A and stream C's tile 0 size[4870, 5252] is different, statistic count: 232
+[2025-09-09 11:09:51.641] stream D:	4650 frames, 15.52 fps,           54471776	bytes,  1685 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:09:52.075] stream C:	4620 frames, 14.52 fps,           53020123	bytes,  1022 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:09:52.101] AVG FPS = 19.08 fps
+[2025-09-09 11:09:55.240] stream D:	4680 frames, 8.34 fps,           54734721	bytes,   568 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:09:55.373] stream D:	4680 frames, 8.34 fps,           54736009	bytes,   568 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:09:55.434] stream B:	4830 frames, 9.00 fps,           59154181	bytes,   680 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:55.533] AVG FPS = 16.86 fps
+[2025-09-09 11:09:55.533] stream A:	4800 frames, 6.62 fps,           56779890	bytes,   571 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:57.072] Stream A and stream C's tile 0 size[260, 224] is different, statistic count: 233
+[2025-09-09 11:09:58.299] stream B:	4890 frames, 21.43 fps,           59629224	bytes,  1177 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:59.466] stream A:	4890 frames, 23.69 fps,           57494039	bytes,  1547 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:59.531] stream A:	4890 frames, 23.69 fps,           57495356	bytes,  1547 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:09:59.633] stream B:	4920 frames, 22.51 fps,           59882847	bytes,  1524 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:09:59.905] stream D:	4770 frames, 18.75 fps,           55596066	bytes,  2051 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:00.004] Stream A and stream C's tile 0 size[277, 284] is different, statistic count: 234
+[2025-09-09 11:10:00.010] Stream A and stream C's tile 0 size[277, 284] is different, statistic count: 235
+[2025-09-09 11:10:00.471] Stream A and stream C's tile 0 size[256, 287] is different, statistic count: 236
+[2025-09-09 11:10:00.899] stream B:	4950 frames, 23.69 fps,           60283005	bytes,  2340 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:01.066] stream A:	4920 frames, 18.75 fps,           57895708	bytes,  1926 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:01.371] AVG FPS = 16.99 fps
+[2025-09-09 11:10:01.374] stream D:	4800 frames, 20.47 fps,           56123638	bytes,  2786 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:01.770] Stream A and stream C's type [1, 3] is different, statistic count: 237
+[2025-09-09 11:10:02.097] stream B:	4980 frames, 25.04 fps,           60659588	bytes,  2591 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:02.136] stream C:	4770 frames, 23.69 fps,           54871650	bytes,  2351 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:02.330] stream A:	4950 frames, 23.71 fps,           58320729	bytes,  2754 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:05.336] AVG FPS = 15.52 fps
+[2025-09-09 11:10:05.896] stream B:	5010 frames, 7.90 fps,           61187015	bytes,  1032 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:06.662] stream A:	4980 frames, 6.93 fps,           58825369	bytes,   909 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:06.834] stream D:	4860 frames, 9.58 fps,           56751072	bytes,   709 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:10.094] stream B:	5040 frames, 7.15 fps,           61585746	bytes,   768 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:10.198] Stream A and stream C's tile 0 size[400, 349] is different, statistic count: 238
+[2025-09-09 11:10:11.167] Stream A and stream C's tile 0 size[3790, 5100] is different, statistic count: 239
+[2025-09-09 11:10:11.398] Stream A and stream C's tile 0 size[249, 447] is different, statistic count: 240
+[2025-09-09 11:10:11.527] stream A:	5040 frames, 22.52 fps,           59463506	bytes,  1428 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:11.538] Stream A and stream C's tile 0 size[403, 398] is different, statistic count: 241
+[2025-09-09 11:10:12.165] Stream A and stream C's tile 0 size[3937, 3324] is different, statistic count: 242
+[2025-09-09 11:10:12.332] stream C:	4890 frames, 22.49 fps,           56233451	bytes,  1809 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:12.725] stream A:	5070 frames, 25.01 fps,           59772024	bytes,  2053 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:12.931] Stream A and stream C's tile 0 size[277, 285] is different, statistic count: 243
+[2025-09-09 11:10:12.959] AVG FPS = 14.38 fps
+[2025-09-09 11:10:12.998] Stream A and stream C's tile 0 size[271, 191] is different, statistic count: 244
+[2025-09-09 11:10:13.197] Stream A and stream C's tile 0 size[304, 303] is different, statistic count: 245
+[2025-09-09 11:10:13.298] stream D:	4950 frames, 20.47 fps,           57862567	bytes,  1728 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:13.364] Stream A and stream C's tile 0 size[3733, 3096] is different, statistic count: 246
+[2025-09-09 11:10:13.864] stream C:	4920 frames, 19.58 fps,           56682044	bytes,  2289 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:14.058] AVG FPS = 16.19 fps
+[2025-09-09 11:10:14.058] stream A:	5100 frames, 22.51 fps,           60286873	bytes,  3018 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:14.098] Stream A and stream C's tile 0 size[3879, 4234] is different, statistic count: 247
+[2025-09-09 11:10:14.160] stream B:	5130 frames, 25.00 fps,           62731160	bytes,  3062 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:14.631] stream D:	4980 frames, 22.50 fps,           58367369	bytes,  2956 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:15.190] stream A:	5130 frames, 26.48 fps,           60684739	bytes,  2744 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:15.231] Stream A and stream C's tile 0 size[3770, 3871] is different, statistic count: 248
+[2025-09-09 11:10:15.265] stream C:	4950 frames, 21.43 fps,           57279159	bytes,  3279 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:15.425] stream B:	5160 frames, 23.69 fps,           63174592	bytes,  2822 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:15.597] Stream A and stream C's tile 0 size[259, 433] is different, statistic count: 249
+[2025-09-09 11:10:15.730] Stream A and stream C's tile 0 size[402, 322] is different, statistic count: 250
+[2025-09-09 11:10:15.930] Stream A and stream C's tile 0 size[258, 330] is different, statistic count: 251
+[2025-09-09 11:10:16.230] Stream A and stream C's tile 0 size[5090, 3857] is different, statistic count: 252
+[2025-09-09 11:10:16.237] Stream A and stream C's tile 0 size[5090, 3857] is different, statistic count: 253
+[2025-09-09 11:10:16.524] stream A:	5160 frames, 22.51 fps,           61211598	bytes,  3088 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:16.664] stream C:	4980 frames, 21.44 fps,           57792932	bytes,  2802 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:16.730] Stream A and stream C's tile 0 size[261, 303] is different, statistic count: 254
+[2025-09-09 11:10:16.757] stream B:	5190 frames, 22.51 fps,           63663241	bytes,  2782 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:16.824] stream B:	5190 frames, 22.51 fps,           63664147	bytes,  2782 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:17.723] stream A:	5190 frames, 25.01 fps,           61587320	bytes,  2444 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:17.762] stream D:	5040 frames, 17.34 fps,           59366880	bytes,  2198 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:17.763] Stream A and stream C's type [1, 3] is different, statistic count: 255
+[2025-09-09 11:10:18.062] Stream A and stream C's tile 0 size[273, 279] is different, statistic count: 256
+[2025-09-09 11:10:18.290] stream B:	5220 frames, 19.58 fps,           64075046	bytes,  2171 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:18.728] Stream A and stream C's tile 0 size[225, 233] is different, statistic count: 257
+[2025-09-09 11:10:19.062] Stream A and stream C's tile 0 size[282, 297] is different, statistic count: 258
+[2025-09-09 11:10:19.432] Stream A and stream C's tile 0 size[3351, 3996] is different, statistic count: 259
+[2025-09-09 11:10:20.062] stream C:	5040 frames, 18.01 fps,           58572286	bytes,  1789 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:20.227] Stream A and stream C's tile 0 size[3674, 3690] is different, statistic count: 260
+[2025-09-09 11:10:20.256] stream A:	5250 frames, 25.00 fps,           62206758	bytes,  1755 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:20.794] Stream A and stream C's tile 0 size[295, 296] is different, statistic count: 261
+[2025-09-09 11:10:20.828] AVG FPS = 15.42 fps
+[2025-09-09 11:10:20.890] stream B:	5280 frames, 23.70 fps,           64760207	bytes,  2071 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:21.522] stream A:	5280 frames, 23.71 fps,           62614911	bytes,  2551 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:21.661] stream C:	5070 frames, 18.76 fps,           58863591	bytes,  1483 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:22.027] Stream A and stream C's tile 0 size[5226, 4644] is different, statistic count: 262
+[2025-09-09 11:10:22.128] Stream A and stream C's tile 0 size[300, 209] is different, statistic count: 263
+[2025-09-09 11:10:22.222] stream B:	5310 frames, 22.50 fps,           65081359	bytes,  1779 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:22.694] Stream A and stream C's tile 0 size[3727, 3777] is different, statistic count: 264
+[2025-09-09 11:10:22.728] AVG FPS = 17.25 fps
+[2025-09-09 11:10:22.760] Stream A and stream C's type [1, 3] is different, statistic count: 265
+[2025-09-09 11:10:22.921] stream A:	5310 frames, 21.45 fps,           63070426	bytes,  2642 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:23.690] stream B:	5340 frames, 20.46 fps,           65424298	bytes,  1872 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:24.327] Stream A and stream C's tile 0 size[367, 436] is different, statistic count: 266
+[2025-09-09 11:10:25.487] stream B:	5370 frames, 17.32 fps,           65732952	bytes,  1308 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:25.693] stream D:	5190 frames, 15.53 fps,           61107248	bytes,  1076 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:27.725] stream C:	5160 frames, 8.34 fps,           59690780	bytes,   709 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:28.019] AVG FPS = 19.92 fps
+[2025-09-09 11:10:28.021] stream B:	5400 frames, 11.54 fps,           66204418	bytes,  1497 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:28.652] AVG FPS = 20.56 fps
+[2025-09-09 11:10:28.652] stream A:	5400 frames, 12.17 fps,           64008336	bytes,   956 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:29.892] stream D:	5220 frames, 7.14 fps,           61569496	bytes,   860 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:30.285] stream B:	5430 frames, 13.24 fps,           66389602	bytes,   639 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:30.351] stream B:	5430 frames, 13.24 fps,           66390881	bytes,   639 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:31.125] stream C:	5190 frames, 8.82 fps,           60241570	bytes,  1212 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:31.290] Stream A and stream C's tile 0 size[3687, 3778] is different, statistic count: 267
+[2025-09-09 11:10:31.958] stream D:	5250 frames, 14.52 fps,           61795143	bytes,   888 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:33.723] stream C:	5220 frames, 11.55 fps,           60516573	bytes,   860 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:35.317] stream A:	5490 frames, 18.00 fps,           65071400	bytes,  2156 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:35.655] Stream A and stream C's tile 0 size[375, 268] is different, statistic count: 268
+[2025-09-09 11:10:36.088] stream D:	5310 frames, 23.68 fps,           62531913	bytes,  2474 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:36.387] Stream A and stream C's tile 2 size[245, 242] is different, statistic count: 269
+[2025-09-09 11:10:36.416] stream B:	5520 frames, 22.50 fps,           67193896	bytes,  1579 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:36.487] Stream A and stream C's tile 0 size[3633, 3674] is different, statistic count: 270
+[2025-09-09 11:10:37.154] Stream A and stream C's tile 0 size[5073, 3969] is different, statistic count: 271
+[2025-09-09 11:10:37.948] stream B:	5550 frames, 19.59 fps,           67542602	bytes,  1827 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:38.320] stream C:	5310 frames, 19.58 fps,           61389589	bytes,  2051 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:38.753] Stream A and stream C's type [1, 3] is different, statistic count: 272
+[2025-09-09 11:10:38.820] stream D:	5370 frames, 23.69 fps,           63074079	bytes,   962 kbps, enc_pipe_time [ 2864: 6451]
+[2025-09-09 11:10:39.687] Stream A and stream C's tile 0 size[3029, 3555] is different, statistic count: 273
+[2025-09-09 11:10:40.353] AVG FPS = 15.37 fps
+[2025-09-09 11:10:40.385] Stream A and stream C's tile 0 size[441, 288] is different, statistic count: 274
+[2025-09-09 11:10:40.815] stream B:	5610 frames, 21.41 fps,           68138293	bytes,  1491 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:41.352] Stream A and stream C's tile 0 size[5052, 3800] is different, statistic count: 275
+[2025-09-09 11:10:42.186] Stream A and stream C's tile 0 size[324, 245] is different, statistic count: 276
+[2025-09-09 11:10:42.585] AVG FPS = 15.11 fps
+[2025-09-09 11:10:43.147] stream B:	5670 frames, 25.01 fps,           68795119	bytes,  2284 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:43.156] stream D:	5460 frames, 22.50 fps,           64133190	bytes,  2542 kbps, enc_pipe_time [ 2863: 6451]
+[2025-09-09 11:10:43.251] Stream A and stream C's tile 0 size[327, 331] is different, statistic count: 277
+[2025-09-09 11:10:43.850] Stream A and stream C's tile 0 size[232, 420] is different, statistic count: 278
+[2025-09-09 11:10:44.545] AVG FPS = 18.15 fps
+[2025-09-09 11:10:44.545] stream B:	5700 frames, 21.45 fps,           69171565	bytes,  2166 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:44.584] Stream A and stream C's tile 0 size[265, 416] is different, statistic count: 279
+[2025-09-09 11:10:45.111] AVG FPS = 18.23 fps
+[2025-09-09 11:10:45.112] stream A:	5700 frames, 21.44 fps,           67581708	bytes,  2724 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:45.650] stream C:	5460 frames, 18.76 fps,           62900197	bytes,  1143 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:46.650] Stream A and stream C's tile 0 size[303, 264] is different, statistic count: 280
+[2025-09-09 11:10:47.477] stream B:	5760 frames, 18.84 fps,           69752241	bytes,  1231 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:47.481] stream B:	5760 frames, 18.84 fps,           69758065	bytes,  1231 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:47.750] stream D:	5550 frames, 17.31 fps,           65038548	bytes,  1292 kbps, enc_pipe_time [ 2863: 6451]
+[2025-09-09 11:10:48.149] Stream A and stream C's tile 0 size[4683, 5333] is different, statistic count: 281
+[2025-09-09 11:10:48.783] Stream A and stream C's tile 0 size[204, 296] is different, statistic count: 282
+[2025-09-09 11:10:49.183] Stream A and stream C's tile 0 size[347, 305] is different, statistic count: 283
+[2025-09-09 11:10:49.381] Stream A and stream C's tile 0 size[420, 284] is different, statistic count: 284
+[2025-09-09 11:10:49.715] Stream A and stream C's tile 0 size[335, 298] is different, statistic count: 285
+[2025-09-09 11:10:49.816] Stream A and stream C's tile 0 size[3612, 3708] is different, statistic count: 286
+[2025-09-09 11:10:49.916] Stream A and stream C's tile 0 size[277, 285] is different, statistic count: 287
+[2025-09-09 11:10:49.928] Stream A and stream C's tile 0 size[277, 285] is different, statistic count: 288
+[2025-09-09 11:10:49.982] Stream A and stream C's tile 0 size[300, 203] is different, statistic count: 289
+[2025-09-09 11:10:49.983] stream C:	5550 frames, 23.69 fps,           63698421	bytes,  2093 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:51.748] Stream A and stream C's type [1, 3] is different, statistic count: 290
+[2025-09-09 11:10:52.281] stream D:	5610 frames, 10.23 fps,           65908547	bytes,  1262 kbps, enc_pipe_time [ 2863: 6451]
+[2025-09-09 11:10:52.774] stream A:	5820 frames, 9.38 fps,           68827282	bytes,   765 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:53.180] stream C:	5580 frames, 9.38 fps,           64115133	bytes,  1017 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:53.340] stream B:	5850 frames, 10.00 fps,           70710722	bytes,   701 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:54.374] stream A:	5850 frames, 18.76 fps,           69155949	bytes,  1537 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:54.579] Stream A and stream C's tile 0 size[383, 403] is different, statistic count: 291
+[2025-09-09 11:10:54.713] stream C:	5610 frames, 20.46 fps,           64433723	bytes,  1665 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:55.547] stream D:	5670 frames, 19.59 fps,           66525992	bytes,  1295 kbps, enc_pipe_time [ 2863: 6451]
+[2025-09-09 11:10:55.614] stream D:	5670 frames, 19.59 fps,           66526603	bytes,  1295 kbps, enc_pipe_time [ 2863: 6451]
+[2025-09-09 11:10:55.779] Stream A and stream C's tile 0 size[248, 303] is different, statistic count: 292
+[2025-09-09 11:10:55.840] stream A:	5880 frames, 20.47 fps,           69664249	bytes,  2782 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:56.113] stream C:	5640 frames, 20.46 fps,           64947048	bytes,  2676 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:56.273] stream B:	5910 frames, 18.76 fps,           71515941	bytes,  2576 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:56.282] stream B:	5910 frames, 18.76 fps,           71534378	bytes,  2576 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:10:57.211] AVG FPS = 17.80 fps
+[2025-09-09 11:10:57.478] Stream A and stream C's tile 0 size[4880, 4941] is different, statistic count: 293
+[2025-09-09 11:10:57.479] Stream A and stream C's tile 0 size[4880, 4941] is different, statistic count: 294
+[2025-09-09 11:10:57.512] stream C:	5670 frames, 21.44 fps,           65145151	bytes,  1200 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:10:58.311] Stream A and stream C's tile 0 size[286, 416] is different, statistic count: 295
+[2025-09-09 11:10:58.378] Stream A and stream C's tile 0 size[406, 236] is different, statistic count: 296
+[2025-09-09 11:10:58.772] stream A:	5940 frames, 22.51 fps,           70353320	bytes,  1739 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:10:58.844] AVG FPS = 18.45 fps
+[2025-09-09 11:10:59.006] stream B:	5970 frames, 25.01 fps,           72137836	bytes,  1474 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:11:00.538] AVG FPS = 18.76 fps
+[2025-09-09 11:11:01.703] AVG FPS = 18.08 fps
+[2025-09-09 11:11:01.744] stream D:	5790 frames, 19.58 fps,           67643905	bytes,   649 kbps, enc_pipe_time [ 2863: 6451]
+[2025-09-09 11:11:01.871] stream B:	6030 frames, 22.51 fps,           72504653	bytes,  1024 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:11:01.943] Stream A and stream C's type [3, 1] is different, statistic count: 297
+[2025-09-09 11:11:02.376] Stream A and stream C's tile 0 size[405, 291] is different, statistic count: 298
+[2025-09-09 11:11:02.776] Stream A and stream C's tile 0 size[232, 279] is different, statistic count: 299
+[2025-09-09 11:11:02.970] stream A:	6030 frames, 23.68 fps,           71119560	bytes,  2712 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:11:03.042] Stream A and stream C's tile 0 size[278, 294] is different, statistic count: 300
+[2025-09-09 11:11:03.077] stream D:	5820 frames, 22.52 fps,           68082797	bytes,  2467 kbps, enc_pipe_time [ 2863: 6451]
+[2025-09-09 11:11:03.143] stream D:	5820 frames, 22.52 fps,           68084109	bytes,  2467 kbps, enc_pipe_time [ 2863: 6451]
+[2025-09-09 11:11:03.444] stream C:	5790 frames, 19.56 fps,           66362676	bytes,  2979 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:11:03.476] Stream A and stream C's tile 0 size[4941, 4949] is different, statistic count: 301
+[2025-09-09 11:11:03.477] Stream A and stream C's tile 0 size[4941, 4949] is different, statistic count: 302
+[2025-09-09 11:11:03.510] stream C:	5790 frames, 19.56 fps,           66363943	bytes,  2979 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:11:03.709] Stream A and stream C's tile 0 size[281, 311] is different, statistic count: 303
+[2025-09-09 11:11:03.909] Stream A and stream C's tile 0 size[284, 446] is different, statistic count: 304
+[2025-09-09 11:11:03.917] Stream A and stream C's tile 0 size[284, 446] is different, statistic count: 305
+[2025-09-09 11:11:04.075] Stream A and stream C's tile 0 size[3720, 3997] is different, statistic count: 306
+[2025-09-09 11:11:04.168] stream A:	6060 frames, 25.03 fps,           71592620	bytes,  3194 kbps, enc_pipe_time [ 2843: 5885]
+[2025-09-09 11:11:04.408] Stream A and stream C's tile 0 size[3411, 3497] is different, statistic count: 307
+[2025-09-09 11:11:04.536] stream B:	6090 frames, 22.51 fps,           73528652	bytes,  3360 kbps, enc_pipe_time [ 2839: 6395]
+[2025-09-09 11:11:04.610] stream D:	5850 frames, 19.58 fps,           68608533	bytes,  2773 kbps, enc_pipe_time [ 2863: 6451]
+[2025-09-09 11:11:04.610] stream D:	5850 frames, 19.58 fps,           68616410	bytes,  2773 kbps, enc_pipe_time [ 2863: 6451]
+[2025-09-09 11:11:04.675] Stream A and stream C's tile 0 size[4581, 3136] is different, statistic count: 308
+[2025-09-09 11:11:04.776] stream C:	5820 frames, 22.51 fps,           66833148	bytes,  2793 kbps, enc_pipe_time [ 3402: 6454]
+[2025-09-09 11:11:04.804] Gop_record doesn't have enough space for new gop record!
+[2025-09-09 11:11:04.805] Do statistics_gop failed!
+[2025-09-09 11:11:04.805] Do statistics exited abnormally!
+[2025-09-09 11:11:04.817] # 

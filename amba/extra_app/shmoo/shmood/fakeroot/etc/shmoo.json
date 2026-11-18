@@ -1,0 +1,26 @@
+{
+	"profile_dir": "/root",
+	"loading":{
+		"CPU":{
+			"Percentage": 100
+		},
+		"MEM":{
+			
+			"SIZE":"850M",
+			"COUNT": 1
+		},
+		"VP":
+		{
+			"Percentage": 100
+		}
+	},
+	"static":{
+		"sensor": "tmp103",
+		"host": "192.168.8.3",
+		"high": 60,
+		"low": -10,
+		"duration_min": 3,
+		"max_duration_min": 1,
+		"sample":3
+	}
+}

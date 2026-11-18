@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libshmoo
+Description: Now only for shmoo use
+Version: 0.1.0
+Libs: -L${libdir} -lshmoo
+Cflags: -I${includedir}

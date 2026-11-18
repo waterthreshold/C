@@ -1,0 +1,19 @@
+
+ip='192.255.256.0'
+include 'veriication_ip.ttl'
+if myresult = 0 then 
+	sprintf2 tmpinfo_msg '%s valid' param1
+	messagebox tmpinfo_msg 'Info'
+else
+	sprintf2 tmpinfo_msg '%s invalid' param1
+	messagebox tmpinfo_msg 'Info'
+endif
+; include 'veriication_ip.ttl'
+ip='192.168.7.101'
+if myresult = 0 then 
+	sprintf2 tmpinfo_msg '%s valid' param1
+	messagebox tmpinfo_msg 'Info'
+else
+	sprintf2 tmpinfo_msg '%s valid' param1
+	messagebox tmpinfo_msg 'Info'
+endif

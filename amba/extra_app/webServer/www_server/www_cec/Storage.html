@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disk Storage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 15px;
+      margin: -20px -20px 20px -20px;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    .storage-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .disk-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      width: 300px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .disk-card h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #007bff;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background: #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+
+    .progress {
+      height: 20px;
+      background: #007bff;
+      text-align: center;
+      color: white;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .disk-info {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: none;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>💾 Disk Storage</h2>
+  </header>
+
+  <div class="storage-container" id="StorageBoard">
+    <!-- Example Disk: USB -->
+    <!-- <div class="disk-card"> -->
+      <!-- <h3>USB Flash Drive</h3> -->
+      <!-- <div class="progress-bar"> -->
+        <!-- <div class="progress" style="width: 70%;">70%</div> -->
+      <!-- </div> -->
+      <!-- <div class="disk-info"> -->
+        <!-- Used: 7.0 GB / 10 GB<br> -->
+        <!-- Free: 3.0 GB -->
+      <!-- </div> -->
+      <!-- <button onclick="ejectDisk('usb')">⏏ Eject</button> -->
+    <!-- </div> -->
+
+    <!-- Example Disk: SD Card -->
+    <!-- <div class="disk-card"> -->
+      <!-- <h3>SD Card</h3> -->
+      <!-- <div class="progress-bar"> -->
+        <!-- <div class="progress" style="width: 45%;">45%</div> -->
+      <!-- </div> -->
+      <!-- <div class="disk-info"> -->
+        <!-- Used: 9.0 GB / 20 GB<br> -->
+        <!-- Free: 11.0 GB -->
+      <!-- </div> -->
+      <!-- <button onclick="ejectDisk('sdcard')">⏏ Eject</button> -->
+    <!-- </div> -->
+
+    <!-- Example Disk: Internal Storage -->
+    <!-- <div class="disk-card"> -->
+      <!-- <h3>Internal Storage</h3> -->
+      <!-- <div class="progress-bar"> -->
+        <!-- <div class="progress" style="width: 85%;">85%</div> -->
+      <!-- </div> -->
+      <!-- <div class="disk-info"> -->
+        <!-- Used: 42.5 GB / 50 GB<br> -->
+        <!-- Free: 7.5 GB -->
+      <!-- </div> -->
+      <!-- <button onclick="cleanupDisk('internal')">🗑 Clean Up</button> -->
+    <!-- </div> -->
+  </div>
+
+  <script>
+  
+	
+    function initStorage(storage_num,parmas) {
+      
+      const  list = document.getElementById("StorageBoard");
+      for (i=0;i<storage_num;i++){ 
+		  var storage_name = parmas.get("storage" + i + "_mnt")
+		  var storage_usage = parmas.get("storage" + i + "_use")
+		  var storage_available = parmas.get("storage" + i + "_avail")
+		  var storage_used = parmas.get("storage" + i + "_used")
+		  var storage_size = parmas.get("storage" + i + "_size")
+		  div = document.createElement("div");
+		  div.className = "disk-card";
+		  div.innerHTML = `<h3>${storage_name}</h3>
+								<div class="progress-bar">
+							<div class="progress" style="width: ${storage_usage};">${storage_usage}</div>
+						</div>
+							<div class="disk-info">
+						Used: ${storage_used} / ${storage_size}<br>
+						Free: ${storage_available}
+					  </div>`;
+		  list.appendChild(div);
+	   }
+    }
+
+	window.onload = () => {
+		fetch('/cgi-bin/GetStorage.cgi')
+			.then(response => response.text())
+			.then(data => {
+				console.log("Response:", data);
+				let params = new URLSearchParams(data);
+				let storageCount = 0;
+				storageCount= params.get('storage_count')   || '';
+				initStorage(storageCount,params);
+			})
+			.catch(err => {
+				console.error(err);
+			});
+		
+	}
+	
+    function ejectDisk(disk) {
+      alert("Ejecting " + disk + " ...");
+      // Example: fetch(`/cgi-bin/DiskAction.cgi?disk=${disk}&action=eject`)
+    }
+
+    function cleanupDisk(disk) {
+      alert("Cleaning up " + disk + " ...");
+      // Example: fetch(`/cgi-bin/DiskAction.cgi?disk=${disk}&action=cleanup`)
+    }
+	
+	
+  </script>
+</body>
+</html>

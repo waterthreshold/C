@@ -1,0 +1,25 @@
+; :verification_ip
+; strcompare param1 'unit_test.ttl'
+; if result = 0 goto main
+; set variable "ip" represent DUT ip for example include 'verification_ip.ttl'
+myresult=0
+strsplit ip '.' 4
+for i 1 4
+sprintf2 tmp_cmnd 'str2int target_ip groupmatchstr%d' i i
+execcmnd  tmp_cmnd
+if result = 0 then 
+	sprintf2 tmp_error_msg 'IP format error %s' param1 
+	; messagebox  tmp_error_msg 'Error'
+	; goto main
+	myresult = 1
+	break
+elseif result = 1 then 
+	if target_ip > 255  || target_ip < 0 then 
+		sprintf2 tmp_error_msg 'IP range error %s %d out of range' param1  target_ip
+		; messagebox  tmp_error_msg 'Error'
+		myresult = 1
+		break
+	endif	
+endif
+next 
+

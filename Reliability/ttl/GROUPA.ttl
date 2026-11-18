@@ -1,0 +1,84 @@
+timeout_time=600
+timeout_longtime=600
+inputbox 'Please Input DUT ip address' 'DUT IP' '192.168.100.20'
+ip=inputstr
+testlink
+if result <> 0  disconnect 0
+
+getdate basedirname '%Y%m%d_%H%M%S_GROUPA'
+getenv 'userprofile' path
+makepath full_path path 'Desktop'
+makepath rootdirname full_path basedirname
+foldercreate rootdirname
+; changedir rootdirname
+sprintf2 cmd '%s /ssh /2 /auth=password /user=root /passwd=' ip
+connect cmd
+timeout=timeout_time
+makepath logpath rootdirname 'A.b.log'
+logopen logpath 0 0 0 1
+waitregex '^# $'
+sendln 'cec_bosch_reliability_function.sh BitstreamDiff' 
+waitregex '^# $'
+if result = 0 call L_INTERRUPT
+logclose
+makepath logpath rootdirname 'A.c.log'
+logopen logpath 0 0 0 1
+sendln 'cec_bosch_reliability_function.sh Bandwidth 1'
+waitregex '^# $'
+if result = 0 call L_INTERRUPT
+logclose
+timeout=timeout_time
+makepath logpath rootdirname 'A.d.log'
+logopen logpath 0 0 0 1
+sendln 'cec_bosch_reliability_function.sh Memorytest 1'
+waitregex '^# $'
+if result = 0 call L_INTERRUPT
+logclose
+makepath logpath rootdirname 'A.e.log'
+logopen logpath 0 0 0 1
+sendln 'cec_bosch_reliability_function.sh Combo_JPEGEnd_SDCardRW 10'
+waitregex '^# $'
+if result = 0 call L_INTERRUPT
+logclose
+makepath logpath rootdirname 'A.f.log'
+logopen logpath 0 0 0 1
+sendln 'cec_bosch_reliability_function.sh ShowMemoryInfo 10'
+waitregex '^# $'
+if result = 0 call L_INTERRUPT
+logclose
+
+makepath logpath rootdirname 'A.g.log'
+logopen logpath 0 0 0 1
+sendln 'modprobe cavalry;cavalry_load -f /lib/firmware/cavalry.bin'
+waitregex '^# $'
+sendln 'time test_nnctrl -b /root/insightface_cavalry-cv5.bin  --dummy data=/root/dog.bin -t 0 -k &'
+waitregex '^# $'
+sendln 'cavalry_top -u 100 -c 10000'
+waitregex '^# $'
+if result = 0 call L_INTERRUPT
+logclose
+makepath logpath rootdirname 'A.h.log'
+logopen logpath 0 0 0 1
+sendln 'watch -n 2 "cat /sys/class/hwmon/hwmon0/temp1_input"'
+waitregex '^# $'
+if result = 0 call L_INTERRUPT
+logclose
+sendln 'systemctl reboot'
+end
+:L_INTERRUPT
+timeout=3
+send #3
+send #3
+send #3
+sendkcode 28 1
+waitregex '^# $'
+mpause 1000
+; if result <> 0 return 
+; send #3
+; send #3
+; send #3
+; sendkcode 28 1
+; waitregex '^# $'
+timeout=timeout_time
+; mpause 500
+return 

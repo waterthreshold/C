@@ -1,0 +1,285 @@
+[2025-09-09 11:31:14.773] modprobe cavalry;cavalry_load -f /lib/firmware/cavalry.bin
+[2025-09-09 11:31:14.795] map_cavalry: phys: 0xc8000000, virt: 0x7f981d0000, total size: 0x100000
+[2025-09-09 11:31:14.992] Cavalry Ucode Version = CV5-Ver.190-20231221-19926c6b-hl_fw.00000003
+[2025-09-09 11:31:14.999] # time test_nnctrl -b /root/insightface_cavalry-cv5.bin  --dummy data=/root/dog.
+[2025-09-09 11:31:15.015] bin -t 0 -k &
+[2025-09-09 11:31:15.015] # cavalry_top -u 100 -c 100 -b
+[2025-09-09 11:31:15.029] Cavalry Bin: [0][/root/insightface_cavalry-cv5.bin]
+[2025-09-09 11:31:15.029] Iteration number [4294967295]
+[2025-09-09 11:31:15.029] Total neural network num: 1
+[2025-09-09 11:31:15.069] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.072] 
+[2025-09-09 11:31:15.072] VP IDLE 100.000%
+[2025-09-09 11:31:15.143] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.151] 
+[2025-09-09 11:31:15.151] VP IDLE 100.000%
+[2025-09-09 11:31:15.193] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.195] 
+[2025-09-09 11:31:15.197] VP IDLE 100.000%
+[2025-09-09 11:31:15.239] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.245] 
+[2025-09-09 11:31:15.245] VP IDLE 100.000%
+[2025-09-09 11:31:15.284] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.285] 
+[2025-09-09 11:31:15.285] VP IDLE 100.000%
+[2025-09-09 11:31:15.330] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.333] 
+[2025-09-09 11:31:15.333] VP IDLE 100.000%
+[2025-09-09 11:31:15.372] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.377] 
+[2025-09-09 11:31:15.377] VP IDLE 100.000%
+[2025-09-09 11:31:15.417] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.420] 
+[2025-09-09 11:31:15.420] VP IDLE 100.000%
+[2025-09-09 11:31:15.468] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.479] 
+[2025-09-09 11:31:15.479] VP IDLE 100.000%
+[2025-09-09 11:31:15.514] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.516] 
+[2025-09-09 11:31:15.516] VP IDLE 100.000%
+[2025-09-09 11:31:15.539] Input: 0 [data] dim: (1, 3, 112, 112), pitch: 128, dram_fmt: 0, bitvector: 0, data_fmt: (0, 0, 0, 0), loop_cnt: 1, size: 43008, phys: 0xca4c7000, virt: 0x7f9742e000
+[2025-09-09 11:31:15.540] Output: 0 [fc1_scale] dim: (1, 1, 1, 512), pitch: 2048, dram_fmt: 0, bitvector: 0, data_fmt: (1, 2, 0, 7), loop_cnt: 1, size: 2048, phys: 0xca5221a0, virt: 0x7f974891a0
+[2025-09-09 11:31:15.540] Network [0] [/root/insightface_cavalry-cv5.bin] total memory size: 34871296, dvi: 34268524, blob: 501760. Bandwidth size: 37035392. Extra_high_mem size: 0
+[2025-09-09 11:31:15.559] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.560] 1052	0	43.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.562] 
+[2025-09-09 11:31:15.562] VP IDLE 57.000%
+[2025-09-09 11:31:15.603] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.603] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.603] 
+[2025-09-09 11:31:15.603] VP IDLE 03.000%
+[2025-09-09 11:31:15.646] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.646] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.646] 
+[2025-09-09 11:31:15.646] VP IDLE 02.000%
+[2025-09-09 11:31:15.687] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.692] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.692] 
+[2025-09-09 11:31:15.692] VP IDLE 03.000%
+[2025-09-09 11:31:15.729] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.729] 1052	0	95.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.744] 
+[2025-09-09 11:31:15.745] VP IDLE 05.000%
+[2025-09-09 11:31:15.773] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.798] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.798] 
+[2025-09-09 11:31:15.798] VP IDLE 02.000%
+[2025-09-09 11:31:15.811] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.811] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.811] 
+[2025-09-09 11:31:15.811] VP IDLE 02.000%
+[2025-09-09 11:31:15.854] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.856] 1052	0	96.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.857] 
+[2025-09-09 11:31:15.857] VP IDLE 04.000%
+[2025-09-09 11:31:15.895] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.902] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.902] 
+[2025-09-09 11:31:15.902] VP IDLE 02.000%
+[2025-09-09 11:31:15.939] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.939] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.939] 
+[2025-09-09 11:31:15.939] VP IDLE 02.000%
+[2025-09-09 11:31:15.980] PID	NID	VP%	CMD
+[2025-09-09 11:31:15.982] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:15.982] 
+[2025-09-09 11:31:15.982] VP IDLE 03.000%
+[2025-09-09 11:31:16.023] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.028] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.028] 
+[2025-09-09 11:31:16.028] VP IDLE 02.000%
+[2025-09-09 11:31:16.063] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.067] 1052	0	99.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.067] 
+[2025-09-09 11:31:16.067] VP IDLE 01.000%
+[2025-09-09 11:31:16.107] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.107] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.107] 
+[2025-09-09 11:31:16.107] VP IDLE 03.000%
+[2025-09-09 11:31:16.146] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.146] 1052	0	96.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.146] 
+[2025-09-09 11:31:16.146] VP IDLE 04.000%
+[2025-09-09 11:31:16.183] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.187] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.187] 
+[2025-09-09 11:31:16.187] VP IDLE 03.000%
+[2025-09-09 11:31:16.222] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.222] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.227] 
+[2025-09-09 11:31:16.227] VP IDLE 02.000%
+[2025-09-09 11:31:16.262] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.265] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.268] 
+[2025-09-09 11:31:16.268] VP IDLE 02.000%
+[2025-09-09 11:31:16.306] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.308] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.314] 
+[2025-09-09 11:31:16.314] VP IDLE 02.000%
+[2025-09-09 11:31:16.346] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.352] 1052	0	96.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.352] 
+[2025-09-09 11:31:16.352] VP IDLE 04.000%
+[2025-09-09 11:31:16.384] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.386] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.388] 
+[2025-09-09 11:31:16.388] VP IDLE 03.000%
+[2025-09-09 11:31:16.435] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.437] 1052	0	99.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.437] 
+[2025-09-09 11:31:16.437] VP IDLE 01.000%
+[2025-09-09 11:31:16.470] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.475] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.475] 
+[2025-09-09 11:31:16.475] VP IDLE 03.000%
+[2025-09-09 11:31:16.514] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.517] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.519] 
+[2025-09-09 11:31:16.519] VP IDLE 02.000%
+[2025-09-09 11:31:16.552] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.555] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.555] 
+[2025-09-09 11:31:16.555] VP IDLE 02.000%
+[2025-09-09 11:31:16.597] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.597] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.598] 
+[2025-09-09 11:31:16.598] VP IDLE 03.000%
+[2025-09-09 11:31:16.644] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.652] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.653] 
+[2025-09-09 11:31:16.653] VP IDLE 03.000%
+[2025-09-09 11:31:16.685] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.685] 1052	0	90.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.685] 
+[2025-09-09 11:31:16.685] VP IDLE 09.000%
+[2025-09-09 11:31:16.727] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.728] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.732] 
+[2025-09-09 11:31:16.732] VP IDLE 02.000%
+[2025-09-09 11:31:16.770] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.770] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.777] 
+[2025-09-09 11:31:16.777] VP IDLE 02.000%
+[2025-09-09 11:31:16.808] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.809] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.813] 
+[2025-09-09 11:31:16.813] VP IDLE 03.000%
+[2025-09-09 11:31:16.856] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.858] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.858] 
+[2025-09-09 11:31:16.858] VP IDLE 03.000%
+[2025-09-09 11:31:16.899] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.901] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.902] 
+[2025-09-09 11:31:16.902] VP IDLE 03.000%
+[2025-09-09 11:31:16.943] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.946] 1052	0	96.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.947] 
+[2025-09-09 11:31:16.947] VP IDLE 04.000%
+[2025-09-09 11:31:16.985] PID	NID	VP%	CMD
+[2025-09-09 11:31:16.990] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:16.990] 
+[2025-09-09 11:31:16.990] VP IDLE 02.000%
+[2025-09-09 11:31:17.027] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.027] 1052	0	96.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.027] 
+[2025-09-09 11:31:17.027] VP IDLE 04.000%
+[2025-09-09 11:31:17.068] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.070] 1052	0	95.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.070] 
+[2025-09-09 11:31:17.070] VP IDLE 04.000%
+[2025-09-09 11:31:17.113] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.116] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.120] 
+[2025-09-09 11:31:17.120] VP IDLE 02.000%
+[2025-09-09 11:31:17.157] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.167] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.167] 
+[2025-09-09 11:31:17.167] VP IDLE 03.000%
+[2025-09-09 11:31:17.199] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.199] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.203] 
+[2025-09-09 11:31:17.203] VP IDLE 03.000%
+[2025-09-09 11:31:17.245] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.245] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.245] 
+[2025-09-09 11:31:17.245] VP IDLE 02.000%
+[2025-09-09 11:31:17.286] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.289] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.290] 
+[2025-09-09 11:31:17.290] VP IDLE 03.000%
+[2025-09-09 11:31:17.330] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.332] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.335] 
+[2025-09-09 11:31:17.335] VP IDLE 02.000%
+[2025-09-09 11:31:17.369] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.370] 1052	0	99.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.374] 
+[2025-09-09 11:31:17.374] VP IDLE 01.000%
+[2025-09-09 11:31:17.407] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.410] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.410] 
+[2025-09-09 11:31:17.410] VP IDLE 03.000%
+[2025-09-09 11:31:17.453] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.454] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.459] 
+[2025-09-09 11:31:17.459] VP IDLE 03.000%
+[2025-09-09 11:31:17.496] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.500] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.500] 
+[2025-09-09 11:31:17.500] VP IDLE 02.000%
+[2025-09-09 11:31:17.538] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.541] 1052	0	89.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.541] 
+[2025-09-09 11:31:17.541] VP IDLE 01.000%
+[2025-09-09 11:31:17.582] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.582] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.582] 
+[2025-09-09 11:31:17.582] VP IDLE 03.000%
+[2025-09-09 11:31:17.624] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.630] 1052	0	96.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.630] 
+[2025-09-09 11:31:17.630] VP IDLE 04.000%
+[2025-09-09 11:31:17.665] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.668] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.668] 
+[2025-09-09 11:31:17.668] VP IDLE 03.000%
+[2025-09-09 11:31:17.708] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.708] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.708] 
+[2025-09-09 11:31:17.708] VP IDLE 02.000%
+[2025-09-09 11:31:17.749] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.749] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.749] 
+[2025-09-09 11:31:17.749] VP IDLE 02.000%
+[2025-09-09 11:31:17.791] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.800] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.801] 
+[2025-09-09 11:31:17.801] VP IDLE 03.000%
+[2025-09-09 11:31:17.833] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.835] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.836] 
+[2025-09-09 11:31:17.836] VP IDLE 02.000%
+[2025-09-09 11:31:17.876] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.876] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.876] 
+[2025-09-09 11:31:17.876] VP IDLE 03.000%
+[2025-09-09 11:31:17.912] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.915] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.915] 
+[2025-09-09 11:31:17.915] VP IDLE 03.000%
+[2025-09-09 11:31:17.960] PID	NID	VP%	CMD
+[2025-09-09 11:31:17.961] 1052	0	97.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:17.965] 
+[2025-09-09 11:31:17.965] VP IDLE 03.000%
+[2025-09-09 11:31:18.002] PID	NID	VP%	CMD
+[2025-09-09 11:31:18.002] 1052	0	96.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:18.005] 
+[2025-09-09 11:31:18.005] VP IDLE 04.000%
+[2025-09-09 11:31:18.042] PID	NID	VP%	CMD
+[2025-09-09 11:31:18.047] 1052	0	98.000%	test_nnctrl -b /root/insightface_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k 
+[2025-09-09 11:31:18.048] 
+[2025-09-09 11:31:18.048] VP IDLE 02.000%
+[2025-09-09 11:31:18.048] ^C# ^C
+[2025-09-09 11:31:18.055] ^C
+[2025-09-09 11:31:18.055] # 

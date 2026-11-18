@@ -1,0 +1,25 @@
+Hi, all:
+	
+HISTORY:
+	This POTD is porting from DNI R7500 GPL code, comptialble  in our DUT using NAND FLASH structure.
+
+
+
+HOW TO USE:
+	potd: as "pot run", it is a daemon calculate power on time 
+	potval: a server listening utility tool and response POT stauts (NTGR spec have definition but FOXCONN not implement!!)
+	stamac: (get/set) [if (active==set)?mac:""], sign up the first STA (wireless)  device (MAC format XX:XX:XX:XX:XX:XX) diffrent Foxconn (XX-XX-XX-XX-XX), same as "pot mac_record [XX-XX-XX]"   
+	ntpstat: (get/set), same as "pot ntp_record", sign up the time status
+
+TROUBLESHOOTING:
+	1.in FLASH NAND DUT always store in /misc3/POT, if you are not carefully delete this file, use command "echo -n POTTOP>> /misc3/POT;pot erase".
+	2.Foxconn "pot value" and "potd" cannot read the value ?
+		Because "pot value" read nvram you might up the "pot run" in system will reload in memory will be work
+FUTURE
+	1.implement client utility with POT
+	2.More comptialbility in our pot 
+	3.implement POT erase
+	
+
+
+

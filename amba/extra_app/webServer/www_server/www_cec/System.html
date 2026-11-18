@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>System Settings</title>
+<style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; padding: 20px; }
+    h2 { color: #333; }
+    .form-group { margin-bottom: 12px; }
+    label { display: block; margin-bottom: 4px; font-weight: bold; }
+    input[type=text] { width: 300px; padding: 6px; }
+    .readonly-text { padding: 6px; background-color: #efefef; display: inline-block; min-width: 150px; }
+    button { padding: 8px 16px; background: #4CAF50; color: white; border: none; cursor: pointer; }
+    button:hover { background: #45a049; }
+	input, select {
+        width: 15%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+    input:focus, select:focus {
+        border-color: #2c97de;
+        outline: none;
+        box-shadow: 0 0 5px rgba(44, 151, 222, 0.5);
+    }
+</style>
+
+</head>
+<body>
+    <h2>System Settings</h2>
+    <form id="networkForm">
+        <div class="form-group">
+            <label for="hostname">Hostname:</label>
+            <input type="text" id="hostname" name="hostname" value="">
+        </div>
+		<div class="form-group">
+            <label for="shmoo">Shmoo:</label>
+            <select id="shmoo" name="shmoo" value="">
+				<option value="on">on</option>
+				<option value="off">off</option>
+				<option value="rel">REL</option>
+			</select>
+        </div>
+		<!-- <div class="form-group"> -->
+            <!-- <label for="timestamp">Timestamp:</label> -->
+            <!-- <select id="timestamp" name="timestamp" value=""> -->
+				<!-- <option value="on">on</option> -->
+				<!-- <option value="off">off</option> -->
+			<!-- </select> -->
+        <!-- </div> -->
+		
+		
+        <div class="form-group">
+            <label>Firmware Version:</label>
+            <span class="readonly-text" id="fwver"></span>
+        </div>
+		
+		<div class="form-group">
+            <label>SDK Version:</label>
+            <span class="readonly-text" id="SDK"></span>
+        </div>
+		
+		<div class="form-group">
+            <label>Sensor Type:</label>
+            <span class="readonly-text" id="sensorType"></span>
+        </div>
+		
+        <div class="form-group">
+            <label>Current Time:</label>
+            <span class="readonly-text" id="curtime"></span>
+        </div>
+		
+		<div class="form-group">
+            <label>System Time:</label>
+            <span class="readonly-text" id="uptime"></span>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</body>
+
+<script>
+var uptime=0;
+function system_boottime(){
+	var h = uptime / 3600
+	var m = uptime % 3600 / 60
+	var s = uptime % 3600 % 60
+	document.getElementById("uptime").textContent = Math.trunc(h) +"H " + Math.trunc(m) + "M " + s + "s ";
+	uptime +=1
+}
+function updateTime() {
+    const now = new Date();
+    document.getElementById("curtime").textContent = now.toLocaleString();
+	system_boottime();
+}
+
+document.getElementById("networkForm").addEventListener("submit", function(e) {
+    e.preventDefault();	
+
+    // Add '=' between parameter name and value
+    var getstr = "hostname=" + encodeURIComponent(document.getElementById('hostname').value) + "&shmoo=" + document.getElementById('shmoo').value  ;
+
+    fetch('/cgi-bin/SetSystem.cgi?' + getstr)
+        .then(response => response.text())
+        .then(data => {
+            console.log("Response:", data);
+            alert("Settings saved!");
+        })
+        .catch(err => {
+            console.error(err);
+            alert("Settings Failure!");
+        });
+});
+
+
+window.onload = () => {
+	fetch('/cgi-bin/GetSystem.cgi')
+        .then(response => response.text())
+        .then(data => {
+            console.log("Response:", data);
+            let params = new URLSearchParams(data);
+			document.getElementById('hostname').value   = params.get('hostname')   || '';
+            document.getElementById('fwver').textContent = params.get('fwver')      || '';
+			document.getElementById('SDK').textContent = params.get('SDK')      || '';
+            document.getElementById('sensorType').textContent = params.get('sensorType')      || '';
+			document.getElementById('shmoo').value = params.get('shmoo')      || '';
+			uptime = Number(params.get('uptime'))
+            //alert("Network settings loaded!");
+        })
+        .catch(err => console.error('Failed to load network settings:', err));
+		setInterval(updateTime, 1000)
+}
+</script>
+</html>

@@ -1,0 +1,12 @@
+[Unit]
+Description=Temperature Monitor Daemon
+After=syslogd.service
+
+
+[Service]
+ExecStart=/usr/local/bin/cec_heaterd
+User=root
+Type=forking
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,163 @@
+#!/bin/sh
+[ -e "/www/cgi-bin/global.sh" ] && source /www/cgi-bin/global.sh
+ENUM_FWNOTEXIST_ERR=255
+ENUM_FWFORMAT_ERR=254
+ENUM_FWDUTDISMATCH_ERR=253
+ENUM_KERNELIMAGE_ERR=252
+ENUM_ROOTFSBIN_ERR=251
+ENUM_UPGRADEIMAGE_ERR=250
+ENUM_UPGRADEROOTFS_ERR=249
+ENUM_UPGRADEDTB_ERR=248
+ENUM_DTB_CRC32ERR=247
+PROJECTCODE=`cat /etc/project_code`
+
+FW_NAME=${1-/tmp/uploaded.bin}
+HEADER_BYTE=80
+
+BYTE_OFFSET=0
+MAGIC_BYTE=4
+PROJECTCODE_BYTE=4
+VERSION_BYTE=4
+TIMESTAMP_BYTE=4
+KERNELLEN_BYTE=4
+KERNELCKS_BYTE=4
+DTBLEN_BYTE=4
+DTBCKS_BYTE=4
+ROOTFSLEN_BYTE=4
+ROOTFSCKS_BYTE=4
+
+blink_REDLED(){
+	trap "exit 0" TERM INT
+	while [ 1 ];
+	do
+		echo 1  > /sys/class/leds/PowerLED/brightness
+		sleep 0.5
+		echo 0 > /sys/class/leds/PowerLED/brightness
+		sleep 0.5
+	done 
+}
+
+err_handler(){
+	local err=$1
+	case $err in
+		${ENUM_FWNOTEXIST_ERR})
+			echo "$FW_NAME cannot find such file!!"
+			;;
+		${ENUM_FWFORMAT_ERR})
+			echo "CEC FW format dismatch!!"
+			;;
+		${ENUM_FWDUTDISMATCH_ERR})
+			echo "this FW not using for this project!!"
+			;;
+		${ENUM_KERNELIMAGE_ERR})
+			echo "KERNEL image Checksum Error!!"
+			;;
+		${ENUM_ROOTFSBIN_ERR})
+			echo "rootfs image checksum Error!!"
+			;;
+		${ENUM_UPGRADEIMAGE_ERR})
+			echo "upgrade  image  Error!!"
+			;;
+		${ENUM_UPGRADEROOTFS_ERR})
+			echo "upgrade rootfs image  Error!!"
+			;;
+		${ENUM_UPGRADEDTB_ERR})
+			echo "upgrade dtb image  Error!!"
+			;;
+		${ENUM_DTB_CRC32ERR})
+			echo "dtb checksume error!"
+			;;
+		*)
+			echo "Unknown Error Type!!"
+			;;
+	esac
+	
+	echo ${err} > /tmp/progress
+	kill $PROCESSID   # sends SIGTERM (default)
+	wait $PROCESSID 2>/dev/null
+	echo "Stopped Blink"
+	exit ${err}
+}
+reverse32() {
+    hex=$(echo "$1" | tr -d ' ')
+    echo "${hex:6:2}${hex:4:2}${hex:2:2}${hex:0:2}"
+}
+
+blink_REDLED & 
+PROCESSID=$!
+
+echo 0 > /tmp/progress
+[ ! -e "$FW_NAME" ] && err_handler ${ENUM_FWNOTEXIST_ERR}
+
+[ "`head -c ${MAGIC_BYTE} $FW_NAME`" != "2385" ] && err_handler $ENUM_FWFORMAT_ERR 
+BYTE_OFFSET=$(( BYTE_OFFSET + MAGIC_BYTE ))
+PROJECTCODE_RAW=`xxd -s ${BYTE_OFFSET} -l 4  -p  ${FW_NAME}`
+[ "$(printf "%d" "0x`reverse32 ${PROJECTCODE_RAW}`")" != "${PROJECTCODE}" ] && err_handler ${ENUM_FWDUTDISMATCH_ERR}
+
+BYTE_OFFSET=$(( BYTE_OFFSET + 4 ))
+VERSION_RAW=`xxd -s ${BYTE_OFFSET} -l 4  -p  ${FW_NAME}`
+VERSION=$(printf "%d" "0x`reverse32 ${VERSION_RAW}`")
+
+BYTE_OFFSET=$(( BYTE_OFFSET + 4 ))
+TIMESTAMP_RAW=`xxd -s ${BYTE_OFFSET} -l 4  -p  ${FW_NAME}`
+TIMESTAMP=$(printf "%d" "0x`reverse32 ${TIMESTAMP_RAW}`")
+
+BYTE_OFFSET=$(( BYTE_OFFSET + 4 ))
+IMAGE_LENS_RAW=`xxd -s ${BYTE_OFFSET} -l 4  -p  ${FW_NAME}`
+IMAGE_LENS=$(printf "%d" "0x`reverse32 ${IMAGE_LENS_RAW}`")
+
+BYTE_OFFSET=$(( BYTE_OFFSET + 4 ))
+IMAGE_CRC32_RAW=$(xxd -s $BYTE_OFFSET  -l 4 -p ${FW_NAME})
+IMAGE_CRC32="`reverse32 ${IMAGE_CRC32_RAW}`"
+
+BYTE_OFFSET=$(( BYTE_OFFSET + 4 ))
+DTB_LENS_RAW=`xxd -s ${BYTE_OFFSET} -l 4  -p  ${FW_NAME}`
+DTB_LENS=$(printf "%d" "0x`reverse32 ${DTB_LENS_RAW}`")
+
+BYTE_OFFSET=$(( BYTE_OFFSET + 4 ))
+DTB_CRC32_RAW=$(xxd -s $BYTE_OFFSET  -l 4 -p ${FW_NAME})
+DTB_CRC32="`reverse32 ${DTB_CRC32_RAW}`"
+
+BYTE_OFFSET=$(( BYTE_OFFSET + 4 ))
+ROOTFSBIN_LENS_RAW=`xxd -s ${BYTE_OFFSET} -l 4  -p  ${FW_NAME}`
+ROOTFSBIN_LENS=$(printf "%d" "0x`reverse32 ${ROOTFSBIN_LENS_RAW}`")
+
+BYTE_OFFSET=$(( BYTE_OFFSET + 4 ))
+ROOTFSBIN_CRC32_RAW=$(xxd -s $BYTE_OFFSET  -l 4 -p ${FW_NAME})
+ROOTFSBIN_CRC32="`reverse32 ${ROOTFSBIN_CRC32_RAW}`"
+
+echo 10 > /tmp/progress
+# dd if=${FW_NAME} of=/tmp/Image bs=1 skip=${HEADER_BYTE} count=${IMAGE_LENS}
+# dd if=${FW_NAME} of=/tmp/rootfs.bin bs=1 skip=$((HEADER_BYTE + IMAGE_LENS)) count=${ROOTFSBIN_LENS}
+/usr/local/bin/filecut -i "$FW_NAME" -o /var/tmp/Image -s ${HEADER_BYTE} -f ${IMAGE_LENS}
+echo 20 > /tmp/progress
+
+/usr/local/bin/filecut -i "$FW_NAME" -o /var/tmp/dtb -s $((HEADER_BYTE + IMAGE_LENS )) -f ${DTB_LENS}
+echo 20 > /tmp/progress
+
+/usr/local/bin/filecut -i "$FW_NAME" -o /var/tmp/rootfs.bin -s $((HEADER_BYTE + IMAGE_LENS + DTB_LENS )) -f ${ROOTFSBIN_LENS}
+echo 30 > /tmp/progress
+[ "`crc32 /var/tmp/Image | awk '{print $1}'`" != "$IMAGE_CRC32" ] && err_handler  ${ENUM_KERNELIMAGE_ERR}
+[ "`crc32 /var/tmp/rootfs.bin | awk '{print $1}'`" != "$ROOTFSBIN_CRC32" ] && err_handler  ${ENUM_ROOTFSBIN_ERR}
+[ "`crc32 /var/tmp/dtb | awk '{print $1}'`" != "$DTB_CRC32" ] && err_handler  ${ENUM_DTB_CRC32ERR}
+
+upgrade_partition -p -s 0x2000000 /dev/mmcblk0p9 /var/tmp/Image 
+[ $? -ne 0 ] && err_handler  ${ENUM_UPGRADEIMAGE_ERR}
+echo 50 > /tmp/progress
+upgrade_partition -p  /dev/mmcblk0p5 /var/tmp/dtb 
+[ $? -ne 0 ] && err_handler  ${ENUM_UPGRADEDTB_ERR}
+e
+echo 98 > /tmp/progress
+upgrade_partition -p /dev/mmcblk0p11 /var/tmp/rootfs.bin 
+[ $? -ne 0 ] && err_handler  ${ENUM_UPGRADEROOTFS_ERR}
+echo 100 > /tmp/progress
+
+kill $PROCESSID   # sends SIGTERM (default)
+wait $PROCESSID 2>/dev/null
+echo "Stopped Blink"
+
+# trigger wdt to reboot
+# systemctl reboot
+sleep 2
+echo 1 > /proc/chicony_wdt/enable
+echo 1000 > /proc/chicony_wdt/period

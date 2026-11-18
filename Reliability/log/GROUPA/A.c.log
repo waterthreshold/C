@@ -1,0 +1,138 @@
+[2025-09-09 11:11:05.404] cec_bosch_reliability_function.sh Bandwidth 1
+[2025-09-09 11:11:05.412] 
+[2025-09-09 11:11:05.412]    [BOSCH Reliability: Bandwidth]
+[2025-09-09 11:11:05.412] Doing limiting time testing
+[2025-09-09 11:11:05.417] This is bandwidth version 0.24a.
+[2025-09-09 11:11:05.417] Copyright (C) 2005-2010 by Zack T Smith.
+[2025-09-09 11:11:05.417] 
+[2025-09-09 11:11:05.417] This software is covered by the GNU Public License.
+[2025-09-09 11:11:05.417] It is provided AS-IS, use at your own risk.
+[2025-09-09 11:11:05.418] See the file COPYING for more information.
+[2025-09-09 11:11:05.418] 
+[2025-09-09 11:11:05.418] Using 64-bit transfers.
+[2025-09-09 11:11:05.418] Notation: kB = 1024 B, MB = 1048576 B.
+[2025-09-09 11:11:05.435] System has 2 processor(s)
+[2025-09-09 11:11:05.450] 
+[2025-09-09 11:11:05.450] Sequential read (64-bit), size = 256 B, loops = 102432768, 4991.4 MB/s
+[2025-09-09 11:11:10.461] Sequential read (64-bit), size = 512 B, loops = 51511296, 5020.7 MB/s
+[2025-09-09 11:11:15.470] Sequential read (64-bit), size = 768 B, loops = 34362578, 5026.9 MB/s
+[2025-09-09 11:11:20.475] Sequential read (64-bit), size = 1 kB, loops = 25772032, 5023.2 MB/s
+[2025-09-09 11:11:25.488] Sequential read (64-bit), size = 2 kB, loops = 12812288, 4992.9 MB/s
+[2025-09-09 11:11:30.499] Sequential read (64-bit), size = 3 kB, loops = 8585085, 5024.4 MB/s
+[2025-09-09 11:11:35.506] Sequential read (64-bit), size = 4 kB, loops = 25763840, 20114.3 MB/s
+[2025-09-09 11:11:40.510] Sequential read (64-bit), size = 6 kB, loops = 17133887, 20067.4 MB/s
+[2025-09-09 11:11:45.513] Sequential read (64-bit), size = 8 kB, loops = 12836864, 20051.2 MB/s
+[2025-09-09 11:11:50.515] Sequential read (64-bit), size = 12 kB, loops = 8561482, 20060.1 MB/s
+[2025-09-09 11:11:55.517] Sequential read (64-bit), size = 16 kB, loops = 6414336, 20033.1 MB/s
+[2025-09-09 11:12:00.518] Sequential read (64-bit), size = 20 kB, loops = 5142501, 20079.3 MB/s
+[2025-09-09 11:12:05.521] Sequential read (64-bit), size = 24 kB, loops = 4284735, 20076.4 MB/s
+[2025-09-09 11:12:10.524] Sequential read (64-bit), size = 28 kB, loops = 3663270, 20025.0 MB/s
+[2025-09-09 11:12:15.526] Sequential read (64-bit), size = 32 kB, loops = 3210752, 20054.3 MB/s
+[2025-09-09 11:12:20.531] Sequential read (64-bit), size = 40 kB, loops = 2561013, 19998.7 MB/s
+[2025-09-09 11:12:25.533] Sequential read (64-bit), size = 48 kB, loops = 2139296, 20042.8 MB/s
+[2025-09-09 11:12:30.536] Sequential read (64-bit), size = 64 kB, loops = 1604096, 20039.2 MB/s
+[2025-09-09 11:12:35.540] Sequential read (64-bit), size = 128 kB, loops = 800000, 19989.7 MB/s
+[2025-09-09 11:12:40.541] Sequential read (64-bit), size = 192 kB, loops = 530340, 19876.0 MB/s
+[2025-09-09 11:12:45.546] Sequential read (64-bit), size = 256 kB, loops = 392576, 19608.2 MB/s
+[2025-09-09 11:12:50.553] Sequential read (64-bit), size = 384 kB, loops = 242420, 18171.0 MB/s
+[2025-09-09 11:12:55.556] Sequential read (64-bit), size = 512 kB, loops = 180384, 18024.1 MB/s
+[2025-09-09 11:13:00.559] Sequential read (64-bit), size = 768 kB, loops = 115323, 17280.0 MB/s
+[2025-09-09 11:13:05.568] Sequential read (64-bit), size = 1 MB, loops = 74448, 14878.2 MB/s
+[2025-09-09 11:13:10.576] Sequential read (64-bit), size = 1.25 MB, loops = 41373, 10330.5 MB/s
+[2025-09-09 11:13:15.584] Sequential read (64-bit), size = 1.5 MB, loops = 26397, 7912.4 MB/s
+[2025-09-09 11:13:20.591] Sequential read (64-bit), size = 1.75 MB, loops = 16920, 5913.2 MB/s
+[2025-09-09 11:13:25.609] Sequential read (64-bit), size = 2 MB, loops = 11904, 4754.7 MB/s
+[2025-09-09 11:13:30.625] Sequential read (64-bit), size = 2.25 MB, loops = 8708, 3910.9 MB/s
+[2025-09-09 11:13:35.641] Sequential read (64-bit), size = 2.5 MB, loops = 6581, 3284.0 MB/s
+[2025-09-09 11:13:40.651] Sequential read (64-bit), size = 2.75 MB, loops = 5330, 2922.9 MB/s
+[2025-09-09 11:13:45.679] Sequential read (64-bit), size = 3 MB, loops = 4488, 2686.2 MB/s
+[2025-09-09 11:13:50.700] Sequential read (64-bit), size = 4 MB, loops = 3096, 2470.2 MB/s
+[2025-09-09 11:13:55.725] Sequential read (64-bit), size = 5 MB, loops = 2388, 2380.3 MB/s
+[2025-09-09 11:14:00.749] Sequential read (64-bit), size = 6 MB, loops = 1962, 2345.8 MB/s
+[2025-09-09 11:14:05.784] Sequential read (64-bit), size = 16 MB, loops = 689, 2198.6 MB/s
+[2025-09-09 11:14:10.847] Sequential read (64-bit), size = 64 MB, loops = 166, 2118.7 MB/s
+[2025-09-09 11:14:16.060] 
+[2025-09-09 11:14:16.060] Random read (64-bit), size = 256 B, loops = 82051072, 3997.4 MB/s
+[2025-09-09 11:14:21.070] Random read (64-bit), size = 512 B, loops = 40501248, 3947.3 MB/s
+[2025-09-09 11:14:26.083] Random read (64-bit), size = 768 B, loops = 26520133, 3874.5 MB/s
+[2025-09-09 11:14:31.095] Random read (64-bit), size = 1 kB, loops = 19972096, 3893.5 MB/s
+[2025-09-09 11:14:36.106] Random read (64-bit), size = 2 kB, loops = 10027008, 3910.7 MB/s
+[2025-09-09 11:14:41.113] Random read (64-bit), size = 3 kB, loops = 6690031, 3912.8 MB/s
+[2025-09-09 11:14:46.123] Random read (64-bit), size = 4 kB, loops = 20017152, 15624.1 MB/s
+[2025-09-09 11:14:51.127] Random read (64-bit), size = 6 kB, loops = 13324840, 15606.1 MB/s
+[2025-09-09 11:14:56.132] Random read (64-bit), size = 8 kB, loops = 10002432, 15617.0 MB/s
+[2025-09-09 11:15:01.135] Random read (64-bit), size = 12 kB, loops = 6648767, 15572.1 MB/s
+[2025-09-09 11:15:06.139] Random read (64-bit), size = 16 kB, loops = 4980736, 15556.8 MB/s
+[2025-09-09 11:15:11.141] Random read (64-bit), size = 20 kB, loops = 3976245, 15515.1 MB/s
+[2025-09-09 11:15:16.149] Random read (64-bit), size = 24 kB, loops = 3311490, 15512.2 MB/s
+[2025-09-09 11:15:21.152] Random read (64-bit), size = 28 kB, loops = 2836665, 15504.0 MB/s
+[2025-09-09 11:15:26.157] Random read (64-bit), size = 32 kB, loops = 2496000, 15586.5 MB/s
+[2025-09-09 11:15:31.163] Random read (64-bit), size = 40 kB, loops = 1988532, 15528.5 MB/s
+[2025-09-09 11:15:36.167] Random read (64-bit), size = 48 kB, loops = 1650285, 15465.3 MB/s
+[2025-09-09 11:15:41.171] Random read (64-bit), size = 64 kB, loops = 1239552, 15477.5 MB/s
+[2025-09-09 11:15:46.179] Random read (64-bit), size = 128 kB, loops = 581504, 14526.5 MB/s
+[2025-09-09 11:15:51.187] Random read (64-bit), size = 192 kB, loops = 340147, 12743.8 MB/s
+[2025-09-09 11:15:56.198] Random read (64-bit), size = 256 kB, loops = 223040, 11142.5 MB/s
+[2025-09-09 11:16:01.212] Random read (64-bit), size = 384 kB, loops = 126862, 9502.9 MB/s
+[2025-09-09 11:16:06.230] Random read (64-bit), size = 512 kB, loops = 84160, 8409.9 MB/s
+[2025-09-09 11:16:11.250] Random read (64-bit), size = 768 kB, loops = 43201, 6474.6 MB/s
+[2025-09-09 11:16:16.281] Random read (64-bit), size = 1 MB, loops = 23824, 4754.2 MB/s
+[2025-09-09 11:16:21.327] Random read (64-bit), size = 1.25 MB, loops = 7956, 1981.2 MB/s
+[2025-09-09 11:16:26.394] Random read (64-bit), size = 1.5 MB, loops = 3843, 1147.4 MB/s
+[2025-09-09 11:16:31.483] Random read (64-bit), size = 1.75 MB, loops = 2781, 965.1 MB/s
+[2025-09-09 11:16:36.594] Random read (64-bit), size = 2 MB, loops = 2296, 914.9 MB/s
+[2025-09-09 11:16:41.714] Random read (64-bit), size = 2.25 MB, loops = 1953, 872.9 MB/s
+[2025-09-09 11:16:46.859] Random read (64-bit), size = 2.5 MB, loops = 1675, 832.3 MB/s
+[2025-09-09 11:16:52.030] Random read (64-bit), size = 2.75 MB, loops = 1512, 825.4 MB/s
+[2025-09-09 11:16:57.211] Random read (64-bit), size = 3 MB, loops = 1365, 811.5 MB/s
+[2025-09-09 11:17:02.435] Random read (64-bit), size = 4 MB, loops = 968, 763.5 MB/s
+[2025-09-09 11:17:07.744] Random read (64-bit), size = 5 MB, loops = 759, 748.9 MB/s
+[2025-09-09 11:17:13.118] Random read (64-bit), size = 6 MB, loops = 627, 746.8 MB/s
+[2025-09-09 11:17:18.533] Random read (64-bit), size = 16 MB, loops = 224, 707.2 MB/s
+[2025-09-09 11:17:24.661] Random read (64-bit), size = 64 MB, loops = 50, 632.4 MB/s
+[2025-09-09 11:17:49.453] 
+[2025-09-09 11:17:49.453] Sequential write (64-bit), size = 256 B, loops = 44498944, 2165.7 MB/s
+[2025-09-09 11:17:54.481] Sequential write (64-bit), size = 512 B, loops = 18644992, 1811.0 MB/s
+[2025-09-09 11:17:59.502] Sequential write (64-bit), size = 768 B, loops = 14483400, 2113.3 MB/s
+[2025-09-09 11:18:04.514] Sequential write (64-bit), size = 1 kB, loops = 10649600, 2074.2 MB/s
+[2025-09-09 11:18:09.536] Sequential write (64-bit), size = 2 kB, loops = 5447680, 2118.8 MB/s
+[2025-09-09 11:18:14.550] Sequential write (64-bit), size = 3 kB, loops = 3620808, 2115.9 MB/s
+[2025-09-09 11:18:19.551] Sequential write (64-bit), size = 4 kB, loops = 25632768, 20014.7 MB/s
+[2025-09-09 11:18:24.555] Sequential write (64-bit), size = 6 kB, loops = 17076547, 20000.4 MB/s
+[2025-09-09 11:18:29.562] Sequential write (64-bit), size = 8 kB, loops = 12795904, 19967.1 MB/s
+[2025-09-09 11:18:34.567] Sequential write (64-bit), size = 12 kB, loops = 8547830, 20018.2 MB/s
+[2025-09-09 11:18:39.569] Sequential write (64-bit), size = 16 kB, loops = 6395904, 19975.5 MB/s
+[2025-09-09 11:18:44.572] Sequential write (64-bit), size = 20 kB, loops = 5116293, 19976.9 MB/s
+[2025-09-09 11:18:49.575] Sequential write (64-bit), size = 24 kB, loops = 4260847, 19965.3 MB/s
+[2025-09-09 11:18:54.576] Sequential write (64-bit), size = 28 kB, loops = 3652740, 19971.0 MB/s
+[2025-09-09 11:18:59.582] Sequential write (64-bit), size = 32 kB, loops = 3200512, 19980.1 MB/s
+[2025-09-09 11:19:04.585] Sequential write (64-bit), size = 40 kB, loops = 2557327, 19970.3 MB/s
+[2025-09-09 11:19:09.587] Sequential write (64-bit), size = 48 kB, loops = 2133153, 19989.6 MB/s
+[2025-09-09 11:19:14.590] Sequential write (64-bit), size = 64 kB, loops = 1601280, 20006.4 MB/s
+[2025-09-09 11:19:19.593] Sequential write (64-bit), size = 128 kB, loops = 799616, 19977.5 MB/s
+[2025-09-09 11:19:24.598] Sequential write (64-bit), size = 192 kB, loops = 530510, 19882.2 MB/s
+[2025-09-09 11:19:29.600] Sequential write (64-bit), size = 256 kB, loops = 397440, 19855.6 MB/s
+[2025-09-09 11:19:34.604] Sequential write (64-bit), size = 384 kB, loops = 262352, 19664.0 MB/s
+[2025-09-09 11:19:39.608] Sequential write (64-bit), size = 512 kB, loops = 191808, 19167.3 MB/s
+[2025-09-09 11:19:44.611] Sequential write (64-bit), size = 768 kB, loops = 107546, 16122.8 MB/s
+[2025-09-09 11:19:49.617] Sequential write (64-bit), size = 1 MB, loops = 50592, 10107.4 MB/s
+[2025-09-09 11:19:54.629] Sequential write (64-bit), size = 1.25 MB, loops = 23179, 5782.3 MB/s
+[2025-09-09 11:19:59.637] Sequential write (64-bit), size = 1.5 MB, loops = 12715, 3807.8 MB/s
+[2025-09-09 11:20:04.648] Sequential write (64-bit), size = 1.75 MB, loops = 9027, 3153.4 MB/s
+[2025-09-09 11:20:09.655] Sequential write (64-bit), size = 2 MB, loops = 6536, 2610.4 MB/s
+[2025-09-09 11:20:14.670] Sequential write (64-bit), size = 2.25 MB, loops = 5194, 2330.4 MB/s
+[2025-09-09 11:20:19.698] Sequential write (64-bit), size = 2.5 MB, loops = 4256, 2115.9 MB/s
+[2025-09-09 11:20:24.716] Sequential write (64-bit), size = 2.75 MB, loops = 3507, 1922.4 MB/s
+[2025-09-09 11:20:29.727] Sequential write (64-bit), size = 3 MB, loops = 3092, 1850.8 MB/s
+[2025-09-09 11:20:34.754] Sequential write (64-bit), size = 4 MB, loops = 2036, 1620.8 MB/s
+[2025-09-09 11:20:39.782] Sequential write (64-bit), size = 5 MB, loops = 1506, 1497.6 MB/s
+[2025-09-09 11:20:44.808] Sequential write (64-bit), size = 6 MB, loops = 1152, 1375.1 MB/s
+[2025-09-09 11:20:49.830] Sequential write (64-bit), size = 16 MB, loops = 399, 1271.0 MB/s
+[2025-09-09 11:20:54.855] Sequential write (64-bit), size = 64 MB, loops = 96, 1223.1 MB/s
+[2025-09-09 11:20:59.914] 
+[2025-09-09 11:20:59.914] Random write (64-bit), size = 256 B, loops = 21233664, 1028.2 MB/s
+[2025-09-09 11:21:04.925] Random write (64-bit), size = 512 B, loops = 8486912, 826.9 MB/s
+[2025-09-09 11:21:05.798] ^C
+[2025-09-09 11:21:05.806] 
+[2025-09-09 11:21:05.806] # 
+[2025-09-09 11:21:05.806] # 

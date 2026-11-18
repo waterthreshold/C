@@ -1,0 +1,1 @@
+aarch64-linux-gnu-gcc -o shmood ~/test_Factoryreset/shmood/shmood.c -Iout/amba_out/cv5_larnaca2/sysroot/usr/include/json-c/json -Lout/amba_out/cv5_larnaca2/sysroot/usr/lib/ -ljson-c

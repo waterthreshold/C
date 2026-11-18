@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Device Settings</title>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+    /* Sidebar */
+    .sidebar {
+        width: 200px;
+        background-color: #2c3e50;
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    .tab {
+        padding: 15px;
+        cursor: pointer;
+        border-bottom: 1px solid #34495e;
+        text-align: left;
+    }
+    .tab:hover {
+        background-color: #34495e;
+    }
+    .tab.active {
+        background-color: #1abc9c;
+    }
+    /* Iframe content */
+    iframe {
+        flex: 1;
+        border: none;
+    }
+</style>
+<link rel="icon" href="asset/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="sidebar">
+	<div class="tab active" onclick="loadPage(this, 'video.html')">Live View</div>
+    <div class="tab" onclick="loadPage(this, 'System.html')">System Settings</div>
+    <div class="tab" onclick="loadPage(this, 'Network.html')">Network Settings</div>
+	<div class="tab" onclick="loadPage(this, 'Sensor.html')">Sensor/MCU</div> 
+	<div class="tab" onclick="loadPage(this, 'Upgrade.html')">Upgrade</div> 
+	<div class="tab" onclick="loadPage(this, 'Storage.html')">Storage</div>
+	<div class="tab" onclick="loadPage(this, 'SMT.html')">SMT</div>	
+    <div class="tab" onclick="logout(this)">Logout</div> 
+</div>
+
+<iframe id="contentFrame" src="video.html"></iframe>
+
+<script>
+    function loadPage(tab, url) {
+        // Load into iframe
+        document.getElementById('contentFrame').src = url;
+
+        // Update active tab
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+    }
+	function logout(o){
+		if(confirm("Are you sure you want to logout?"))
+		{	
+			loadPage(o, 'logout');
+			window.location.replace('/');
+		}
+	}
+</script>
+
+</body>
+</html>

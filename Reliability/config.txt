@@ -1,0 +1,3 @@
+TERATERM_PATH=C:\Users\10008847\scoop\apps\teraterm\5.4.0\ttermpro.exe
+DUT_IP=172.16.7.44
+TESTTIME=600

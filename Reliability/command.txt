@@ -1,0 +1,7 @@
+open 172.16.7.37
+root
+
+cd /root
+get sd_loop_test_result_1
+get sd_loop_test_result_2
+bye

@@ -1,0 +1,69 @@
+
+strlen param2
+if result <= 0 then
+inputbox 'Please Input DUT ip address' 'DUT IP' '192.168.100.20'
+ip=inputstr
+else
+ip=param2
+endif 
+call verification_ip 
+if myresult = 1 then 
+	sprintf2 tmpinfo_msg '%s invalid' param1
+	messagebox tmpinfo_msg 'Error'
+	exit
+endif
+
+testlink
+if result <> 0  disconnect 0
+
+sprintf2 cmd '%s /ssh /2 /auth=password /user=root /passwd=' ip
+connect cmd
+
+getdate basedirname '%Y%m%d_A'
+getenv 'userprofile' path
+makepath full_path path 'Desktop'
+makepath rootdirname full_path basedirname
+foldercreate rootdirname
+; changedir rootdirname
+gettitle titletext
+sprintf2 mytitle '%s,Ag,Vector process' titletext
+settitle mytitle
+; timeout=timeout_time
+makepath logpath rootdirname 'Ag.log'
+filedelete logpath
+logopen logpath 0 0 0 1
+waitregex '^# $'
+sendln 'modprobe cavalry;cavalry_load -f /lib/firmware/cavalry.bin'
+waitregex '^# $'
+sendln 'test_nnctrl -b /root/onnx_yolov3_cavalry-cv5.bin --dummy data=/root/dog.bin -t 0 -k &'
+mpause 500
+sendkcode 28 1
+waitregex '^# $'
+sendln 'cavalry_top -u 100 -c 10000 &'
+waitregex '^# $'
+exit
+; waitregex '^# $'
+; if result = 0 call L_INTERRUPT
+; logclose
+:verification_ip
+myresult=0
+strsplit ip '.' 4
+for i 1 4
+sprintf2 tmp_cmnd 'str2int target_ip groupmatchstr%d' i i
+execcmnd  tmp_cmnd
+if result = 0 then 
+	sprintf2 tmp_error_msg 'IP format error %s' param1 
+	; messagebox  tmp_error_msg 'Error'
+	; goto main
+	myresult = 1
+	break
+elseif result = 1 then 
+	if target_ip > 255  || target_ip < 0 then 
+		sprintf2 tmp_error_msg 'IP range error %s %d out of range' param1  target_ip
+		; messagebox  tmp_error_msg 'Error'
+		myresult = 1
+		break
+	endif	
+endif
+next 
+return

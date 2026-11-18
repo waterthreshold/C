@@ -1,0 +1,792 @@
+[2025-09-09 11:55:22.601] cec_bosch_reliability_function.sh Bandwidth 1
+[2025-09-09 11:55:22.610] 
+[2025-09-09 11:55:22.610]    [BOSCH Reliability: Bandwidth]
+[2025-09-09 11:55:22.611] Doing limiting time testing
+[2025-09-09 11:55:22.616] This is bandwidth version 0.24a.
+[2025-09-09 11:55:22.616] Copyright (C) 2005-2010 by Zack T Smith.
+[2025-09-09 11:55:22.616] 
+[2025-09-09 11:55:22.616] This software is covered by the GNU Public License.
+[2025-09-09 11:55:22.617] It is provided AS-IS, use at your own risk.
+[2025-09-09 11:55:22.619] See the file COPYING for more information.
+[2025-09-09 11:55:22.620] 
+[2025-09-09 11:55:22.620] Using 64-bit transfers.
+[2025-09-09 11:55:22.620] Notation: kB = 1024 B, MB = 1048576 B.
+[2025-09-09 11:55:22.634] System has 2 processor(s)
+[2025-09-09 11:55:22.670] 
+[2025-09-09 11:55:22.670] Sequential read (64-bit), size = 256 B, PID	NID	VP%	CMD
+[2025-09-09 11:55:26.010] 457	0	96.670%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:55:26.011] 
+[2025-09-09 11:55:26.011] VP IDLE 03.010%
+[2025-09-09 11:55:27.679] loops = 81199104, 3957.8 MB/s
+[2025-09-09 11:55:27.679] Sequential read (64-bit), size = 512 B, PID	NID	VP%	CMD
+[2025-09-09 11:55:29.715] 457	0	96.740%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:55:29.716] 
+[2025-09-09 11:55:29.716] VP IDLE 03.200%
+[2025-09-09 11:55:32.693] loops = 41091072, 4002.1 MB/s
+[2025-09-09 11:55:32.695] Sequential read (64-bit), size = 768 B, PID	NID	VP%	CMD
+[2025-09-09 11:55:33.371] 457	0	96.820%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:55:33.372] 
+[2025-09-09 11:55:33.372] VP IDLE 03.050%
+[2025-09-09 11:55:36.901] PID	NID	VP%	CMD
+[2025-09-09 11:55:36.901] 457	0	97.080%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:55:36.902] 
+[2025-09-09 11:55:36.902] VP IDLE 02.820%
+[2025-09-09 11:55:37.702] loops = 28158527, 4118.2 MB/s
+[2025-09-09 11:55:37.704] Sequential read (64-bit), size = 1 kB, PID	NID	VP%	CMD
+[2025-09-09 11:55:40.489] 457	0	96.550%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:55:40.491] 
+[2025-09-09 11:55:40.492] VP IDLE 03.160%
+[2025-09-09 11:55:42.712] loops = 20217856, 3942.1 MB/s
+[2025-09-09 11:55:42.713] Sequential read (64-bit), size = 2 kB, PID	NID	VP%	CMD
+[2025-09-09 11:55:44.077] 457	0	96.340%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:55:44.081] 
+[2025-09-09 11:55:44.081] VP IDLE 03.540%
+[2025-09-09 11:55:47.668] PID	NID	VP%	CMD
+[2025-09-09 11:55:47.668] 457	0	96.650%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:55:47.669] 
+[2025-09-09 11:55:47.669] VP IDLE 03.070%
+[2025-09-09 11:55:47.731] loops = 10125312, 3940.2 MB/s
+[2025-09-09 11:55:47.731] Sequential read (64-bit), size = 3 kB, PID	NID	VP%	CMD
+[2025-09-09 11:55:51.325] 457	0	96.880%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:55:51.326] 
+[2025-09-09 11:55:51.326] VP IDLE 02.890%
+[2025-09-09 11:55:52.746] loops = 6842946, 4000.7 MB/s
+[2025-09-09 11:55:52.746] Sequential read (64-bit), size = 4 kB, PID	NID	VP%	CMD
+[2025-09-09 11:55:55.057] 457	0	96.860%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:55:55.057] 
+[2025-09-09 11:55:55.057] VP IDLE 03.080%
+[2025-09-09 11:55:57.746] loops = 20217856, 15784.7 MB/s
+[2025-09-09 11:55:57.750] Sequential read (64-bit), size = 6 kB, PID	NID	VP%	CMD
+[2025-09-09 11:55:58.808] 457	0	96.130%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:55:58.809] 
+[2025-09-09 11:55:58.811] VP IDLE 03.430%
+[2025-09-09 11:56:02.423] PID	NID	VP%	CMD
+[2025-09-09 11:56:02.423] 457	0	96.760%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:02.424] 
+[2025-09-09 11:56:02.424] VP IDLE 02.980%
+[2025-09-09 11:56:02.752] loops = 13750798, 16099.2 MB/s
+[2025-09-09 11:56:02.753] Sequential read (64-bit), size = 8 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:06.156] 457	0	96.260%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:06.157] 
+[2025-09-09 11:56:06.157] VP IDLE 03.350%
+[2025-09-09 11:56:07.756] loops = 10102784, 15777.7 MB/s
+[2025-09-09 11:56:07.756] Sequential read (64-bit), size = 12 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:09.801] 457	0	96.340%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:09.802] 
+[2025-09-09 11:56:09.802] VP IDLE 03.420%
+[2025-09-09 11:56:12.760] loops = 6663785, 15608.2 MB/s
+[2025-09-09 11:56:12.761] Sequential read (64-bit), size = 16 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:13.326] 457	0	96.260%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:13.327] 
+[2025-09-09 11:56:13.327] VP IDLE 03.390%
+[2025-09-09 11:56:16.867] PID	NID	VP%	CMD
+[2025-09-09 11:56:16.868] 457	0	96.130%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:16.868] 
+[2025-09-09 11:56:16.868] VP IDLE 03.340%
+[2025-09-09 11:56:17.774] loops = 5043200, 15716.0 MB/s
+[2025-09-09 11:56:17.774] Sequential read (64-bit), size = 20 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:20.430] 457	0	96.540%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:20.431] 
+[2025-09-09 11:56:20.431] VP IDLE 02.980%
+[2025-09-09 11:56:22.779] loops = 4052412, 15815.1 MB/s
+[2025-09-09 11:56:22.780] Sequential read (64-bit), size = 24 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:24.091] 457	0	96.820%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:24.091] 
+[2025-09-09 11:56:24.091] VP IDLE 02.770%
+[2025-09-09 11:56:27.765] PID	NID	VP%	CMD
+[2025-09-09 11:56:27.765] 457	0	96.690%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:27.766] 
+[2025-09-09 11:56:27.766] VP IDLE 03.130%
+[2025-09-09 11:56:27.783] loops = 3409770, 15973.3 MB/s
+[2025-09-09 11:56:27.783] Sequential read (64-bit), size = 28 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:31.546] 457	0	96.470%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:31.548] 
+[2025-09-09 11:56:31.548] VP IDLE 03.270%
+[2025-09-09 11:56:32.786] loops = 2873520, 15711.3 MB/s
+[2025-09-09 11:56:32.787] Sequential read (64-bit), size = 32 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:35.113] 457	0	96.360%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:35.115] 
+[2025-09-09 11:56:35.115] VP IDLE 03.460%
+[2025-09-09 11:56:37.794] loops = 2509312, 15654.2 MB/s
+[2025-09-09 11:56:37.794] Sequential read (64-bit), size = 40 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:38.671] 457	0	96.340%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:38.672] 
+[2025-09-09 11:56:38.672] VP IDLE 03.480%
+[2025-09-09 11:56:42.322] PID	NID	VP%	CMD
+[2025-09-09 11:56:42.322] 457	0	96.610%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:42.324] 
+[2025-09-09 11:56:42.324] VP IDLE 03.170%
+[2025-09-09 11:56:42.797] loops = 2033167, 15874.6 MB/s
+[2025-09-09 11:56:42.798] Sequential read (64-bit), size = 48 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:45.942] 457	0	96.780%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:45.942] 
+[2025-09-09 11:56:45.942] VP IDLE 03.180%
+[2025-09-09 11:56:47.803] loops = 1721265, 16122.9 MB/s
+[2025-09-09 11:56:47.803] Sequential read (64-bit), size = 64 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:49.605] 457	0	96.860%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:49.605] 
+[2025-09-09 11:56:49.605] VP IDLE 02.970%
+[2025-09-09 11:56:52.807] loops = 1254656, 15673.0 MB/s
+[2025-09-09 11:56:52.808] Sequential read (64-bit), size = 128 kB, PID	NID	VP%	CMD
+[2025-09-09 11:56:53.177] 457	0	96.850%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:53.179] 
+[2025-09-09 11:56:53.179] VP IDLE 02.910%
+[2025-09-09 11:56:56.753] PID	NID	VP%	CMD
+[2025-09-09 11:56:56.753] 457	0	96.410%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:56:56.755] 
+[2025-09-09 11:56:56.755] VP IDLE 03.520%
+[2025-09-09 11:56:57.809] loops = 621568, 15530.2 MB/s
+[2025-09-09 11:56:57.810] Sequential read (64-bit), size = 192 kB, PID	NID	VP%	CMD
+[2025-09-09 11:57:00.322] 457	0	96.060%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:00.323] 
+[2025-09-09 11:57:00.323] VP IDLE 03.720%
+[2025-09-09 11:57:02.818] loops = 414059, 15499.5 MB/s
+[2025-09-09 11:57:02.819] Sequential read (64-bit), size = 256 kB, PID	NID	VP%	CMD
+[2025-09-09 11:57:03.876] 457	0	95.880%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:03.877] 
+[2025-09-09 11:57:03.877] VP IDLE 03.610%
+[2025-09-09 11:57:07.511] PID	NID	VP%	CMD
+[2025-09-09 11:57:07.511] 457	0	96.530%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:07.512] 
+[2025-09-09 11:57:07.512] VP IDLE 03.260%
+[2025-09-09 11:57:07.823] loops = 308608, 15416.7 MB/s
+[2025-09-09 11:57:07.823] Sequential read (64-bit), size = 384 kB, PID	NID	VP%	CMD
+[2025-09-09 11:57:11.119] 457	0	96.620%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:11.120] 
+[2025-09-09 11:57:11.120] VP IDLE 03.170%
+[2025-09-09 11:57:12.829] loops = 188997, 14166.6 MB/s
+[2025-09-09 11:57:12.829] Sequential read (64-bit), size = 512 kB, PID	NID	VP%	CMD
+[2025-09-09 11:57:14.717] 457	0	96.380%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:14.718] 
+[2025-09-09 11:57:14.718] VP IDLE 03.570%
+[2025-09-09 11:57:17.834] loops = 142144, 14202.5 MB/s
+[2025-09-09 11:57:17.835] Sequential read (64-bit), size = 768 kB, PID	NID	VP%	CMD
+[2025-09-09 11:57:18.285] 457	0	96.300%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:18.287] 
+[2025-09-09 11:57:18.287] VP IDLE 03.670%
+[2025-09-09 11:57:21.876] PID	NID	VP%	CMD
+[2025-09-09 11:57:21.876] 457	0	96.330%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:21.877] 
+[2025-09-09 11:57:21.877] VP IDLE 03.280%
+[2025-09-09 11:57:22.844] loops = 86742, 12991.5 MB/s
+[2025-09-09 11:57:22.845] Sequential read (64-bit), size = 1 MB, PID	NID	VP%	CMD
+[2025-09-09 11:57:25.513] 457	0	96.150%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:25.515] 
+[2025-09-09 11:57:25.515] VP IDLE 03.300%
+[2025-09-09 11:57:27.853] loops = 54464, 10884.1 MB/s
+[2025-09-09 11:57:27.853] Sequential read (64-bit), size = 1.25 MB, PID	NID	VP%	CMD
+[2025-09-09 11:57:29.329] 457	0	95.510%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:29.331] 
+[2025-09-09 11:57:29.331] VP IDLE 04.160%
+[2025-09-09 11:57:32.859] loops = 29784, 7441.1 MB/s
+[2025-09-09 11:57:32.860] Sequential read (64-bit), size = 1.5 MB, PID	NID	VP%	CMD
+[2025-09-09 11:57:33.264] 457	0	94.690%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:33.265] 
+[2025-09-09 11:57:33.265] VP IDLE 04.830%
+[2025-09-09 11:57:37.091] PID	NID	VP%	CMD
+[2025-09-09 11:57:37.092] 457	0	95.440%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:37.093] 
+[2025-09-09 11:57:37.093] VP IDLE 04.200%
+[2025-09-09 11:57:37.877] loops = 18826, 5637.1 MB/s
+[2025-09-09 11:57:37.878] Sequential read (64-bit), size = 1.75 MB, PID	NID	VP%	CMD
+[2025-09-09 11:57:40.984] 457	0	94.870%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:40.985] 
+[2025-09-09 11:57:40.985] VP IDLE 04.860%
+[2025-09-09 11:57:42.888] loops = 10827, 3785.6 MB/s
+[2025-09-09 11:57:42.889] Sequential read (64-bit), size = 2 MB, PID	NID	VP%	CMD
+[2025-09-09 11:57:44.795] 457	0	94.850%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:44.796] 
+[2025-09-09 11:57:44.796] VP IDLE 04.180%
+[2025-09-09 11:57:47.906] loops = 7128, 2844.1 MB/s
+[2025-09-09 11:57:47.911] Sequential read (64-bit), size = 2.25 MB, PID	NID	VP%	CMD
+[2025-09-09 11:57:48.567] 457	0	95.940%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:48.569] 
+[2025-09-09 11:57:48.569] VP IDLE 03.430%
+[2025-09-09 11:57:52.275] PID	NID	VP%	CMD
+[2025-09-09 11:57:52.276] 457	0	95.280%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:52.276] 
+[2025-09-09 11:57:52.276] VP IDLE 04.210%
+[2025-09-09 11:57:52.933] loops = 5404, 2423.2 MB/s
+[2025-09-09 11:57:52.933] Sequential read (64-bit), size = 2.5 MB, PID	NID	VP%	CMD
+[2025-09-09 11:57:56.061] 457	0	95.310%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:56.063] 
+[2025-09-09 11:57:56.063] VP IDLE 04.010%
+[2025-09-09 11:57:57.956] loops = 3831, 1909.3 MB/s
+[2025-09-09 11:57:57.956] Sequential read (64-bit), size = 2.75 MB, PID	NID	VP%	CMD
+[2025-09-09 11:57:59.838] 457	0	95.860%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:57:59.839] 
+[2025-09-09 11:57:59.839] VP IDLE 03.660%
+[2025-09-09 11:58:02.989] loops = 3306, 1810.3 MB/s
+[2025-09-09 11:58:02.990] Sequential read (64-bit), size = 3 MB, PID	NID	VP%	CMD
+[2025-09-09 11:58:03.599] 457	0	95.860%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:03.600] 
+[2025-09-09 11:58:03.600] VP IDLE 03.390%
+[2025-09-09 11:58:07.288] PID	NID	VP%	CMD
+[2025-09-09 11:58:07.288] 457	0	95.560%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:07.291] 
+[2025-09-09 11:58:07.291] VP IDLE 04.260%
+[2025-09-09 11:58:08.011] loops = 3003, 1798.2 MB/s
+[2025-09-09 11:58:08.011] Sequential read (64-bit), size = 4 MB, PID	NID	VP%	CMD
+[2025-09-09 11:58:10.944] 457	0	94.750%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:10.945] 
+[2025-09-09 11:58:10.945] VP IDLE 05.070%
+[2025-09-09 11:58:13.057] loops = 2116, 1682.7 MB/s
+[2025-09-09 11:58:13.057] Sequential read (64-bit), size = 5 MB, PID	NID	VP%	CMD
+[2025-09-09 11:58:14.591] 457	0	94.500%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:14.593] 
+[2025-09-09 11:58:14.593] VP IDLE 05.380%
+[2025-09-09 11:58:18.090] loops = 1692, 1686.1 MB/s
+[2025-09-09 11:58:18.091] Sequential read (64-bit), size = 6 MB, PID	NID	VP%	CMD
+[2025-09-09 11:58:18.206] 457	0	93.480%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:18.208] 
+[2025-09-09 11:58:18.208] VP IDLE 06.070%
+[2025-09-09 11:58:21.737] PID	NID	VP%	CMD
+[2025-09-09 11:58:21.737] 457	0	93.850%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:21.738] 
+[2025-09-09 11:58:21.738] VP IDLE 05.750%
+[2025-09-09 11:58:23.130] loops = 1487, 1776.2 MB/s
+[2025-09-09 11:58:23.133] Sequential read (64-bit), size = 16 MB, PID	NID	VP%	CMD
+[2025-09-09 11:58:25.317] 457	0	94.120%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:25.319] 
+[2025-09-09 11:58:25.319] VP IDLE 05.590%
+[2025-09-09 11:58:28.226] loops = 475, 1513.4 MB/s
+[2025-09-09 11:58:28.234] Sequential read (64-bit), size = 64 MB, PID	NID	VP%	CMD
+[2025-09-09 11:58:29.045] 457	0	95.620%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:29.047] 
+[2025-09-09 11:58:29.047] VP IDLE 03.900%
+[2025-09-09 11:58:32.707] PID	NID	VP%	CMD
+[2025-09-09 11:58:32.708] 457	0	95.680%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:32.708] 
+[2025-09-09 11:58:32.708] VP IDLE 03.700%
+[2025-09-09 11:58:33.528] loops = 118, 1502.0 MB/s
+[2025-09-09 11:58:33.545] 
+[2025-09-09 11:58:33.547] Random read (64-bit), size = 256 B, PID	NID	VP%	CMD
+[2025-09-09 11:58:36.331] 457	0	96.520%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:36.332] 
+[2025-09-09 11:58:36.332] VP IDLE 03.110%
+[2025-09-09 11:58:38.559] loops = 64815104, 3157.4 MB/s
+[2025-09-09 11:58:38.560] Random read (64-bit), size = 512 B, PID	NID	VP%	CMD
+[2025-09-09 11:58:39.905] 457	0	96.720%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:39.908] 
+[2025-09-09 11:58:39.908] VP IDLE 03.040%
+[2025-09-09 11:58:43.514] PID	NID	VP%	CMD
+[2025-09-09 11:58:43.514] 457	0	96.220%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:43.517] 
+[2025-09-09 11:58:43.517] VP IDLE 03.510%
+[2025-09-09 11:58:43.582] loops = 32047104, 3115.0 MB/s
+[2025-09-09 11:58:43.583] Random read (64-bit), size = 768 B, PID	NID	VP%	CMD
+[2025-09-09 11:58:47.061] 457	0	96.410%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:47.062] 
+[2025-09-09 11:58:47.062] VP IDLE 03.500%
+[2025-09-09 11:58:48.593] loops = 21058821, 3079.4 MB/s
+[2025-09-09 11:58:48.593] Random read (64-bit), size = 1 kB, PID	NID	VP%	CMD
+[2025-09-09 11:58:50.606] 457	0	96.780%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:50.609] 
+[2025-09-09 11:58:50.609] VP IDLE 03.100%
+[2025-09-09 11:58:53.606] loops = 15695872, 3058.3 MB/s
+[2025-09-09 11:58:53.607] Random read (64-bit), size = 2 kB, PID	NID	VP%	CMD
+[2025-09-09 11:58:54.190] 457	0	96.190%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:54.193] 
+[2025-09-09 11:58:54.193] VP IDLE 03.580%
+[2025-09-09 11:58:57.739] PID	NID	VP%	CMD
+[2025-09-09 11:58:57.739] 457	0	96.490%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:58:57.740] 
+[2025-09-09 11:58:57.740] VP IDLE 03.290%
+[2025-09-09 11:58:58.637] loops = 7880704, 3061.1 MB/s
+[2025-09-09 11:58:58.637] Random read (64-bit), size = 3 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:01.324] 457	0	96.380%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:01.326] 
+[2025-09-09 11:59:01.326] VP IDLE 03.400%
+[2025-09-09 11:59:03.653] loops = 5248261, 3065.6 MB/s
+[2025-09-09 11:59:03.653] Random read (64-bit), size = 4 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:04.892] 457	0	96.120%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:04.893] 
+[2025-09-09 11:59:04.893] VP IDLE 03.600%
+[2025-09-09 11:59:08.443] PID	NID	VP%	CMD
+[2025-09-09 11:59:08.443] 457	0	96.280%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:08.444] 
+[2025-09-09 11:59:08.444] VP IDLE 03.320%
+[2025-09-09 11:59:08.660] loops = 15847424, 12362.8 MB/s
+[2025-09-09 11:59:08.660] Random read (64-bit), size = 6 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:12.028] 457	0	96.490%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:12.030] 
+[2025-09-09 11:59:12.030] VP IDLE 03.280%
+[2025-09-09 11:59:13.665] loops = 10913808, 12779.0 MB/s
+[2025-09-09 11:59:13.665] Random read (64-bit), size = 8 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:15.605] 457	0	96.810%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:15.606] 
+[2025-09-09 11:59:15.606] VP IDLE 02.880%
+[2025-09-09 11:59:18.668] loops = 7821312, 12213.6 MB/s
+[2025-09-09 11:59:18.669] Random read (64-bit), size = 12 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:19.196] 457	0	96.440%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:19.198] 
+[2025-09-09 11:59:19.198] VP IDLE 03.510%
+[2025-09-09 11:59:22.749] PID	NID	VP%	CMD
+[2025-09-09 11:59:22.750] 457	0	95.940%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:22.752] 
+[2025-09-09 11:59:22.752] VP IDLE 03.550%
+[2025-09-09 11:59:23.671] loops = 5205698, 12193.9 MB/s
+[2025-09-09 11:59:23.672] Random read (64-bit), size = 16 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:26.280] 457	0	96.340%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:26.283] 
+[2025-09-09 11:59:26.283] VP IDLE 03.450%
+[2025-09-09 11:59:28.675] loops = 3922944, 12250.2 MB/s
+[2025-09-09 11:59:28.676] Random read (64-bit), size = 20 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:29.878] 457	0	96.750%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:29.879] 
+[2025-09-09 11:59:29.879] VP IDLE 03.000%
+[2025-09-09 11:59:33.544] PID	NID	VP%	CMD
+[2025-09-09 11:59:33.544] 457	0	97.030%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:33.545] 
+[2025-09-09 11:59:33.545] VP IDLE 02.940%
+[2025-09-09 11:59:33.688] loops = 3203109, 12489.4 MB/s
+[2025-09-09 11:59:33.689] Random read (64-bit), size = 24 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:37.132] 457	0	96.850%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:37.133] 
+[2025-09-09 11:59:37.133] VP IDLE 03.040%
+[2025-09-09 11:59:38.692] loops = 2605102, 12198.4 MB/s
+[2025-09-09 11:59:38.693] Random read (64-bit), size = 28 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:40.656] 457	0	96.330%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:40.657] 
+[2025-09-09 11:59:40.657] VP IDLE 03.320%
+[2025-09-09 11:59:43.695] loops = 2266290, 12385.1 MB/s
+[2025-09-09 11:59:43.695] Random read (64-bit), size = 32 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:44.178] 457	0	96.910%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:44.179] 
+[2025-09-09 11:59:44.179] VP IDLE 02.800%
+[2025-09-09 11:59:47.732] PID	NID	VP%	CMD
+[2025-09-09 11:59:47.733] 457	0	97.090%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:47.735] 
+[2025-09-09 11:59:47.735] VP IDLE 02.800%
+[2025-09-09 11:59:48.699] loops = 1971200, 12313.0 MB/s
+[2025-09-09 11:59:48.700] Random read (64-bit), size = 40 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:51.326] 457	0	96.230%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:51.326] 
+[2025-09-09 11:59:51.326] VP IDLE 03.480%
+[2025-09-09 11:59:53.705] loops = 1555281, 12139.7 MB/s
+[2025-09-09 11:59:53.706] Random read (64-bit), size = 48 kB, PID	NID	VP%	CMD
+[2025-09-09 11:59:54.979] 457	0	96.770%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:54.982] 
+[2025-09-09 11:59:54.982] VP IDLE 03.110%
+[2025-09-09 11:59:58.553] PID	NID	VP%	CMD
+[2025-09-09 11:59:58.553] 457	0	97.030%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 11:59:58.554] 
+[2025-09-09 11:59:58.554] VP IDLE 02.810%
+[2025-09-09 11:59:58.712] loops = 1285830, 12044.5 MB/s
+[2025-09-09 11:59:58.712] Random read (64-bit), size = 64 kB, PID	NID	VP%	CMD
+[2025-09-09 12:00:02.093] 457	0	96.760%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:02.095] 
+[2025-09-09 12:00:02.095] VP IDLE 03.170%
+[2025-09-09 12:00:03.719] loops = 968192, 12092.7 MB/s
+[2025-09-09 12:00:03.720] Random read (64-bit), size = 128 kB, PID	NID	VP%	CMD
+[2025-09-09 12:00:05.660] 457	0	96.230%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:05.661] IDSP	NID:0	00.010%
+[2025-09-09 12:00:05.662] 
+[2025-09-09 12:00:05.662] VP IDLE 03.010%
+[2025-09-09 12:00:08.737] loops = 465664, 11611.7 MB/s
+[2025-09-09 12:00:08.738] Random read (64-bit), size = 192 kB, PID	NID	VP%	CMD
+[2025-09-09 12:00:09.201] 457	0	96.430%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:09.202] 
+[2025-09-09 12:00:09.202] VP IDLE 03.280%
+[2025-09-09 12:00:12.889] PID	NID	VP%	CMD
+[2025-09-09 12:00:12.889] 457	0	96.560%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:12.891] 
+[2025-09-09 12:00:12.891] VP IDLE 03.320%
+[2025-09-09 12:00:13.748] loops = 268452, 10060.8 MB/s
+[2025-09-09 12:00:13.749] Random read (64-bit), size = 256 kB, PID	NID	VP%	CMD
+[2025-09-09 12:00:16.475] 457	0	96.200%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:16.476] 
+[2025-09-09 12:00:16.476] VP IDLE 03.540%
+[2025-09-09 12:00:18.761] loops = 173184, 8650.0 MB/s
+[2025-09-09 12:00:18.761] Random read (64-bit), size = 384 kB, PID	NID	VP%	CMD
+[2025-09-09 12:00:20.064] 457	0	96.200%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:20.065] 
+[2025-09-09 12:00:20.065] VP IDLE 03.590%
+[2025-09-09 12:00:23.746] PID	NID	VP%	CMD
+[2025-09-09 12:00:23.746] 457	0	96.680%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:23.748] 
+[2025-09-09 12:00:23.748] VP IDLE 03.130%
+[2025-09-09 12:00:23.785] loops = 96475, 7225.4 MB/s
+[2025-09-09 12:00:23.785] Random read (64-bit), size = 512 kB, PID	NID	VP%	CMD
+[2025-09-09 12:00:27.501] 457	0	96.450%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:27.505] 
+[2025-09-09 12:00:27.505] VP IDLE 03.380%
+[2025-09-09 12:00:28.823] loops = 62432, 6228.8 MB/s
+[2025-09-09 12:00:28.825] Random read (64-bit), size = 768 kB, PID	NID	VP%	CMD
+[2025-09-09 12:00:31.100] 457	0	95.310%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:31.101] 
+[2025-09-09 12:00:31.101] VP IDLE 04.220%
+[2025-09-09 12:00:33.876] loops = 31237, 4676.3 MB/s
+[2025-09-09 12:00:33.876] Random read (64-bit), size = 1 MB, PID	NID	VP%	CMD
+[2025-09-09 12:00:34.827] 457	0	96.100%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:34.827] 
+[2025-09-09 12:00:34.827] VP IDLE 03.380%
+[2025-09-09 12:00:38.554] PID	NID	VP%	CMD
+[2025-09-09 12:00:38.554] 457	0	95.590%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:38.554] 
+[2025-09-09 12:00:38.554] VP IDLE 03.320%
+[2025-09-09 12:00:38.941] loops = 13808, 2758.5 MB/s
+[2025-09-09 12:00:38.941] Random read (64-bit), size = 1.25 MB, PID	NID	VP%	CMD
+[2025-09-09 12:00:42.225] 457	0	95.350%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:42.227] 
+[2025-09-09 12:00:42.227] VP IDLE 04.040%
+[2025-09-09 12:00:44.008] loops = 4016, 1000.9 MB/s
+[2025-09-09 12:00:44.008] Random read (64-bit), size = 1.5 MB, PID	NID	VP%	CMD
+[2025-09-09 12:00:45.826] 457	0	95.370%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:45.827] 
+[2025-09-09 12:00:45.827] VP IDLE 04.480%
+[2025-09-09 12:00:49.103] loops = 2583, 770.3 MB/s
+[2025-09-09 12:00:49.104] Random read (64-bit), size = 1.75 MB, PID	NID	VP%	CMD
+[2025-09-09 12:00:49.385] 457	0	96.050%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:49.387] 
+[2025-09-09 12:00:49.387] VP IDLE 03.760%
+[2025-09-09 12:00:53.128] PID	NID	VP%	CMD
+[2025-09-09 12:00:53.129] 457	0	95.700%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:53.130] 
+[2025-09-09 12:00:53.130] VP IDLE 03.640%
+[2025-09-09 12:00:54.239] loops = 1773, 615.8 MB/s
+[2025-09-09 12:00:54.241] Random read (64-bit), size = 2 MB, PID	NID	VP%	CMD
+[2025-09-09 12:00:56.866] 457	0	96.220%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:00:56.867] 
+[2025-09-09 12:00:56.867] VP IDLE 03.250%
+[2025-09-09 12:00:59.427] loops = 1416, 560.4 MB/s
+[2025-09-09 12:00:59.428] Random read (64-bit), size = 2.25 MB, PID	NID	VP%	CMD
+[2025-09-09 12:01:00.615] 457	0	95.850%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:00.616] 
+[2025-09-09 12:01:00.616] VP IDLE 03.740%
+[2025-09-09 12:01:04.304] PID	NID	VP%	CMD
+[2025-09-09 12:01:04.305] 457	0	95.030%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:04.306] 
+[2025-09-09 12:01:04.306] VP IDLE 04.510%
+[2025-09-09 12:01:04.628] loops = 1183, 527.1 MB/s
+[2025-09-09 12:01:04.628] Random read (64-bit), size = 2.5 MB, PID	NID	VP%	CMD
+[2025-09-09 12:01:07.989] 457	0	96.010%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:07.990] 
+[2025-09-09 12:01:07.990] VP IDLE 03.520%
+[2025-09-09 12:01:09.845] loops = 1081, 534.4 MB/s
+[2025-09-09 12:01:09.845] Random read (64-bit), size = 2.75 MB, PID	NID	VP%	CMD
+[2025-09-09 12:01:11.527] 457	0	96.350%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:11.529] 
+[2025-09-09 12:01:11.529] VP IDLE 03.290%
+[2025-09-09 12:01:14.967] PID	NID	VP%	CMD
+[2025-09-09 12:01:14.967] 457	0	96.140%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:14.968] 
+[2025-09-09 12:01:14.968] VP IDLE 03.720%
+[2025-09-09 12:01:15.136] loops = 989, 533.3 MB/s
+[2025-09-09 12:01:15.137] Random read (64-bit), size = 3 MB, PID	NID	VP%	CMD
+[2025-09-09 12:01:18.585] 457	0	95.560%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:18.586] 
+[2025-09-09 12:01:18.586] VP IDLE 04.230%
+[2025-09-09 12:01:20.388] loops = 861, 512.1 MB/s
+[2025-09-09 12:01:20.388] Random read (64-bit), size = 4 MB, PID	NID	VP%	CMD
+[2025-09-09 12:01:22.295] 457	0	94.900%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:22.298] 
+[2025-09-09 12:01:22.298] VP IDLE 04.820%
+[2025-09-09 12:01:25.741] loops = 632, 498.2 MB/s
+[2025-09-09 12:01:25.741] Random read (64-bit), size = 5 MB, PID	NID	VP%	CMD
+[2025-09-09 12:01:25.998] 457	0	96.200%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:25.999] 
+[2025-09-09 12:01:25.999] VP IDLE 03.380%
+[2025-09-09 12:01:29.474] PID	NID	VP%	CMD
+[2025-09-09 12:01:29.475] 457	0	96.090%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:29.477] 
+[2025-09-09 12:01:29.477] VP IDLE 03.800%
+[2025-09-09 12:01:31.181] loops = 504, 495.5 MB/s
+[2025-09-09 12:01:31.181] Random read (64-bit), size = 6 MB, PID	NID	VP%	CMD
+[2025-09-09 12:01:33.117] 457	0	96.390%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:33.118] 
+[2025-09-09 12:01:33.118] VP IDLE 03.440%
+[2025-09-09 12:01:36.712] loops = 402, 473.2 MB/s
+[2025-09-09 12:01:36.712] Random read (64-bit), size = 16 MB, PID	NID	VP%	CMD
+[2025-09-09 12:01:36.865] 457	0	95.940%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:36.866] 
+[2025-09-09 12:01:36.866] VP IDLE 03.530%
+[2025-09-09 12:01:40.387] PID	NID	VP%	CMD
+[2025-09-09 12:01:40.387] 457	0	95.920%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:40.388] 
+[2025-09-09 12:01:40.388] VP IDLE 03.860%
+[2025-09-09 12:01:43.369] loops = 150, 469.0 MB/s
+[2025-09-09 12:01:43.369] Random read (64-bit), size = 64 MB, PID	NID	VP%	CMD
+[2025-09-09 12:01:43.956] 457	0	95.570%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:43.957] 
+[2025-09-09 12:01:43.957] VP IDLE 04.080%
+[2025-09-09 12:01:47.711] PID	NID	VP%	CMD
+[2025-09-09 12:01:47.711] 457	0	96.610%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:47.713] 
+[2025-09-09 12:01:47.713] VP IDLE 03.000%
+[2025-09-09 12:01:51.424] PID	NID	VP%	CMD
+[2025-09-09 12:01:51.425] 457	0	96.770%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:51.425] 
+[2025-09-09 12:01:51.425] VP IDLE 03.060%
+[2025-09-09 12:01:55.224] PID	NID	VP%	CMD
+[2025-09-09 12:01:55.224] 457	0	96.870%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:55.226] 
+[2025-09-09 12:01:55.226] VP IDLE 02.980%
+[2025-09-09 12:01:58.953] PID	NID	VP%	CMD
+[2025-09-09 12:01:58.953] 457	0	96.240%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:01:58.954] 
+[2025-09-09 12:01:58.954] VP IDLE 03.650%
+[2025-09-09 12:02:02.698] PID	NID	VP%	CMD
+[2025-09-09 12:02:02.700] 457	0	96.530%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:02.701] 
+[2025-09-09 12:02:02.701] VP IDLE 03.210%
+[2025-09-09 12:02:06.449] PID	NID	VP%	CMD
+[2025-09-09 12:02:06.449] 457	0	97.090%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:06.451] 
+[2025-09-09 12:02:06.451] VP IDLE 02.890%
+[2025-09-09 12:02:10.028] PID	NID	VP%	CMD
+[2025-09-09 12:02:10.028] 457	0	95.930%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:10.029] 
+[2025-09-09 12:02:10.029] VP IDLE 03.710%
+[2025-09-09 12:02:11.820] loops = 33, 412.4 MB/s
+[2025-09-09 12:02:13.506] PID	NID	VP%	CMD
+[2025-09-09 12:02:13.507] 457	0	96.470%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:13.509] 
+[2025-09-09 12:02:13.509] VP IDLE 03.280%
+[2025-09-09 12:02:16.843] 
+[2025-09-09 12:02:16.843] Sequential write (64-bit), size = 256 B, loops = 42729472, 2083.4 MB/s
+[2025-09-09 12:02:16.931] PID	NID	VP%	CMD
+[2025-09-09 12:02:16.931] 457	0	96.780%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:16.933] 
+[2025-09-09 12:02:16.933] VP IDLE 03.100%
+[2025-09-09 12:02:20.475] PID	NID	VP%	CMD
+[2025-09-09 12:02:20.475] 457	0	96.960%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:20.477] 
+[2025-09-09 12:02:20.477] VP IDLE 03.000%
+[2025-09-09 12:02:21.867] Sequential write (64-bit), size = 512 B, loops = 19857408, 1929.9 MB/s
+[2025-09-09 12:02:23.986] PID	NID	VP%	CMD
+[2025-09-09 12:02:23.986] 457	0	96.670%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:23.987] 
+[2025-09-09 12:02:23.987] VP IDLE 02.700%
+[2025-09-09 12:02:26.886] Sequential write (64-bit), size = 768 B, loops = 15291675, 2231.7 MB/s
+[2025-09-09 12:02:27.490] PID	NID	VP%	CMD
+[2025-09-09 12:02:27.491] 457	0	96.740%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:27.493] 
+[2025-09-09 12:02:27.493] VP IDLE 03.040%
+[2025-09-09 12:02:31.061] PID	NID	VP%	CMD
+[2025-09-09 12:02:31.061] 457	0	96.070%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:31.062] 
+[2025-09-09 12:02:31.062] VP IDLE 03.510%
+[2025-09-09 12:02:31.893] Sequential write (64-bit), size = 1 kB, loops = 11026432, 2150.2 MB/s
+[2025-09-09 12:02:34.607] PID	NID	VP%	CMD
+[2025-09-09 12:02:34.607] 457	0	96.850%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:34.608] 
+[2025-09-09 12:02:34.608] VP IDLE 03.060%
+[2025-09-09 12:02:36.912] Sequential write (64-bit), size = 2 kB, loops = 5292032, 2059.6 MB/s
+[2025-09-09 12:02:38.215] PID	NID	VP%	CMD
+[2025-09-09 12:02:38.216] 457	0	97.010%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:38.217] 
+[2025-09-09 12:02:38.217] VP IDLE 02.840%
+[2025-09-09 12:02:41.756] PID	NID	VP%	CMD
+[2025-09-09 12:02:41.756] 457	0	96.980%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:41.758] 
+[2025-09-09 12:02:41.758] VP IDLE 02.810%
+[2025-09-09 12:02:41.924] Sequential write (64-bit), size = 3 kB, loops = 3757340, 2196.3 MB/s
+[2025-09-09 12:02:45.336] PID	NID	VP%	CMD
+[2025-09-09 12:02:45.337] 457	0	96.750%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:45.337] 
+[2025-09-09 12:02:45.337] VP IDLE 03.160%
+[2025-09-09 12:02:46.931] Sequential write (64-bit), size = 4 kB, loops = 20783104, 16218.7 MB/s
+[2025-09-09 12:02:48.836] PID	NID	VP%	CMD
+[2025-09-09 12:02:48.838] 457	0	96.740%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:48.839] 
+[2025-09-09 12:02:48.839] VP IDLE 03.170%
+[2025-09-09 12:02:51.935] Sequential write (64-bit), size = 6 kB, loops = 14395196, 16855.6 MB/s
+[2025-09-09 12:02:52.235] PID	NID	VP%	CMD
+[2025-09-09 12:02:52.235] 457	0	96.810%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:52.236] 
+[2025-09-09 12:02:52.236] VP IDLE 02.950%
+[2025-09-09 12:02:55.822] PID	NID	VP%	CMD
+[2025-09-09 12:02:55.822] 457	0	96.330%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:55.823] 
+[2025-09-09 12:02:55.823] VP IDLE 03.380%
+[2025-09-09 12:02:56.938] Sequential write (64-bit), size = 8 kB, loops = 9986048, 15595.3 MB/s
+[2025-09-09 12:02:59.403] PID	NID	VP%	CMD
+[2025-09-09 12:02:59.403] 457	0	97.110%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:02:59.404] 
+[2025-09-09 12:02:59.404] VP IDLE 02.700%
+[2025-09-09 12:03:01.941] Sequential write (64-bit), size = 12 kB, loops = 6693820, 15677.8 MB/s
+[2025-09-09 12:03:02.956] PID	NID	VP%	CMD
+[2025-09-09 12:03:02.956] 457	0	96.740%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:02.958] 
+[2025-09-09 12:03:02.958] VP IDLE 03.200%
+[2025-09-09 12:03:06.610] PID	NID	VP%	CMD
+[2025-09-09 12:03:06.610] 457	0	97.010%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:06.611] 
+[2025-09-09 12:03:06.611] VP IDLE 02.830%
+[2025-09-09 12:03:06.945] Sequential write (64-bit), size = 16 kB, loops = 5177344, 16167.0 MB/s
+[2025-09-09 12:03:10.315] PID	NID	VP%	CMD
+[2025-09-09 12:03:10.316] 457	0	96.970%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:10.318] 
+[2025-09-09 12:03:10.318] VP IDLE 02.890%
+[2025-09-09 12:03:11.949] Sequential write (64-bit), size = 20 kB, loops = 4124484, 16097.1 MB/s
+[2025-09-09 12:03:13.977] PID	NID	VP%	CMD
+[2025-09-09 12:03:13.978] 457	0	96.780%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:13.980] 
+[2025-09-09 12:03:13.980] VP IDLE 02.940%
+[2025-09-09 12:03:16.952] Sequential write (64-bit), size = 24 kB, loops = 3377692, 15825.1 MB/s
+[2025-09-09 12:03:17.532] PID	NID	VP%	CMD
+[2025-09-09 12:03:17.532] 457	0	96.940%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:17.534] 
+[2025-09-09 12:03:17.534] VP IDLE 02.760%
+[2025-09-09 12:03:21.122] PID	NID	VP%	CMD
+[2025-09-09 12:03:21.123] 457	0	96.490%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:21.124] 
+[2025-09-09 12:03:21.124] VP IDLE 03.100%
+[2025-09-09 12:03:21.956] Sequential write (64-bit), size = 28 kB, loops = 2897505, 15834.9 MB/s
+[2025-09-09 12:03:24.841] PID	NID	VP%	CMD
+[2025-09-09 12:03:24.841] 457	0	96.650%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:24.843] 
+[2025-09-09 12:03:24.843] VP IDLE 03.250%
+[2025-09-09 12:03:26.959] Sequential write (64-bit), size = 32 kB, loops = 2577408, 16098.4 MB/s
+[2025-09-09 12:03:28.465] PID	NID	VP%	CMD
+[2025-09-09 12:03:28.465] 457	0	96.740%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:28.466] 
+[2025-09-09 12:03:28.466] VP IDLE 03.090%
+[2025-09-09 12:03:31.962] Sequential write (64-bit), size = 40 kB, loops = 2030710, 15858.5 MB/s
+[2025-09-09 12:03:32.197] PID	NID	VP%	CMD
+[2025-09-09 12:03:32.197] 457	0	96.390%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:32.199] 
+[2025-09-09 12:03:32.199] VP IDLE 03.450%
+[2025-09-09 12:03:35.865] PID	NID	VP%	CMD
+[2025-09-09 12:03:35.865] 457	0	96.370%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:35.867] 
+[2025-09-09 12:03:35.867] VP IDLE 03.360%
+[2025-09-09 12:03:36.976] Sequential write (64-bit), size = 48 kB, loops = 1683386, 15741.5 MB/s
+[2025-09-09 12:03:39.621] PID	NID	VP%	CMD
+[2025-09-09 12:03:39.621] 457	0	96.030%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:39.622] 
+[2025-09-09 12:03:39.622] VP IDLE 03.620%
+[2025-09-09 12:03:41.982] Sequential write (64-bit), size = 64 kB, loops = 1258496, 15721.7 MB/s
+[2025-09-09 12:03:43.371] PID	NID	VP%	CMD
+[2025-09-09 12:03:43.372] 457	0	96.680%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:43.373] 
+[2025-09-09 12:03:43.373] VP IDLE 03.080%
+[2025-09-09 12:03:46.983] Sequential write (64-bit), size = 128 kB, loops = 630784, 15763.0 MB/s
+[2025-09-09 12:03:47.073] PID	NID	VP%	CMD
+[2025-09-09 12:03:47.073] 457	0	96.380%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:47.074] 
+[2025-09-09 12:03:47.074] VP IDLE 03.250%
+[2025-09-09 12:03:50.818] PID	NID	VP%	CMD
+[2025-09-09 12:03:50.818] 457	0	96.810%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:50.819] 
+[2025-09-09 12:03:50.819] VP IDLE 03.050%
+[2025-09-09 12:03:51.987] Sequential write (64-bit), size = 192 kB, loops = 419344, 15717.7 MB/s
+[2025-09-09 12:03:54.464] PID	NID	VP%	CMD
+[2025-09-09 12:03:54.465] 457	0	96.960%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:54.466] 
+[2025-09-09 12:03:54.466] VP IDLE 02.980%
+[2025-09-09 12:03:56.996] Sequential write (64-bit), size = 256 kB, loops = 319808, 15965.8 MB/s
+[2025-09-09 12:03:58.257] PID	NID	VP%	CMD
+[2025-09-09 12:03:58.258] 457	0	96.640%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:03:58.259] 
+[2025-09-09 12:03:58.259] VP IDLE 03.160%
+[2025-09-09 12:04:01.856] PID	NID	VP%	CMD
+[2025-09-09 12:04:01.856] 457	0	96.800%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:01.857] 
+[2025-09-09 12:04:01.857] VP IDLE 03.080%
+[2025-09-09 12:04:01.998] Sequential write (64-bit), size = 384 kB, loops = 201237, 15085.0 MB/s
+[2025-09-09 12:04:05.680] PID	NID	VP%	CMD
+[2025-09-09 12:04:05.680] 457	0	96.350%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:05.682] 
+[2025-09-09 12:04:05.682] VP IDLE 03.480%
+[2025-09-09 12:04:07.004] Sequential write (64-bit), size = 512 kB, loops = 140224, 14010.4 MB/s
+[2025-09-09 12:04:09.272] PID	NID	VP%	CMD
+[2025-09-09 12:04:09.272] 457	0	94.940%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:09.274] 
+[2025-09-09 12:04:09.274] VP IDLE 04.680%
+[2025-09-09 12:04:12.011] Sequential write (64-bit), size = 768 kB, loops = 68233, 10224.2 MB/s
+[2025-09-09 12:04:12.942] PID	NID	VP%	CMD
+[2025-09-09 12:04:12.942] 457	0	94.340%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:12.943] 
+[2025-09-09 12:04:12.943] VP IDLE 05.220%
+[2025-09-09 12:04:16.656] PID	NID	VP%	CMD
+[2025-09-09 12:04:16.656] 457	0	94.580%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:16.656] 
+[2025-09-09 12:04:16.656] VP IDLE 04.760%
+[2025-09-09 12:04:17.032] Sequential write (64-bit), size = 1 MB, loops = 22608, 4503.9 MB/s
+[2025-09-09 12:04:20.469] PID	NID	VP%	CMD
+[2025-09-09 12:04:20.470] 457	0	95.640%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:20.471] 
+[2025-09-09 12:04:20.471] VP IDLE 04.080%
+[2025-09-09 12:04:22.048] Sequential write (64-bit), size = 1.25 MB, loops = 12520, 3120.3 MB/s
+[2025-09-09 12:04:24.289] PID	NID	VP%	CMD
+[2025-09-09 12:04:24.289] 457	0	95.050%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:24.291] 
+[2025-09-09 12:04:24.291] VP IDLE 04.370%
+[2025-09-09 12:04:27.067] Sequential write (64-bit), size = 1.5 MB, loops = 7854, 2347.6 MB/s
+[2025-09-09 12:04:28.157] PID	NID	VP%	CMD
+[2025-09-09 12:04:28.157] 457	0	95.020%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:28.160] 
+[2025-09-09 12:04:28.160] VP IDLE 04.620%
+[2025-09-09 12:04:32.061] PID	NID	VP%	CMD
+[2025-09-09 12:04:32.061] 457	0	94.910%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:32.062] 
+[2025-09-09 12:04:32.062] VP IDLE 04.700%
+[2025-09-09 12:04:32.084] Sequential write (64-bit), size = 1.75 MB, loops = 5643, 1968.5 MB/s
+[2025-09-09 12:04:35.878] PID	NID	VP%	CMD
+[2025-09-09 12:04:35.879] 457	0	94.150%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:35.879] 
+[2025-09-09 12:04:35.879] VP IDLE 05.680%
+[2025-09-09 12:04:37.093] Sequential write (64-bit), size = 2 MB, loops = 3976, 1587.4 MB/s
+[2025-09-09 12:04:39.697] PID	NID	VP%	CMD
+[2025-09-09 12:04:39.698] 457	0	94.460%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:39.699] 
+[2025-09-09 12:04:39.699] VP IDLE 05.410%
+[2025-09-09 12:04:42.115] Sequential write (64-bit), size = 2.25 MB, loops = 3080, 1379.7 MB/s
+[2025-09-09 12:04:43.481] PID	NID	VP%	CMD
+[2025-09-09 12:04:43.481] 457	0	94.050%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:43.482] 
+[2025-09-09 12:04:43.482] VP IDLE 05.510%
+[2025-09-09 12:04:47.144] Sequential write (64-bit), size = 2.5 MB, loops = 2706, 1345.9 MB/s
+[2025-09-09 12:04:47.300] PID	NID	VP%	CMD
+[2025-09-09 12:04:47.300] 457	0	94.270%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:47.302] 
+[2025-09-09 12:04:47.302] VP IDLE 05.530%
+[2025-09-09 12:04:51.184] PID	NID	VP%	CMD
+[2025-09-09 12:04:51.184] 457	0	95.230%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:51.186] 
+[2025-09-09 12:04:51.186] VP IDLE 04.500%
+[2025-09-09 12:04:52.185] Sequential write (64-bit), size = 2.75 MB, loops = 2357, 1285.7 MB/s
+[2025-09-09 12:04:55.043] PID	NID	VP%	CMD
+[2025-09-09 12:04:55.043] 457	0	94.900%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:55.044] 
+[2025-09-09 12:04:55.044] VP IDLE 04.850%
+[2025-09-09 12:04:57.228] Sequential write (64-bit), size = 3 MB, loops = 2052, 1221.1 MB/s
+[2025-09-09 12:04:58.859] PID	NID	VP%	CMD
+[2025-09-09 12:04:58.859] 457	0	94.440%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:04:58.862] 
+[2025-09-09 12:04:58.862] VP IDLE 05.360%
+[2025-09-09 12:05:02.273] Sequential write (64-bit), size = 4 MB, loops = 1404, 1113.4 MB/s
+[2025-09-09 12:05:02.746] PID	NID	VP%	CMD
+[2025-09-09 12:05:02.746] 457	0	93.760%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:05:02.748] 
+[2025-09-09 12:05:02.748] VP IDLE 06.060%
+[2025-09-09 12:05:06.643] PID	NID	VP%	CMD
+[2025-09-09 12:05:06.643] 457	0	94.070%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:05:06.644] 
+[2025-09-09 12:05:06.644] VP IDLE 05.710%
+[2025-09-09 12:05:07.296] Sequential write (64-bit), size = 5 MB, loops = 1038, 1032.9 MB/s
+[2025-09-09 12:05:10.594] PID	NID	VP%	CMD
+[2025-09-09 12:05:10.595] 457	0	94.910%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:05:10.596] 
+[2025-09-09 12:05:10.596] VP IDLE 04.610%
+[2025-09-09 12:05:12.343] Sequential write (64-bit), size = 6 MB, loops = 837, 995.8 MB/s
+[2025-09-09 12:05:14.533] PID	NID	VP%	CMD
+[2025-09-09 12:05:14.533] 457	0	94.450%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:05:14.534] 
+[2025-09-09 12:05:14.534] VP IDLE 04.920%
+[2025-09-09 12:05:17.363] Sequential write (64-bit), size = 16 MB, loops = 297, 946.8 MB/s
+[2025-09-09 12:05:18.426] PID	NID	VP%	CMD
+[2025-09-09 12:05:18.426] 457	0	94.380%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:05:18.427] 
+[2025-09-09 12:05:18.427] VP IDLE 05.220%
+[2025-09-09 12:05:22.390] PID	NID	VP%	CMD
+[2025-09-09 12:05:22.391] 457	0	94.660%	test_nnctrl -b /root/insightface_cavalry-cv5-2024-01-13-0527.bin --in data -e -t 0 
+[2025-09-09 12:05:22.391] 
+[2025-09-09 12:05:22.391] VP IDLE 04.840%
+[2025-09-09 12:05:22.391] Sequential write (64-bit), size = 64 MB, loops = 71, 904.9 MB/s
+[2025-09-09 12:05:22.840] ^C^C^C
+[2025-09-09 12:05:22.853] 
+[2025-09-09 12:05:22.853] # 
+[2025-09-09 12:05:22.853] # 
