@@ -1,0 +1,30 @@
+{
+	"server":{
+		"protocol": "ftp",
+		"url": "fake",
+		"username": "fake",
+		"password": "fake"
+	},
+    "projects": {
+        "larnaca2": {
+            "path": "/VIP-DQA/FW/ProdFW/BoschLarnaca2",
+            "default_ip": "192.168.100.20",
+            "parameter": {
+                "identification": "rev1",
+                "sap": "F.01U.430.191",
+                "erase_partition": [
+                    "raw"
+                ]
+            }
+        }, 
+		"deneb2": {
+            "path": "/VIP-DQA/FW/ProdFW/BoschDeneb2",
+            "default_ip": "192.168.100.1",
+            "parameter": {
+                "identification": "rev1",
+                "sap": "F.01U.426.901",
+                "crc": true
+            }
+        }
+    }
+}
