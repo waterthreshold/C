@@ -1,0 +1,95 @@
+From a99fc24e5c7aa2640d029ada6625ff545c0df5c1 Mon Sep 17 00:00:00 2001
+From: Jeff_Chiang <Jeff_Chiang@chicony.com>
+Date: Thu, 3 Jul 2025 14:36:01 +0800
+Subject: [PATCH] Make zsh shell can create enviroment varibles properly
+
+---
+ README.md                                        | 3 +--
+ ambarella/boards/cv5_larnaca2/Makefile           | 3 ++-
+ ambarella/build/env/amba-build.env               | 5 ++++-
+ ambarella/build/env/common/inc-ext-out.env       | 6 +++++-
+ ambarella/build/env/common/inc-get-boardname.env | 7 +++++--
+ 5 files changed, 17 insertions(+), 7 deletions(-)
+
+diff --git a/README.md b/README.md
+index da10d75ea..ff48f9f2a 100644
+--- a/README.md
++++ b/README.md
+@@ -15,9 +15,8 @@ This repository is used to provide support for CV5_Lefkosia with Cooper SDK 1.6
+ 
+ # Larnaca2 Build command 
+ ```bash
+-export TOOLCHAIN_PATH=1
+ cd board/cv5_larnaca2
+-./project.sh
+ source ../../build/env/amba-build.env
++./project.sh
+ make
+ ```
+diff --git a/ambarella/boards/cv5_larnaca2/Makefile b/ambarella/boards/cv5_larnaca2/Makefile
+index db76d205b..ffe5e975a 100644
+--- a/ambarella/boards/cv5_larnaca2/Makefile
++++ b/ambarella/boards/cv5_larnaca2/Makefile
+@@ -27,5 +27,6 @@
+ ## POSSIBILITY OF SUCH DAMAGE.
+ ###########################################################
+ 
+-include ../../build/env/amba-build.mk
++#include ../../build/env/amba-build.mk
++
+ include ../../build/bin/amba/inc-amba-build.mk
+diff --git a/ambarella/build/env/amba-build.env b/ambarella/build/env/amba-build.env
+index b85f2a842..404cf9a07 100755
+--- a/ambarella/build/env/amba-build.env
++++ b/ambarella/build/env/amba-build.env
+@@ -29,8 +29,11 @@
+ ## ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ ## POSSIBILITY OF SUCH DAMAGE.
+ ###########################################################
+-
++if [[ "${BASH##*/}" = "bash"  ]]; then 
+ script_path=$(realpath $(dirname ${BASH_SOURCE[0]}))
++else
++script_path=$(cd "${0%/*}" && pwd)
++fi 
+ source ${script_path}/common/inc-unset-env.env
+ ENV_TOP_DIR=$(realpath ${script_path}/../..)
+ 
+diff --git a/ambarella/build/env/common/inc-ext-out.env b/ambarella/build/env/common/inc-ext-out.env
+index b62d8a23f..839d18ac0 100755
+--- a/ambarella/build/env/common/inc-ext-out.env
++++ b/ambarella/build/env/common/inc-ext-out.env
+@@ -29,7 +29,11 @@
+ ###########################################################
+ 
+ if [[ -z ${ENV_TOP_DIR} ]]; then
+-    script_path=$(realpath $(dirname ${BASH_SOURCE[0]}))
++	if [[ "${BASH##*/}" = "bash" ]];then 
++		script_path=$(realpath $(dirname ${BASH_SOURCE[0]}))
++	else
++    	script_path=$(realpath ${0%/*})
++	fi
+     ENV_TOP_DIR=$(realpath ${script_path}/../../..)
+ fi
+ 
+diff --git a/ambarella/build/env/common/inc-get-boardname.env b/ambarella/build/env/common/inc-get-boardname.env
+index ffcd5eb0d..fce3a40c3 100755
+--- a/ambarella/build/env/common/inc-get-boardname.env
++++ b/ambarella/build/env/common/inc-get-boardname.env
+@@ -67,8 +67,11 @@ get_board_name() {
+     fi
+     board_name=$(eval echo \${$num})
+ }
+-
+-SDK_TOP=$(realpath $(dirname ${BASH_SOURCE[0]})/../../../)
++if [[ "${BASH##*/}" = "bash" ]]; then 
++	SDK_TOP=$(realpath $(dirname ${BASH_SOURCE[0]})/../../../)
++else
++	SDK_TOP=$(realpath ${0%/*}/../../../)
++fi
+ BOARDS_DIR=$(realpath ${SDK_TOP}/boards)
+ CURR_DIR=$(realpath $(pwd))
+ 
+-- 
+2.34.1
+
