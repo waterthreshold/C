@@ -1,0 +1,52 @@
+{
+    "metadata":
+    {
+        "cycle":1,
+        "item_num":4,
+        "safe_high_temp": 45.0,
+        "safe_low_temp": 0.0
+    },
+    "row_temp":[
+        {
+            "temp": 20.0,
+            "humidity" : 0.0,
+            "hour": 0,
+            "min" :0,
+            "p1":0,
+            "p2":0,
+            "p3":0,
+            "wt":0
+        },
+        {
+            "temp": 20.0,
+            "humidity" : 0.0,
+            "hour": 9999,
+            "min" :59,
+            "p1":0,
+            "p2":0,
+            "p3":0,
+            "wt":1
+        },
+        {
+            "temp": -30.0,
+            "humidity" : 0.0,
+            "hour": 0,
+            "min" :0,
+            "p1":0,
+            "p2":0,
+            "p3":0,
+            "wt":0
+        },
+        {
+            "temp": -30.0,
+            "humidity" : 0.0,
+            "hour": 24,
+            "min" :0,
+            "p1":0,
+            "p2":0,
+            "p3":0,
+            "wt":1
+        }
+    ]
+
+}
