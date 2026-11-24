@@ -1,0 +1,204 @@
+#!/bin/bash
+GCC_VERSION=gcc12.2
+TOOLCHAIN_VERSION=2023.04
+TOOLCHAIN_DIR=toolchain-${TOOLCHAIN_VERSION}
+TOOLCHAIN_NAME_AARCH64=cortex-a76-${TOOLCHAIN_VERSION}-${GCC_VERSION}
+GCC_ARM_NONE_EABI_VERSION=10.3-2021.10
+GCC_ARM_NONE_EABI_NAME=gcc-arm-none-eabi-${GCC_ARM_NONE_EABI_VERSION}
+
+OS_VERSION=`cat /etc/issue | head -n 1 | awk -F ' ' '{print $2}'`
+OS_VERSION_MAJ=`echo $OS_VERSION | awk -F '.' '{print $1}'`
+OS_VERSION_MIN=`echo $OS_VERSION | awk -F '.' '{print $2}'`
+
+filter_warnings() {
+  grep -Ev "Error in \`/usr/share/doc-base/dnf', line 12: all \`Format' sections are invalid|Note: \`install-docs --verbose --check file_name' may give more details about the above error"
+}
+
+if [[ ${OS_VERSION_MAJ} -lt 20 ]]; then
+  echo "Ubuntu version number must be larger than or equal to 20.04"
+  exit 1
+fi
+
+if [ -z $(which apt-get) ] || [ -z $(which dpkg) ]; then
+  echo "Can't find apt or dpkg, Ubuntu only"
+  exit 1
+fi
+
+INSTALL_PKGS=(git gnupg flex bison gperf build-essential zip curl libssl-dev      \
+              zlib1g-dev wget fakeroot genext2fs gawk subversion git-gui gitk     \
+              unixodbc texinfo gcc-multilib g++-multilib cppcheck libxml2-dev     \
+              doxygen graphviz perl ghostscript bc libx11-dev x11proto-core-dev   \
+              zlib1g cmake python3-pyelftools libarchive-zip-perl diffstat unzip  \
+              gcc chrpath socat cpio python3 python3-pexpect xz-utils debianutils \
+              iputils-ping python3-git python3-jinja2 libsdl1.2-dev pylint xterm  \
+              python3-subunit mesa-common-dev zstd liblz4-tool device-tree-compiler \
+              python3-venv meson whois mtd-utils util-linux binutils-dev gnupg2     \
+              libarchive-dev libaudit-dev libbz2-dev libcap-dev libdw-dev           \
+              libelf-dev  libgcrypt20-dev liblua5.3-dev libmagic-dev \
+              libpopt-dev libreadline-dev libfsverity-dev libzstd-dev pandoc devscripts dh-python   \
+              qemu-system-misc qemu-user-static qemu-user binfmt-support \ 
+			  python-is-python3 git-lfs python3-pip)
+
+
+
+
+if [[ ${OS_VERSION_MAJ} -lt 22 ]]; then
+  INSTALL_PKGS+=(python3-pip libsemanage1-dev)
+else
+  INSTALL_PKGS+=(rpm dnf libsemanage-dev)
+fi
+
+if [[ ${OS_VERSION_MAJ} -le 22 ]]; then
+  INSTALL_PKGS+=(libncurses5-dev)
+  INSTALL_PKGS+=(libgtk2.0-0)
+  INSTALL_PKGS+=(libegl1-mesa)
+else
+  INSTALL_PKGS+=(libncurses-dev)
+  INSTALL_PKGS+=(libgtk2.0-0t64)
+  INSTALL_PKGS+=(libegl1-mesa-dev)
+fi
+
+if [[ "$(uname -m)" = "x86_64" ]]; then
+  INSTALL_PKGS+=(libc6-dev-i386 lib32readline-dev lib32z1 lib32z1-dev     \
+                 libc6:i386 libstdc++6:i386 lib32ncurses6 lib32ncurses-dev)
+  sudo dpkg --add-architecture i386 &&
+  sudo apt update
+fi
+
+sudo apt-get install -y ${INSTALL_PKGS[@]}
+
+if [[ ${OS_VERSION_MAJ} -eq 20 ]]; then
+  sudo dpkg -i deb_pkgs/20.04/*.deb &> >(filter_warnings >&1)
+  dpkg_result=$?
+  sudo apt-get check &> check.log
+  if [[ `grep "Unmet dependencies" check.log -c` -ne 0 ]]; then
+    echo "====> dnf and rpm are installed with errors, tools might not work! <===="
+    echo "====> Warn: Unmet dependencies! Try to run 'apt --fix-broken install'. <===="
+    sudo apt --fix-broken install
+  elif [[ ${dpkg_result} -ne 0 ]]; then
+    echo "Failed to intall deb packages under ./deb_pkgs/20.04/"
+    exit 1
+  fi
+  rm -rf check.log
+fi
+
+# Check whether cyclonedx-python-lib has been installed or not
+MODEL_cyclonedx_python_lib=$(pip list | grep -c cyclonedx-python-lib)
+if [ $MODEL_cyclonedx_python_lib -eq 0 ]; then
+  if [ ${OS_VERSION_MAJ} -ge 24 ]; then
+    while true; do
+      read -r -p "Warning: The OS version is $OS_VERSION, 'pip3 install' is not recommended. \
+Are you sure to force run the command 'pip3 install cyclonedx-python-lib --break-system-packages' \
+or skip and install it later manully ? (force install / skip) [Y/n] " input
+      case $input in
+        [yY][eE][sS]|[yY])
+          echo "Entered $input"
+          sudo pip3 install cyclonedx-python-lib --break-system-packages
+          break;;
+        [nN][oO]|[nN])
+          echo "Entered $input"
+          break;;
+        *)
+          echo "Invalid input: $input"
+          ;;
+      esac
+    done
+  else
+    sudo pip3 install cyclonedx-python-lib
+  fi
+fi
+if [[ ${OS_VERSION_MAJ} -eq 22 ]]; then
+  sudo pip3 install crypto
+fi
+# Version of meson should be greater than 0.56.0
+MESON_REFER_MAJOR=0
+MESON_REFER_MINOR=56
+MESON_REFER_PATCH=0
+
+# Check whether meson has been installed or not
+MESON_PATH=$(which meson)
+
+# Flag indicates whether a newer meson needs to be installed.
+MESON_NEED_INSTALL_FLAG=0
+
+if [[ x$MESON_PATH != x ]]; then
+  # meson has been install, we need to check the version of meson.
+  MESON_VERSION=`meson --version`
+  MESON_VERSION_MAJOR=`echo $MESON_VERSION | cut -d '.' -f 1`
+  MESON_VERSION_MINOR=`echo $MESON_VERSION | cut -d '.' -f 2`
+  MESON_VERSION_PATCH=`echo $MESON_VERSION | cut -d '.' -f 3`
+  if [[ $MESON_VERSION_MAJOR -lt $MESON_REFER_MAJOR ]]; then
+    MESON_NEED_INSTALL_FLAG=1
+    echo "version of meson ($MESON_VERSION) in your building machine is too old and it will be reinstall."
+  elif [[ $MESON_VERSION_MAJOR -eq $MESON_REFER_MAJOR ]]; then
+    if [[ $MESON_VERSION_MINOR -lt $MESON_REFER_MINOR ]]; then
+      MESON_NEED_INSTALL_FLAG=1
+      echo "version of meson ($MESON_VERSION) in your building machine is too old and it will be reinstall."
+    elif [[ $MESON_VERSION_MINOR -eq $MESON_REFER_MINOR ]]; then
+      if [[ $MESON_VERSION_PATCH -lt $MESON_REFER_PATCH ]]; then
+        MESON_NEED_INSTALL_FLAG=1
+        echo "version of meson ($MESON_VERSION) in your building machine is too old and it will be reinstall."
+      fi
+    fi
+  fi
+
+  # Check whether meson on building machine needs to be reinstall.
+  if [[ $MESON_NEED_INSTALL_FLAG -eq 1 ]]; then
+    sudo apt-get purge meson
+  fi
+else
+  MESON_NEED_INSTALL_FLAG=1
+fi
+
+if [[ $MESON_NEED_INSTALL_FLAG -eq 1 ]]; then
+  echo "Meson with version 1.0 will be installed."
+  sudo pip3 install meson==1.0
+fi
+
+ARM_TOOLCHAIN_PREFIX=/usr/local
+INSTALL_WITH_SUDO=yes
+SystemArch=$(uname -m)
+
+GCC_ARM_NONE_EABI_LINK="https://developer.arm.com/-/media/Files/downloads/gnu-rm/${GCC_ARM_NONE_EABI_VERSION}/${GCC_ARM_NONE_EABI_NAME}-${SystemArch}-linux.tar.bz2"
+if [ ! -e "$(pwd)/${TOOLCHAIN_DIR}/${GCC_ARM_NONE_EABI_NAME}-${SystemArch}-linux.tar.bz2" ]; then
+  wget ${GCC_ARM_NONE_EABI_LINK} -P $(pwd)/${TOOLCHAIN_DIR}
+  if [ $? -ne 0 ]; then
+    echo "Error: fail to download ${GCC_ARM_NONE_EABI_NAME}-${SystemArch}-linux from upstream link ${GCC_ARM_NONE_EABI_LINK}."
+  else
+    LINARO_TOOLCHAIN+=($(pwd)/${TOOLCHAIN_DIR}/${GCC_ARM_NONE_EABI_NAME}-${SystemArch}-linux.tar.bz2)
+  fi
+else
+  LINARO_TOOLCHAIN+=($(pwd)/${TOOLCHAIN_DIR}/${GCC_ARM_NONE_EABI_NAME}-${SystemArch}-linux.tar.bz2)
+fi
+
+LINARO_TOOLCHAIN+=($(pwd)/${TOOLCHAIN_DIR}/armv8/aarch64/${TOOLCHAIN_NAME_AARCH64}-linux5.15-${SystemArch}.tar.xz)
+
+#echo -n "TOOLCHAIN PATH[$ARM_TOOLCHAIN_PREFIX]:"
+#read ANSWER
+ANSWER=""
+if [[ "$ANSWER" != "" ]]; then
+  ARM_TOOLCHAIN_PREFIX=$ANSWER
+fi
+sudo mkdir -p $ARM_TOOLCHAIN_PREFIX/bin/
+
+#echo -n "Install $LINARO_TOOLCHAIN into $ARM_TOOLCHAIN_PREFIX?(Y/n):"
+#read ANSWER
+ANSWER=Y
+case $ANSWER in
+  [Nn]*)
+    echo "You choose NO!"
+  ;;
+  *)
+    for toolchain in ${LINARO_TOOLCHAIN[@]}
+    do
+      if [[ ! -z ${toolchain} ]]; then
+        sudo tar xvf ${toolchain} -C ${ARM_TOOLCHAIN_PREFIX}
+      fi
+    done
+    gcc -o makedevs/makedevs -O3 -Wall makedevs/makedevs.c
+    chmod 755 makedevs/makedevs
+    sudo mv makedevs/makedevs $ARM_TOOLCHAIN_PREFIX/bin/makedevs
+    sudo ln -sf $(which mkfs.cramfs) /usr/local/sbin/mkcramfs
+  ;;
+esac
+

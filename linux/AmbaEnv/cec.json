@@ -1,0 +1,33 @@
+{
+	"username":"Jeff_Chiang",
+	"password":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"project":
+	[ 
+	  { 
+			"name": "larnaca2",
+			"path":"http://172.16.9.242:16888/Jeff_Chiang/odm_cv5_larnaca2_Mirror.git",
+			"mainStream" : "main",
+			"uploadSrv":{ 
+				"protocol": "ftp",
+				"upload_url": "xxxxxxxxx",
+				"dailyPath": "VIP-DQA/FW/MfgFW/BoschLarnaca2/Daily", 
+				"prodPath": "VIP-DQA/FW/MfgFW/BoschLarnaca2/SMT",
+				"username": "xxxx",
+				"password": "xxxx"
+			}
+	  },
+	  { 
+			"name": "deneb2",
+			"path":"http://172.16.9.242:16888/CEC_Bosch/Deneb2_cv72_cooper2.5.git",
+			"mainStream": "odm_cv72_deneb2",
+			"uploadSrv":{ 
+				"protocol": "ftp",
+				"upload_url": "xxxxxxxxxxxxx",
+				"dailyPath": "VIP-DQA/FW/MfgFW/BoschDeneb2/Daily", 
+				"prodPath": "VIP-DQA/FW/MfgFW/BoschDeneb2/SMT",
+				"username": "xxxx",
+				"password": "xxxx"
+			}
+	  }
+	]
+}

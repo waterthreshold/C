@@ -1,0 +1,299 @@
+#!/bin/bash
+# Smt: Factory production firmware 
+# Hotfix: Fix magnifacant change invole in main stream after Smt firmware.
+# Trial: For specific file 
+# Daily: For Daily build use
+
+
+GREENTEXTFONT='\033[0;32m'
+NCTEXTFONT='\033[0m'
+REDTEXTFONT='\033[0;31m'
+
+CONFIG_FILE="/etc/cec.json"
+METHOD="trial"
+MAIN_BRANCHNAME="main"
+#REL_DOC_NAME="Larnaca2_stress_test_guide.txt"
+RELEASE_FIRMWARE=0
+
+usage (){
+cat <<EOF
+Usage: git cec [OPTIONS] <project> [Root Directory]
+
+Options:
+  -m, --method <smt|hotfix|triali|none>      (required)
+  -b, --branch <branch name> (default: main)
+  -R, --release	(Default: No)
+  -h, --help           Show help
+EOF
+}
+
+get_git_username_password(){
+	echo "`jq -r '"\(.username):\(.password)"' ${CONFIG_FILE}`"
+}
+
+get_git_repo_mainstream(){
+	local branch=$(jq -r ".project[] | select(.name == \"${1}\").mainStream" ${CONFIG_FILE})
+	if [[ "$branch" == "null" || "branch" == "" ]]; then
+		exit 9
+	else
+		MAIN_BRANCHNAME=$branch
+	fi
+}
+get_git_clone_remote_target()
+{
+	local url=$(jq -r ".project[] | select(.name == \"${1}\").path" ${CONFIG_FILE})
+	if [[ "$url" == "null" || "$url" == "" ]]; then
+		exit 9
+	else
+		PROJECT=$1
+		GIT_REPO="${url/http:\/\//http://`get_git_username_password`@}"
+	fi
+}
+	
+get_target_rootdirname(){
+	datetime="$(date +%Y%m%d%H%M)"
+	local url=$(jq -r ".project[] | select(.name == \"${PROJECT}\").path" ${CONFIG_FILE})
+	name=${url##*/}
+	echo "${name//.git}_${datetime}"
+}
+get_args (){
+	OPTS=$(getopt \
+		-l method:branch:help \
+		-n 'git cec' -- m:b:hR "$@"
+	)
+
+	eval set -- "$OPTS"
+	
+	while true; do
+    case "$1" in
+        -m|--method)
+            METHOD="${2,,}"
+            shift 2
+            ;;
+        -b|--branch)
+            MAIN_BRANCHNAME="${2,,}"
+            shift 2
+            ;;
+       	-R|--release)
+		RELEASE_FIRMWARE=1
+		shift 1
+		;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        --)
+            shift
+            break
+            ;;
+        *)
+            break
+            ;;
+    esac
+done
+get_git_clone_remote_target "$1"
+get_git_repo_mainstream "$1"
+ROOTDIR=${2-`get_target_rootdirname`}
+}
+
+print_info(){
+	echo ""
+	echo "================================="
+	echo " PROJECT = ${PROJECT}"
+	echo " Root Dir name= ${ROOTDIR}"
+	echo " Root Dir Path= `dirname ${ROOTDIR}`"
+	echo " Build Method= ${METHOD}"
+	echo " GIT REMOTE PATH= ${GIT_REPO}"
+	echo " GIT BRANCH NAME= ${MAIN_BRANCHNAME}"
+	echo "================================="
+	echo ""
+}
+
+local_check_rootdir (){
+	[  -d ${ROOTDIR} ] && exit 7 
+	[ ! -d ${ROOTDIR%/*} ] && mkdir -p ${ROOTDIR%/*} 
+}
+
+local_hotfix()
+{
+	BOARD_TAG="`cat .soc`_`cat .board`"
+	BOARDS_PATH="./ambarella/boards/$BOARD_TAG"
+	if [ -d "$BOARDS_PATH" ]; then 
+		cd ${BOARDS_PATH}
+	else 
+		echo "Cannot find ${BOARDS_PATH} !"
+		exit 1
+	fi
+	
+	if [ -e project.sh ]; then
+		./project.sh hotfix
+	else 
+		echo "Cannot exist project.sh!"
+		exit 7
+	fi
+	cd -
+	FW_NAME_FILE="ambarella/out/amba_out/${BOARD_TAG}/sysroot/etc/fw_version"
+	if [ -e "${FW_NAME_FILE}" ]; then 
+	fw_name="`cat ${FW_NAME_FILE}`.bin"
+	cp $(ls -S1 ambarella/out/amba_out/${BOARD_TAG}/firmware/*.bin | head -1) ${fw_name}
+	fi
+}
+
+local_smt()
+{	
+	git lfs install
+	git config --global credential.helper store
+	git clone --recurse-submodules -j$(nproc) -b ${MAIN_BRANCHNAME} ${GIT_REPO} "${ROOTDIR}"
+	[ $? -ne 0 ] && exit 3
+	cd ${ROOTDIR}
+	BOARD_TAG="`cat .soc`_`cat .board`"
+	BOARDS_PATH="./ambarella/boards/$BOARD_TAG"
+	PROFILE=`cat .profile`
+	
+	
+	if [ -z "$PROFILE" ]; then
+		echo "PROFILE not exit please check .profile exist or not"
+		exit 10
+	fi
+	if [ -d "$BOARDS_PATH" ]; then 
+		cd ${BOARDS_PATH}
+	else 
+		echo "Cannot find ${BOARDS_PATH} !"
+		exit 1
+	fi
+	
+	echo "SMT build profile ${PROFILE}"
+	BRANCHNAME=$(git rev-parse --abbrev-ref HEAD)
+	SHA1HEAD=$(git rev-parse --short HEAD)
+	DATE=$(date +"%Y%m%d.%H%M")	
+	FWVER="${PROJECT}_${BRANCHNAME}_${SHA1HEAD}_smt_${DATE}"
+	
+	echo "$FWVER" > rootfs/default/etc/fw_version
+	#git add rootfs/default/etc/fw_version 
+	#git remote set-url origin "$GIT_REPO"
+	#git commit -m "[SMT] version: ${FWVER}"
+	#git push origin ${MAIN_BRANCHNAME}
+	#git pull
+	
+	SHA1HEAD2=$(git rev-parse --short HEAD)
+	FWVER="${PROJECT}_${BRANCHNAME}_${SHA1HEAD2}_smt_${DATE}"
+	echo "$FWVER" > rootfs/default/etc/fw_version
+	
+	#../../build/env/amba-build.env
+	#make ${PROFILE}
+	#make -j$(nproc)
+	./project.sh smt
+	cd -
+	FW_NAME_FILE="ambarella/out/amba_out/${BOARD_TAG}/sysroot/etc/fw_version"
+	if [ -e "${FW_NAME_FILE}" ]; then
+		fw_name="`cat ${FW_NAME_FILE}`.bin"
+		mv $(ls -S1 ambarella/out/amba_out/${BOARD_TAG}/firmware/*.bin | head -1) ${fw_name}
+		md5sum ${fw_name} > fw_md5sum.txt
+		#REL_DOCVER=$(grep "Version :" ${REL_DOC_NAME} | cut -d":" -f 2 )
+		#NEW_RELDOCNAME="${REL_DOC_NAME%.*}_v${REL_DOCVER// }.txt"
+		#cp ${REL_DOC_NAME}  ${NEW_RELDOCNAME}
+		zip -r "`cat ${FW_NAME_FILE}`.zip" "${fw_name}" fw_md5sum.txt # "${NEW_RELDOCNAME}"
+		#[ $? -eq 0 ] && cp "`cat ${FW_NAME_FILE}`.zip"  "/mnt/c/Users/10008847/OneDrive - chicony.com/Public/Larnaca2/Firmware/Smt"  && echo "Push to the onedrive"
+		ZIP_ARCIHEVENAME="`cat ${FW_NAME_FILE}`.zip"
+		if [ $RELEASE_FIRMWARE -eq 1  ]; then
+			POST_PROTOCOL=$(jq -r ".project[] | select(.name == \"${PROJECT}\").uploadSrv.protocol" ${CONFIG_FILE}) 
+			POST_URL=$(jq -r ".project[] | select(.name == \"${PROJECT}\").uploadSrv.upload_url" ${CONFIG_FILE}) 
+			POST_PRODPATH=$(jq -r ".project[] | select(.name == \"${PROJECT}\").uploadSrv.prodPath" ${CONFIG_FILE}) 
+			POST_USERNAME=$(jq -r ".project[] | select(.name == \"${PROJECT}\").uploadSrv.username" ${CONFIG_FILE}) 
+
+			POST_PASSWORD=$(jq -r ".project[] | select(.name == \"${PROJECT}\").uploadSrv.password" ${CONFIG_FILE}) 
+
+		curl -u "${POST_USERNAME}:${POST_PASSWORD}" ${POST_PROTOCOL}://${POST_URL}/${POST_PRODPATH}/${ZIP_ARCIHEVENAME} -T ${ZIP_ARCIHEVENAME} 
+	
+		fi
+		return 0
+	fi
+}
+
+local_trial()
+{
+	git lfs install
+	git clone --recurse-submodules -j$(nproc) -b ${MAIN_BRANCHNAME} ${GIT_REPO} "${ROOTDIR}"
+	[ $? -ne 0 ] && exit 3
+	cd ${ROOTDIR}
+	BOARD_TAG="`cat .soc`_`cat .board`"
+	BOARDS_PATH="./ambarella/boards/$BOARD_TAG"
+	if [ -d "$BOARDS_PATH" ]; then 
+		cd ${BOARDS_PATH}
+	else 
+		echo "Cannot find ${BOARDS_PATH} !"
+		exit 1
+	fi
+	
+	if [ -e project.sh ]; then
+		./project.sh 
+	else 
+		echo "Cannot exist project.sh!"
+		exit 7
+	fi
+	cd -
+	FW_NAME_FILE="ambarella/out/amba_out/${BOARD_TAG}/sysroot/etc/fw_version"
+	if [ -e "${FW_NAME_FILE}" ]; then 
+	fw_name="`cat ${FW_NAME_FILE}`.bin"
+	cp $(ls -S1 ambarella/out/amba_out/${BOARD_TAG}/firmware/*.bin | head -1) ${fw_name}
+	fi
+}
+local_none () {
+	
+	git lfs install
+	git clone --recurse-submodules -j$(nproc) ${GIT_REPO} "${ROOTDIR}"
+}
+local_daily(){
+	echo "Daily Build"
+	RELEASE_FIRMWARE=0
+	LATESTUPADTEINFOFILE="latest.cec"
+
+	POST_PROTOCOL=$(jq -r ".project[] | select(.name == \"${PROJECT}\").uploadSrv.protocol" ${CONFIG_FILE}) 
+	POST_URL=$(jq -r ".project[] | select(.name == \"${PROJECT}\").uploadSrv.upload_url" ${CONFIG_FILE}) 
+			POST_DAILYPATH=$(jq -r ".project[] | select(.name == \"${PROJECT}\").uploadSrv.dailyPath" ${CONFIG_FILE}) 
+			POST_USERNAME=$(jq -r ".project[] | select(.name == \"${PROJECT}\").uploadSrv.username" ${CONFIG_FILE}) 
+
+			POST_PASSWORD=$(jq -r ".project[] | select(.name == \"${PROJECT}\").uploadSrv.password" ${CONFIG_FILE}) 
+	echo "Fetch the latest version info:"
+		curl -u "${POST_USERNAME}:${POST_PASSWORD}" ${POST_PROTOCOL}://${POST_URL}/${POST_DAILYPATH}/${LATESTUPADTEINFOFILE} -o ${LATESTUPADTEINFOFILE}
+	[ $? -eq 0 ] && LATEST_HASH=`cat ${LATESTUPADTEINFOFILE}` || exit 100 	
+	NOW_HASH=`git ls-remote ${GIT_REPO} ${MAIN_BRANCHNAME} | awk '{print $1}'`
+	if [ "$NOW_HASH" != "$LATEST_HASH" ]; then
+		local_smt
+		if [ $? -eq 0 ]; then 
+			curl -u "${POST_USERNAME}:${POST_PASSWORD}" ${POST_PROTOCOL}://${POST_URL}/${POST_DAILYPATH}/${ZIP_ARCIHEVENAME} -T ${ZIP_ARCIHEVENAME}
+		
+			echo "${NOW_HASH}" > ${LATESTUPADTEINFOFILE}
+			curl -u "${POST_USERNAME}:${POST_PASSWORD}" ${POST_PROTOCOL}://${POST_URL}/${POST_DAILYPATH}/${LATESTUPADTEINFOFILE} -T ${LATESTUPADTEINFOFILE}
+		fi
+	else 	
+		echo "Daily build not necessary. Because latest was Built"
+	fi	
+	
+}
+
+local_check_method()
+{
+	if [ "$(type -t local_${METHOD})" != "function" ]; then
+		echo "Not supported method: ${METHOD} !"
+		exit 4
+	else
+		eval local_${METHOD}
+	fi
+	
+}
+## Main 
+get_args $@
+
+local_check_rootdir "${ROOTDIR}"
+
+print_info
+if [ -z ${PROJECT} ]; then 
+	echo "No Project name as Paramater"
+	exit 1
+fi
+
+
+
+local_check_method "$METHOD"
+
