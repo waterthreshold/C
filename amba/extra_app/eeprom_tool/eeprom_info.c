@@ -25,7 +25,7 @@
     {"PriductFamilyName", 17, 1, TYPE_STRING},
     {"Project", 18, 0, TYPE_STRING},
     {"MinumumFirmwarevVersion", 19, 1, TYPE_HEX},
-    {"ManufacturingDate", 20, 1, TYPE_HEX},
+    {"ManufacturingDate", 20, 1, TYPE_DATE},
     {"NumberOfmacs", 21, 0, TYPE_NUM},
     {"LabelMac", 31, 0, TYPE_STRING},
     {"UnkonownCode1", 32, 0, TYPE_HEX},
@@ -33,7 +33,7 @@
     {"OriginalVarintId", 53, 0, TYPE_NUM},
     {"ReleaseStatus", 54, 0, TYPE_STRING},
     {"UnkonownCode", 55, 0, TYPE_HEX},
-    {"ManufacturingSignDate", 56, 0, TYPE_HEX}
+    {"ManufacturingSignDate", 56, 0, TYPE_DATE}
 };
 
 void replace_charater(char *str, char src, char target) {
@@ -171,14 +171,32 @@ int show_info( char *input_file,  char *output_file) {
                         }
                         case TYPE_HEX: {
                             char hex_str[2048] = "0x";
-                            size_t offset = 2;
-                            for (size_t i = 0; i < data_len && offset < sizeof(hex_str) - 2; i++) {
-                                snprintf(hex_str + offset, sizeof(hex_str) - offset, "%02X", payload[i]);
-                                offset += 2;
-                            }
+							size_t offset = 2;
+							for (size_t i = 0; i < data_len && offset < sizeof(hex_str) - 2; i++) {
+								snprintf(hex_str + offset, sizeof(hex_str) - offset, "%02X", payload[i]);
+								offset += 2;
+							}			    
                             cJSON_AddItemToObject(data_obj, meta->name, cJSON_CreateString(hex_str));
                             break;
                         }
+						case TYPE_DATE: {
+							
+							char date_str[2048] ={0};
+							if (data_len ==7 ) {
+								int year = payload [0] << 8 | payload[1];
+								int mon = payload[2];
+								int day = payload[3];
+								int hour = payload[4];
+								int min = payload[5];
+								int sec = payload[6];
+								snprintf(date_str, sizeof(date_str),"%d-%02d-%02d %02d:%02d:%02d",year,mon,day,hour,min,sec);
+							} else {
+								snprintf(date_str, sizeof(date_str),"Not valid date format");
+							}
+							
+							cJSON_AddItemToObject(data_obj, meta->name, cJSON_CreateString(date_str));
+							break;
+						}
                         case TYPE_STRING: {
                             cJSON_AddItemToObject(data_obj, meta->name, cJSON_CreateString((char *)payload));
                             break;
@@ -207,6 +225,22 @@ int show_info( char *input_file,  char *output_file) {
                     }
                     case TYPE_STRING: {
                         printf("\"%s\" (string)\n", (char *)payload);
+                        break;
+                    }
+					case TYPE_DATE: {
+						char date_str[2048] ={0};
+						if (data_len ==7 ) {
+							int year = payload [0] << 8 | payload[1];
+							int mon = payload[2];
+							int day = payload[3];
+							int hour = payload[4];
+							int min = payload[5];
+							int sec = payload[6];
+							snprintf(date_str, sizeof(date_str),"%d-%02d-%02d %02d:%02d:%02d",year,mon,day,hour,min,sec);
+						} else {
+							snprintf(date_str, sizeof(date_str),"Not valid date format");
+						}
+                        printf("\"%s\" (date)\n", date_str);
                         break;
                     }
                 }
