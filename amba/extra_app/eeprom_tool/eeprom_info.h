@@ -11,7 +11,8 @@ extern "C" {
 typedef enum {
     TYPE_NUM,
     TYPE_HEX,
-    TYPE_STRING
+    TYPE_STRING,
+    TYPE_DATE
 } TagType;
 
 typedef struct {
